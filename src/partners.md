@@ -47,9 +47,9 @@ partners:
     name_fr: HZ University of Applied Sciences
     name_nl: HZ University of Applied Sciences
     logo: /images/logos/hz.svg
-    text: Our scientific partner in the Netherlands. HZ supports your research projects, coordinates the project with GoodPlanet and hosted the October 2025 exchange in Zeeland, where the Scheldt meets the sea.
-    text_fr: "Notre partenaire scientifique aux Pays-Bas. HZ soutient tes projets de recherche, coordonne le projet avec GoodPlanet et a accueilli l'échange d'octobre 2025 en Zélande, là où l'Escaut rejoint la mer."
-    text_nl: Onze wetenschappelijke partner in Nederland. HZ ondersteunt je onderzoeksprojecten, coördineert het project samen met GoodPlanet en ontving de uitwisseling van oktober 2025 in Zeeland, waar de Schelde de zee ontmoet.
+    text: Our scientific partner in the Netherlands since 2024. HZ supports your research projects, coordinates the project with GoodPlanet and hosted the October 2025 exchange in Zeeland, where the Scheldt meets the sea.
+    text_fr: "Notre partenaire scientifique aux Pays-Bas depuis 2024. HZ soutient tes projets de recherche, coordonne le projet avec GoodPlanet et a accueilli l'échange d'octobre 2025 en Zélande, là où l'Escaut rejoint la mer."
+    text_nl: Onze wetenschappelijke partner in Nederland sinds 2024. HZ ondersteunt je onderzoeksprojecten, coördineert het project samen met GoodPlanet en ontving de uitwisseling van oktober 2025 in Zeeland, waar de Schelde de zee ontmoet.
     story: /partners/hz-university-of-applied-sciences/
     url: https://hz.nl
     linkLabel: hz.nl
