@@ -1,10 +1,11 @@
 <header class="site-header">
-  {#- The language switcher, top right (Tine, file 88): only on pages that exist in more than one language. Each name in
-      its own language, so a reader finds theirs. #}
+  {#- The language switcher (Tine, file 88): only on pages that exist in more than one language. Since 6 November 2026 a
+      narrow dark blue bar across the top with the full names, English · Français · Nederlands (Tine, file 96: more official,
+      like isc-cie.org). Each name in its own language, so a reader finds theirs; on a phone the short EN · FR · NL. -#}
   {%- if translations.length %}
-  <div class="container lang-switch-row"><nav class="lang-switch" aria-label="{{ T.language }}"><ul role="list">
-    {%- for v in translations %}<li><a href="{{ v.url }}" hreflang="{{ v.code }}" lang="{{ v.code }}"{% if v.code == L %} aria-current="true"{% endif %}><abbr title="{{ v.name }}">{{ v.short }}</abbr></a></li>{% endfor %}
-  </ul></nav></div>
+  <div class="lang-bar"><div class="container"><nav class="lang-switch" aria-label="{{ T.language }}"><ul role="list">
+    {%- for v in translations %}<li><a href="{{ v.url }}" hreflang="{{ v.code }}" lang="{{ v.code }}"{% if v.code == L %} aria-current="true"{% endif %}><span class="lang-full">{{ v.name }}</span><span class="lang-short" aria-hidden="true">{{ v.short }}</span></a></li>{% endfor %}
+  </ul></nav></div></div>
   {%- endif %}
   <div class="container site-header-inner">
     {# The name of the project, without GoodPlanet's logo: with that logo the site looked like GoodPlanet's own website (Luc via Tine, 5 October 2026).

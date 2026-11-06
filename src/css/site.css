@@ -201,17 +201,24 @@ a, button, summary, label { -webkit-tap-highlight-color: transparent; }
 .brand:hover { color: var(--deep-hover); }
 /* A long name (the French and Dutch names) stands on two lines beside the full menu, so the menu still fits */
 
-/* The language switcher, top right above the name and the menu (Tine, file 88): EN · FR · NL, the current one bold and
-   underlined. Each link is 44 px high to tap, pulled up so the header does not grow more than needed. */
-.lang-switch-row { display: flex; justify-content: flex-end; margin-bottom: -18px; }
-@media (min-width: 960px) { .lang-switch-row { margin-bottom: -26px; } }
+/* The language switcher: a narrow dark blue bar across the top of every page, the languages on the right (Tine, file 96,
+   6 November 2026; before, small links above the menu). English · Français · Nederlands, on a phone EN · FR · NL. The
+   current one bold and underlined. Each link is 40 px high on a computer, 44 px on a phone, to tap. White on --deep-hover: 7.2:1. */
+.lang-bar { background: var(--deep-hover); color: var(--white); }
+.lang-bar .container { display: flex; justify-content: flex-end; }
 .lang-switch ul { display: flex; margin: 0; padding: 0; list-style: none; }
-.lang-switch li + li::before { content: "\00b7"; color: var(--grey); padding-inline: 2px; }
+.lang-switch li + li::before { content: "\00b7"; color: rgba(255, 255, 255, 0.6); padding-inline: 2px; }
 .lang-switch li { display: flex; align-items: center; }
-.lang-switch a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 6px; font-size: var(--fs-small); color: var(--water-ink); text-decoration: none; }
-.lang-switch a:hover { text-decoration: underline; }
-.lang-switch a[aria-current] { font-weight: 700; color: var(--heading); text-decoration: underline; text-underline-offset: 4px; }
-.lang-switch abbr { text-decoration: none; }
+.lang-switch a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px; font-size: var(--fs-small); color: var(--white); text-decoration: none; }
+.lang-switch li:last-child a { margin-right: -8px; }
+.lang-switch a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lang-switch a[aria-current] { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.lang-switch .lang-full { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }   /* read out on a phone, shown from 600 px */
+@media (min-width: 600px) {
+  .lang-switch a { min-height: 40px; }
+  .lang-switch .lang-full { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .lang-switch .lang-short { display: none; }
+}
 
 .nav-toggle {
   width: 44px; height: 44px; margin-right: -8px; padding: 0; border: 0; background: none; cursor: pointer;
