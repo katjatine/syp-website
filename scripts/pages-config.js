@@ -58,7 +58,7 @@ const heroFields = (extra = []) => [
   txt("lede", "Intro", { description: "The larger text under the title." }),
   photo("photo", "Photo at the top", { description: "A .jpg or .png, only with the consent of the people on it, and never one where a full name can be read." }),
   str("alt", "What is on that photo", { description: "One sentence for people who cannot see it." }),
-  select("photoShape", "Shape of that photo (optional)", [{ name: "free", label: "Free, wavy shape with a thin line around it" }], { description: "Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners." }),
+  select("photoShape", "Shape of that photo (optional)", [{ name: "free", label: "Free, wavy shape with a thin line around it" }, { name: "rough", label: "Uneven edge, like a cut-out canvas (for a painting or drawing)" }], { description: "Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners." }),
   str("stamp", "Round stamp on that photo (optional)", { description: "Two short parts with · between them: the first over the top, the second under the bottom. For example: Making waves · since 2008" }),
   ...extra,
   txt("description", "Description for search engines", { description: "One or two sentences. Google shows it under the title, and it shows when someone shares the page." }),

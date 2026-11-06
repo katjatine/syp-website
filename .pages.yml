@@ -597,6 +597,8 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+            - name: rough
+              label: Uneven edge, like a cut-out canvas (for a painting or drawing)
         description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
@@ -1193,6 +1195,8 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+            - name: rough
+              label: Uneven edge, like a cut-out canvas (for a painting or drawing)
         description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
@@ -4097,6 +4101,8 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+            - name: rough
+              label: Uneven edge, like a cut-out canvas (for a painting or drawing)
         description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
@@ -4658,6 +4664,8 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+            - name: rough
+              label: Uneven edge, like a cut-out canvas (for a painting or drawing)
         description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English

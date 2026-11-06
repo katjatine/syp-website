@@ -972,6 +972,7 @@ dl.facts { margin-bottom: 0; }
 .hero-photo-wrap.is-free { margin-block: 14px; }   /* the curves stay soft, so faces near the edge are not cut off (Tine) */
 .hero-photo-wrap.is-free img { border-radius: 32% 40% 30% 38% / 38% 30% 40% 32%; outline: 2px solid var(--orange); outline-offset: 6px; }
 @media (min-width: 900px) { .hero-photo-wrap.is-free img { outline-offset: 10px; } }
+.hero-photo-wrap.is-rough img { --rough: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='none'%3E%3Cpath d='M14,22 C60,10 120,18 180,12 C240,6 300,16 352,10 C372,8 388,16 390,34 C394,80 386,130 392,180 C398,226 388,262 386,280 C384,292 370,294 340,290 C280,284 220,294 160,288 C110,284 60,294 28,288 C12,286 8,272 10,250 C14,200 6,150 12,100 C14,70 4,40 14,22 Z'/%3E%3C/svg%3E"); border-radius: 0; -webkit-mask: var(--rough) 0 0 / 100% 100% no-repeat; mask: var(--rough) 0 0 / 100% 100% no-repeat; }   /* a slightly uneven edge, like a cut-out canvas (photoShape: rough; the painting on Timeline, Tine 6 November 2026) */
 .stamp { position: absolute; left: -10px; bottom: -18px; width: 96px; height: 96px; transform: rotate(-12deg); }
 @media (min-width: 900px) { .stamp { left: -34px; bottom: -26px; width: 124px; height: 124px; } }
 .stamp circle { fill: var(--orange); }

@@ -9,6 +9,7 @@ lede: We did not start in 2024. We have been meeting along the Scheldt since 200
 lede_fr: "Nous n'avons pas commencé en 2024. Nous nous retrouvons le long de l'Escaut depuis 2008, et depuis 2012, nous sommes observateurs à la Commission Internationale de l'Escaut, où la France, la Belgique et les Pays-Bas travaillent ensemble sur le fleuve. Une vraie place à la table, pas une simple visite."
 lede_nl: "We zijn niet in 2024 begonnen. Sinds 2008 komen we samen langs de Schelde, en sinds 2012 zijn we waarnemer in de Internationale Scheldecommissie, waar Frankrijk, België en Nederland samenwerken aan de rivier. Een echte plaats aan tafel, geen bezoekje."
 photo: /images/photos/timeline-2011-painted-escaut.jpg
+photoShape: rough
 alt: "A painted canvas from the early years: the word l'escaut, the colours of France, Belgium and the Netherlands, and a blue river running through a heart"
 alt_fr: "Une toile peinte des premières années : le mot l'escaut, les couleurs de la France, de la Belgique et des Pays-Bas, et un fleuve bleu qui traverse un cœur"
 alt_nl: "Een beschilderd doek uit de beginjaren: het woord l'escaut, de kleuren van Frankrijk, België en Nederland, en een blauwe rivier die door een hart stroomt"
