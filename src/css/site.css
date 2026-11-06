@@ -1096,6 +1096,14 @@ dl.facts { margin-bottom: 0; }
 .join-who-text { font-size: var(--fs-article); line-height: 1.6; }
 .join-who-text p { margin: 16px 0 0; }
 .join-who .quote-block { margin-top: 32px; }
+/* Text and quote in one wide colour card (text-and-quote.njk, "asCard"; Exchanges, Before 2025): the text left, the quote
+   right from 900 px, the quote without a card of its own. */
+.tq-card { display: grid; gap: 28px; }
+@media (min-width: 900px) { .tq-card { grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 56px; align-items: center; padding: 48px 48px 40px; } }
+.tq-card .tq-card-text h2 { margin-bottom: 12px; }
+.tq-card .tq-card-text p:last-child { margin-bottom: 0; }
+.tq-card .quote-block.tq-card-quote { padding: 0; background: none; overflow: visible; }
+.tq-card .quote-block.tq-card-quote::before { display: none; }
 /* As a colour card (with a name), like the quotes on Youth voices */
 .quote-block.colour-card { border-radius: 24px; padding: 44px 24px 24px; }
 @media (min-width: 900px) { .quote-block.colour-card { padding: 44px 32px 32px; } }

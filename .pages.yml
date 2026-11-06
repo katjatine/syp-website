@@ -1637,6 +1637,10 @@ content:
                   regex: ^(?![\s\S]*\[TODO)[^<>]*$
                   message: No "[TODO" and no < or > please.
                 description: Links to /page/#name jump here. Leave as it is.
+              - name: asCard
+                label: One wide colour card
+                type: boolean
+                description: Heading, text and quote together in one card in the colour of the quote. Good for a short text.
               - name: classes
                 label: Spacing (leave as it is)
                 type: select
@@ -2307,6 +2311,10 @@ content:
                   regex: ^(?![\s\S]*\[TODO)[^<>]*$
                   message: No "[TODO" and no < or > please.
                 description: Links to /page/#name jump here. Leave as it is.
+              - name: asCard
+                label: One wide colour card
+                type: boolean
+                description: Heading, text and quote together in one card in the colour of the quote. Good for a short text.
               - name: classes
                 label: Spacing (leave as it is)
                 type: select

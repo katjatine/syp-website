@@ -56,5 +56,5 @@ blocks:
       source: Press release, 2013
       source_fr: "Communiqué de presse, 2013"
       source_nl: "Persbericht, 2013"
-    classes: split has-aside exchanges-before
+    asCard: true
 ---

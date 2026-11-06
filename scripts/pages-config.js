@@ -80,7 +80,7 @@ const BLOCKS = {
   "trip-band": { label: "Centred call with a sailing boat", fields: [str("heading", "Heading", { description: "Two short sentences break nicely between them." }), md("text", "Text")] },
   "text-and-quote": {
     label: "Text with a quote beside it",
-    fields: [str("heading", "Heading"), md("text", "Text"), arrowLink(), quote(), str("anchor", "Name for links to this block (optional)", { description: "Links to /page/#name jump here. Leave as it is." }), select("classes", "Spacing (leave as it is)", [{ name: "page-block join-who", label: "As on Join" }, { name: "split has-aside exchanges-before", label: "As on Exchanges" }]), bool("fullWidth", "Everything over the full width, one under the other")],
+    fields: [str("heading", "Heading"), md("text", "Text"), arrowLink(), quote(), str("anchor", "Name for links to this block (optional)", { description: "Links to /page/#name jump here. Leave as it is." }), bool("asCard", "One wide colour card", { description: "Heading, text and quote together in one card in the colour of the quote. Good for a short text." }), select("classes", "Spacing (leave as it is)", [{ name: "page-block join-who", label: "As on Join" }, { name: "split has-aside exchanges-before", label: "As on Exchanges" }]), bool("fullWidth", "Everything over the full width, one under the other")],
   },
   journey: {
     label: "Steps along a small river",
