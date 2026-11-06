@@ -70,7 +70,7 @@ whatPoints:
     text: Our recommendations go to the International Scheldt Commission, where the three countries work on the river together.
     text_fr: Nos recommandations vont à la Commission Internationale de l'Escaut, où les trois pays travaillent ensemble sur le fleuve.
     text_nl: Onze aanbevelingen gaan naar de Internationale Scheldecommissie, waar de drie landen samen werken aan de rivier.
-  - icon: handshake
+  - icon: goodplanet-heart
     lead: Run by [GoodPlanet Belgium](https://www.goodplanet.be),
     lead_fr: Porté par [GoodPlanet Belgium](https://www.goodplanet.be),
     lead_nl: Georganiseerd door [GoodPlanet Belgium](https://www.goodplanet.be),

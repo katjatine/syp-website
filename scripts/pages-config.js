@@ -36,7 +36,7 @@ const list = (field, extra = {}) => ({ ...field, list: true, ...extra });
 const obj = (name, label, fields, extra = {}) => ({ name, label, type: "object", fields, ...extra });
 const select = (name, label, values, extra = {}) => ({ name, label, type: "select", options: { values }, ...extra });
 
-const LUCIDE = ["route", "landmark", "flag", "footprints", "sparkles", "megaphone", "handshake", "headphones", "sprout", "sailboat", "scroll-text", "user-plus", "laptop", "lightbulb", "search"];
+const LUCIDE = ["route", "landmark", "flag", "footprints", "sparkles", "megaphone", "handshake", "goodplanet-heart", "headphones", "sprout", "sailboat", "scroll-text", "user-plus", "laptop", "lightbulb", "search"];
 const LINE = ["voice", "countries", "explore", "care", "sun", "skills", "people", "fish", "dam", "parkWater", "route", "megaphone", "video", "waves", "droplet", "scale"];
 const TONES = ["lime", "orange", "pink", "green", "blue"];
 const ACCENTS = ["orange", "green", "pink", "lime"];
