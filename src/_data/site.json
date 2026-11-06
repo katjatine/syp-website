@@ -1,0 +1,82 @@
+{
+  "name": "Scheldt Youth Parliament",
+  "shortName": "SYP",
+  "description": "Young people from France, Belgium and the Netherlands explore the Scheldt together and advise the International Scheldt Commission. By GoodPlanet Belgium.",
+  "url": "https://goodplanet-syp.be",
+  "shareImage": "/images/brand/share-ghent-2022.jpg",
+  "shareImageAlt": "About twenty participants laughing and waving by a canal in Ghent",
+  "alternateNames": ["SYP", "Schelde Jongeren Parlement", "Schelde Jongerenparlement", "Parlement des Jeunes de l'Escaut", "Parlement des Jeunes Citoyens de l'Escaut"],
+  "_alternateNamesNote": "alternateNames: other names people may search for (the Dutch and French names on the key visual and in the International Scheldt Commission's papers). Search engines read them from the structured data on the homepage; visitors do not see this list.",
+  "_shareNote": "url: the address of the site, without a slash at the end. Link previews (Teams, WhatsApp, LinkedIn) need it, so change it when the domain changes. shareImage: the picture in those previews, 1200 x 630 px (Tine, file 80). News posts and exchanges show their own photo instead.",
+  "contactEmail": "r.loubert@goodplanet.be",
+  "joinFormUrl": "",
+  "goatcounterCode": "goodplanet",
+  "goatcounterHosts": [
+    "goodplanet-syp.netlify.app",
+    "goodplanet-syp.be"
+  ],
+  "_goatcounterNote": "goatcounterCode: the code of the GoatCounter account (the part before .goatcounter.com). Empty: nothing is counted and no script loads. goatcounterHosts: the only addresses where visits count (www. is ignored), so local work and other copies stay out of the figures. Clicks are counted on the Join buttons (data-goatcounter-click); the referrer of a click is the page it came from.",
+  "social": {
+    "facebook": "https://www.facebook.com/ScheldtYouthParliament",
+    "instagram": "https://www.instagram.com/goodplanetbelgium/",
+    "linkedin": "https://www.linkedin.com/company/goodplanet-belgium"
+  },
+  "nav": [
+    {
+      "label": "Exchanges",
+      "url": "/exchanges/"
+    },
+    {
+      "label": "News",
+      "url": "/news/"
+    },
+    {
+      "label": "Recommendations",
+      "url": "/recommendations/"
+    },
+    {
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "label": "Partners",
+      "url": "/partners/"
+    }
+  ],
+  "_navNote": "nav: the main menu, kept short (Join comes after it as a button). The other pages are in footerNav. The footer shows the GoodPlanet logo, then nav and Join, then footerNav.",
+  "footerNav": [
+    {
+      "label": "Contact",
+      "url": "/join/#contact"
+    },
+    {
+      "label": "Timeline",
+      "url": "/timeline/"
+    },
+    {
+      "label": "Go with the flow",
+      "url": "/go-with-the-flow/"
+    },
+    {
+      "label": "Reports",
+      "url": "/reports/"
+    },
+    {
+      "label": "The Scheldt",
+      "url": "/the-scheldt/"
+    }
+  ],
+  "joinLabel": "Join",
+  "joinUrl": "/join/",
+  "disclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or JINT. Neither the European Union nor JINT can be held responsible for them.",
+  "showCandidateQuotes": false,
+  "_note": "showCandidateQuotes: set to false before publishing to hide the candidate quotes block and the 'Candidate quote, source' lines in one go.",
+  "noindex": false,
+  "_noindexNote": "noindex: true keeps search engines out (preview). Set to false when the site goes live on its real domain: the meta tag, robots.txt and the X-Robots-Tag header (src/headers.njk) follow automatically.",
+  "pincode": "",
+  "_pincodeNote": "pincode: the PIN code that protects the preview (letters or digits, no quotes). Leave empty (\"\") to remove the PIN gate at the next publication.",
+  "showPhotoCaptions": false,
+  "_showPhotoCaptionsNote": "showPhotoCaptions: false shows photo captions only when a photo is opened large. true also shows them under the photos in the galleries.",
+  "editEmail": "t.driessen@goodplanet.be",
+  "_editNote": "editEmail: where edit-mode suggestions go (the pencil in the footer of About). Send stores them in Netlify Forms (form 'edit-suggestions', with the JSON file) and then opens a mail to this address in the sender's own mail program, with the list in it (Netlify's own notification mail needs the Pro plan; Tine, file 68). Also used for the fallback when sending fails."
+}

@@ -1,0 +1,6 @@
+{#- Reasons as colour cards (Join): a heading and the cards (blocks/reasons.njk). Each card: title, a line icon
+    (lib/line-icons.js), text and an optional photo, which makes the card wide. -#}
+<section class="page-block">
+  <h2 class="block-heading">{{ b.heading }}</h2>
+  {% set reasons = b.items %}{% include "blocks/reasons.njk" %}
+</section>

@@ -1,0 +1,13 @@
+# Netlify-configuratie van de SYP-website.
+# Netlify bouwt en publiceert zelf bij elke wijziging op main in GitHub (ook elke opslag in Pages CMS).
+[build]
+  # Eerst de foto's die in de webeditor (Pages CMS) opgeladen zijn omzetten naar webfoto's, dan nakijken of elk
+  # bestand nog bij de editor past, dan de site bouwen. Faalt een stap, dan blijft de vorige versie online.
+  command = "npm run images && npm run check-editor && npm run build"
+  publish = "_site"
+  # Pincodepoort (gegenereerd bij elke bouw uit netlify/pincode-poort.js, zie site.json "pincode").
+  # Staat de pincode leeg, dan bestaat deze map niet en is er geen poort.
+  edge_functions = "netlify/edge-functions"
+
+[build.environment]
+  NODE_VERSION = "22"

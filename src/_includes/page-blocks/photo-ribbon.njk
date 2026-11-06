@@ -1,0 +1,3 @@
+{#- The moving strip of photos (blocks/photo-ribbon.njk): each item a photo, year, place and alt text, oldest first.
+    The photos open large: the page needs "lightbox: true" (in its .11tydata.js file). -#}
+{% set ribbonItems = b.items %}{% include "blocks/photo-ribbon.njk" %}

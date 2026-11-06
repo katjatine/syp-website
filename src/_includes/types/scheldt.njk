@@ -1,0 +1,70 @@
+{# The Scheldt page (/the-scheldt/): the river itself, from the source to the sea, and why it needs young people.
+   Everything comes from the front matter of src/the-scheldt.md; linked from About, the Timeline note and the footer, not from the main menu. #}
+<section class="container page-hero">
+  <div class="page-hero-grid">
+    <div>
+      {% if eyebrow %}<div class="eyebrow">{{ eyebrow }}</div>{% endif %}
+      <h1>{{ headline or title }}</h1>
+      <p class="lead">{{ lede }}</p>
+    </div>
+    <div class="page-hero-photo">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true, class: "photo-wave-edge" } %}</div>
+  </div>
+</section>
+
+{# The wave above the figures sways, as on the homepage (Tine, file 63, point 10); a still wave for people who ask for less motion #}
+{% swayWave "var(--deep)" %}
+<section class="figures" aria-label="{{ T.scheldtInFigures }}">
+  <div class="container figures-grid">
+    {% for f in figures %}
+    <div><div class="figure-number">{{ f.number }}</div><div class="figure-label">{{ f.label }}</div></div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="container section" id="down-the-river">
+  <div class="section-head-inline journey-head">
+    <h2>{{ journey.title }}</h2>
+    <p class="lead measure">{{ journey.intro }}</p>
+  </div>
+  <div class="journey-river">
+    <div class="journey-river-map">{% scheldtJourney journey.stops, journey.borders, journey.mapLabel %}</div>
+    <ol class="journey-stops" role="list">
+      {% for s in journey.stops %}
+      <li class="journey-stop">
+        <span class="journey-stop-number" aria-hidden="true">{{ loop.index }}</span>
+        <div>
+          <div class="label">{{ s.country }}</div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+          {% if s.we %}<p class="journey-stop-we"><span class="sticker sticker-lime">{{ T.weWereHere }}</span> {% if s.url %}<a href="{{ s.url }}">{{ s.we }}</a>{% else %}{{ s.we }}{% endif %}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section bg-foam" id="at-stake">
+  <div class="container">
+    <div class="section-head-inline journey-head">
+      <h2>{{ stakes.title }}</h2>
+      <p class="lead measure">{{ stakes.intro }}</p>
+    </div>
+    <div class="card-grid">
+      {% for c in stakes.cards %}
+      <div class="card-soft colour-card reco">
+        <div class="reco-head"><span class="label">{{ c.label }}</span>{% lineIcon c.icon, "reco-icon" %}</div>
+        <h3>{{ c.title }}</h3>
+        <p style="font-size:var(--fs-body);line-height:1.55;margin:0 0 16px">{{ c.text }}</p>
+        <a class="link-arrow" href="{{ c.url }}" style="margin-top:auto">{{ c.linkLabel }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="container journey-sources">
+  <p>{{ sources | markdownInline | safe }}</p>
+</section>
+
+{% include "blocks/join-cta.njk" %}

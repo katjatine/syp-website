@@ -1,0 +1,24 @@
+{# Photo gallery. Set "galleryItems" before including this block.
+   Each item: photo (name in src/images/photos, without ending), alt, caption.
+   Every photo keeps its own shape, nothing is cut off. Captions show when a photo is opened large;
+   under the photos only if site.showPhotoCaptions is true.
+   The dashes inside the tags trim the empty lines around them: on a Markdown page an empty line would end the HTML,
+   and Markdown would then wrap the figures in stray paragraphs. #}
+{% if galleryItems and galleryItems.length -%}
+<div class="gallery">
+  {%- for row in galleryItems | galleryRows %}
+  <div class="gallery-row"{% if row.maxWidth %} style="max-width: {{ row.maxWidth }}px"{% endif %}>
+    {%- for g in row.items %}
+    <figure class="gallery-item" style="--r: {{ g.ratio }}">
+      <a class="lightbox-link" href="/images/photos/{{ g.photo | photoSlug }}.jpg" data-caption="{{ g.caption }}">
+        {% photo g.photo, g.alt, { sizes: "(min-width: 700px) 600px, 100vw" } %}<span class="visually-hidden">{{ T.viewLarger }}</span>
+      </a>
+      {%- if g.caption and site.showPhotoCaptions %}
+      <figcaption>{{ g.caption }}</figcaption>
+      {%- endif %}
+    </figure>
+    {%- endfor %}
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}

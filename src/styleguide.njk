@@ -1,0 +1,353 @@
+---
+title: Style guide
+description: The design system of the Scheldt Youth Parliament website, for checking the build against the design.
+eleventyExcludeFromCollections: true
+type: raw
+lightbox: true
+noindex: true
+# The map in "One river, three countries" below uses the same data as About: src/_data/countriesMap.js.
+# Do not put a countriesMap in this front matter: Eleventy would merge it with that file and draw the borders twice.
+---
+<section class="container page-hero">
+  <div class="eyebrow">Style guide</div>
+  <h1>The design system in code</h1>
+  <p class="lead measure">This page shows every building block of the site, in GoodPlanet's house style. It is not linked from the menu. Use it to check colours, type, buttons, waves, cards and the river timeline.</p>
+</section>
+
+<section class="container" style="padding-bottom: var(--section)">
+  <div class="split">
+    <h2>Palette</h2>
+    <div>
+      <div class="sg-swatches">
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#1895D3"></div><strong>GoodPlanet blue</strong><span>#1895D3</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#1376A7"></div><strong>Blue, for headings, text and surfaces</strong><span>#1376A7</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#0D5173"></div><strong>Blue, hover</strong><span>#0D5173</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#494132"></div><strong>Dark brown-grey</strong><span>#494132</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#2E2B26"></div><strong>Ink</strong><span>#2E2B26</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#675F55"></div><strong>Grey text</strong><span>#675F55</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#D1EAF6"></div><strong>Mist</strong><span>#D1EAF6</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#EDF7FB"></div><strong>Foam</strong><span>#EDF7FB</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#AFCA14"></div><strong>Lime</strong><span>#AFCA14</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#E9860D"></div><strong>Orange</strong><span>#E9860D</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#E72D52"></div><strong>Pink</strong><span>#E72D52</span></div>
+        <div class="sg-swatch"><div class="sg-swatch-color" style="background:#29AF8A"></div><strong>Green</strong><span>#29AF8A</span></div>
+      </div>
+      <p class="sg-note" style="margin-top:20px">GoodPlanet's house style (Huisstijlgids 2025). GoodPlanet blue for waves, rivers, dots and large numbers; its darker variant #1376A7 for headings, links and buttons. The dark brown-grey #494132 marks the first label of Then and now. The four other secondary colours are accents only: the bars under the key figures and on the reasons to join, and the line icons.</p>
+      <p class="sg-note">One adjustment for accessibility: GoodPlanet blue #1895D3 on white has a contrast of 3.3 to 1, enough for large text and shapes but too low for small text. Links, labels, buttons and the blue surfaces with white text use a darker GoodPlanet blue, #1376A7 (5.0 to 1). The secondary colours are too light for any text.</p>
+      <table class="sg-table">
+        <tr><th>Combination</th><th>Contrast</th><th>Result</th></tr>
+        <tr><td>Ink on white</td><td>14.1 to 1</td><td>Passes</td></tr>
+        <tr><td>Headings on white</td><td>5.0 to 1</td><td>Passes</td></tr>
+        <tr><td>Grey text on white</td><td>6.3 to 1</td><td>Passes</td></tr>
+        <tr><td>Grey text on Foam</td><td>5.8 to 1</td><td>Passes</td></tr>
+        <tr><td>Blue for text on white</td><td>5.0 to 1</td><td>Passes</td></tr>
+        <tr><td>Blue for text on Foam</td><td>4.6 to 1</td><td>Passes</td></tr>
+        <tr><td>White on blue surfaces (footer, cards, key figures)</td><td>5.0 to 1</td><td>Passes</td></tr>
+        <tr><td>GoodPlanet blue #1895D3 on white</td><td>3.3 to 1</td><td>Large text and shapes only</td></tr>
+        <tr><td>Lime, orange, pink, green on white</td><td>1.9 to 4.3 to 1</td><td>Shapes only, never text</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom: var(--section)">
+  <div class="split">
+    <h2>Type</h2>
+    <div class="stack">
+      <div>
+        <h1 style="font-size: var(--fs-h1)">Young people, one river, three countries.</h1>
+        <p class="sg-note" style="margin-top:12px">Lato Bold, homepage title, 64 px on desktop and 38 px on a phone. Other pages use 58 to 36 px.</p>
+      </div>
+      <div>
+        <h2>What is the SYP?</h2>
+        <p class="sg-note" style="margin-top:12px">Lato Bold, section title, 42 to 30 px.</p>
+      </div>
+      <div>
+        <h3>The river so far</h3>
+        <p class="sg-note" style="margin-top:12px">Lato Bold, small title, 24 to 20 px.</p>
+      </div>
+      <div>
+        <p class="lead measure">Lato Regular for the lead paragraph, 21 to 18 px. You explore the Scheldt with people your age from three countries, meet the ones who manage it, and hand your recommendations to the International Scheldt Commission.</p>
+        <p class="article">Lato Regular for article text, 20 to 17 px, line height 1.6. Ghent knows what water does when it rises. We started with the question the city asks itself every winter: how do you keep a city dry without walling off its rivers?</p>
+        <p class="text-grey" style="font-size: var(--fs-small)">Grey text, 15 px, for captions and secondary lines.</p>
+        <p><span class="label">Label, 14 px, Water for text</span></p>
+        <p><span class="todo">[TODO] notes look like this, in monospace, until the real content arrives</span></p>
+      </div>
+      <div class="pull-quote"><p>The river does not stop at the border, and neither do its problems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom: var(--section)">
+  <div class="split">
+    <h2>Spacing and shapes</h2>
+    <div class="stack">
+      <p class="sg-note">8 px grid. Content width 1200 px. Section padding 112 px on desktop, 64 px on a phone. Text columns stay under 60 characters. Pill buttons. Photos and cards get 20 to 28 px corners. One wave shape, used as a section divider and as the river timeline, nowhere else.</p>
+      <div class="sg-row">
+        <a class="btn btn-primary" href="#">Join the next group</a>
+        <a class="btn btn-secondary" href="#">See what we did</a>
+        <a class="btn btn-accent" href="#">Youth voices</a>
+        <a class="btn btn-small" href="#">See the full timeline</a>
+        <div class="sg-shape"></div>
+      </div>
+      <div class="sg-row">
+        <a class="link-arrow" href="#">About the project</a>
+        <a class="link-back" href="#" style="margin:0">All exchanges</a>
+      </div>
+      {% waveMark %}
+      <p class="sg-note">Double wave marks, centred above and below quotes, like the two strokes of a quotation mark; the one below is mirrored. Keyboard focus shows a 3 px Water outline, press Tab to see it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom: var(--section-sm)">
+  <div class="split">
+    <h2>Waves and the blue band</h2>
+    <p class="sg-note">The wave divider fills the colour of the section that follows. Below, the band with key figures, as on the Exchanges page and The Scheldt, each with a bar in one of GoodPlanet's secondary colours. The homepage band shows why to join instead (src/_data/whyJoin.json).</p>
+  </div>
+</section>
+{% wave "var(--deep)" %}
+<section class="figures">
+  <div class="container figures-grid">
+    <div><div class="figure-number">40</div><div class="figure-label">participants</div></div>
+    <div><div class="figure-number">9</div><div class="figure-label">nationalities</div></div>
+    <div><div class="figure-number">4</div><div class="figure-label">cross-border exchanges</div></div>
+    <div><div class="figure-number">2012</div><div class="figure-label">observer at the International Scheldt Commission since</div></div>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="split" style="margin-bottom: var(--block)">
+    <h2>Cards</h2>
+    <p class="sg-note">Four card styles: the small timeline card, the soft Foam card for recommendations, the outlined quote card and the dark call to action.</p>
+  </div>
+  <div class="card-grid" style="margin-bottom: var(--block)">
+    <div>
+      <div class="mini-card" style="max-width:234px"><div class="river-date">May 2026</div><div class="mini-card-title">Ghent, Belgium</div><div class="mini-card-text">Exchange 4, floods and a letter to policymakers.</div></div>
+      <div class="mini-card is-upcoming" style="max-width:234px;margin-top:12px"><div class="mini-card-title">Your turn next</div><div class="mini-card-text">A new group of 16 to 26 year olds.</div></div>
+    </div>
+    <div class="card-soft">
+      <span class="label">Group 1</span>
+      <h3>[TODO theme]</h3>
+      <ul class="card-list">
+        <li>[TODO] First recommendation of this group.</li>
+        <li>[TODO] Second recommendation of this group.</li>
+        <li>[TODO] Third recommendation of this group.</li>
+      </ul>
+    </div>
+    <blockquote class="card-quote">
+      {% waveMark "sm" %}
+      <p>[TODO] One sentence from a participant, taken from the reports, goes here.</p>
+      {% waveMark "sm", "end" %}
+      <cite>First name, France</cite>
+    </blockquote>
+  </div>
+  <div class="card-dark">
+    <div>
+      <h2>Read the letter to policymakers</h2>
+      <p>The full letter and the recommendations of the three groups, as we presented them to the International Scheldt Commission.</p>
+    </div>
+    <a class="btn btn-accent" href="#">Youth voices</a>
+  </div>
+</section>
+
+<section class="bg-foam section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Latest</h2>
+      <a class="link-arrow" href="#">All news</a>
+    </div>
+    <div class="latest">
+      <a class="latest-main" href="#">
+        {% photo "tournai-2026-title-slide", "The title slide of the plenary session projected in the historic hall", { sizes: "(min-width: 900px) 720px, 100vw" } %}
+        <div class="latest-date">June 2026, Tournai</div>
+        <div class="latest-title">We presented our recommendations to the International Scheldt Commission</div>
+        <p class="latest-text">Two years of walking, paddling and debating, brought to the table where the three countries decide.</p>
+      </a>
+      <div class="latest-list">
+        <a class="latest-item" href="#">
+          {% photo "ghent-2026-paddles", "Four participants in life jackets holding red paddles before going on the water", { sizes: "176px" } %}
+          <div class="latest-item-body">
+            <div class="latest-date">May 2026, Ghent</div>
+            <div class="latest-title">Floods, bikes, kayaks and a letter to policymakers</div>
+            <p class="latest-text">Three days in Ghent on how a city lives with rising water.</p>
+          </div>
+        </a>
+        <a class="latest-item" href="#">
+          {% photo "zeeland-2025-kayak-paddles", "Kayak paddles held upright at the misty waterside before the group sets off", { sizes: "176px" } %}
+          <div class="latest-item-body">
+            <div class="latest-date">October 2025, Zeeland</div>
+            <div class="latest-title">Do rivers have rights?</div>
+            <p class="latest-text">A weekend at the water in Zeeland, with kayaks and the Go with the flow game.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="overflow:hidden">
+  <div class="container section-head" style="margin-bottom:4px">
+    <h3>The river so far</h3>
+    <div class="river-legend"><span>So far</span><span class="is-upcoming">Coming up</span></div>
+  </div>
+  {% river timeline, "home" %}
+  <div class="container"><p class="sg-note" style="margin-top:24px">The homepage river: horizontal from 1024 px, vertical below. The first stop, "2008 to 2024", links to the Timeline page.</p></div>
+</section>
+
+<section class="container section-sm">
+  <div class="split" style="margin-bottom: var(--block)">
+    <h2>Photos</h2>
+    <p class="sg-note">Photos are served as WebP with a JPEG fallback, longest side 1600 px, under 200 KB, lazy loaded. A gallery holds 1 to 4 photos and adapts its layout to the number. Click a photo to open it large, with its caption. Alt texts and captions live in the page's front matter.</p>
+  </div>
+  {% set galleryItems = [
+    { photo: "zeeland-2025-group-arms-wide", alt: "A large group of participants on the grass with their arms spread wide", caption: "Thirteen participants, three days, one river" },
+    { photo: "zeeland-2025-kayak-paddles", alt: "Kayak paddles held upright at the misty waterside before the group sets off", caption: "Early start on the water" },
+    { photo: "zeeland-2025-water-game", alt: "The printed board of the water game Go with the flow on a picnic table", caption: "The water goose game, played outdoors for the first time" },
+    { photo: "zeeland-2025-dinner-greenhouse", alt: "Participants eating together at a long table in a greenhouse", caption: "Eating together, every evening" }
+  ] %}
+  {% include "blocks/gallery.njk" %}
+</section>
+
+{# The map for "One river, three countries" on the About page (Tine chose option A on choice page 63, a soft band per country).
+   Same data as on About, in src/_data/countriesMap.js; drawn by lib/scheldt-map.js, styles .countries-map-* in site.css. #}
+<section class="container section-sm" id="countries-map">
+  <div class="split">
+    <h2>One river, three countries</h2>
+    <div>
+      {% scheldtCountries countriesMap %}
+      <p class="sg-note" style="margin-top:16px">{% raw %}{% scheldtCountries countriesMap %}{% endraw %}, with countriesMap from src/_data/countriesMap.js: a soft band per country behind the river, split where the river crosses a border, and what the river is called in each country. Up to 420 px wide, the full column up to 360 px on phones; the smallest text stays 12 px on a 375 px phone. The tints and their contrast ratios are in site.css.</p>
+    </div>
+  </div>
+</section>
+
+{# The photo ribbon for About (Tine, file 63, option A, October 2026): shown here inside a text column, as on About,
+   so you can see it leave the column. On About the list is the "photo-ribbon" block in the front matter of src/project.md. #}
+<section class="container section-sm" id="photo-ribbon">
+  <div class="split" style="margin-bottom: var(--block)">
+    <h2>Photo ribbon</h2>
+    <p class="sg-note">blocks/photo-ribbon.njk with js/ribbon.js. One strip that slides slowly to the left, about 30 px a second, edge to edge of the screen, with the year as a sticker and "Place, year" under each photo. It rests while the mouse or the Tab key is on it, while a photo is open large and while it is off screen; the round button under it pauses it for good. For people who ask for less motion, and without JavaScript, it stands still and can be swiped.</p>
+  </div>
+  <div class="prose">
+    <h2>Come for the river, stay for the friends</h2>
+    <p>Since 2008 we have met in the Belgian Senate, by the water in Zeeland, on a boat in Antwerp and even in Zagreb. Every group is new, and many of us stay friends long after.</p>
+    <a class="link-arrow" href="/timeline/">The timeline since 2008</a>
+    {% set ribbonItems = [
+      { photo: "project-2013-beach", year: 2013, place: "By the sea", alt: "A line of young people walking together along the edge of the sea in low evening sun" },
+      { photo: "zeeland-2018-abbey-group", year: 2018, place: "Middelburg", alt: "A group of young people cheering in the cloister garden of the abbey in Middelburg" },
+      { photo: "antwerp-2019-boat-group", year: 2019, place: "On a boat in Antwerp", alt: "A group of young people on a boat on the Scheldt, with the skyline of Antwerp behind them" },
+      { photo: "ghent-2022-canal-cheering", year: 2022, place: "Ghent", alt: "About twenty participants laughing and waving by a canal in Ghent" },
+      { photo: "zagreb-2023-meadow-group", year: 2023, place: "Zagreb", alt: "Young people from the Scheldt and the Sava youth parliaments together in a meadow by the water in Zagreb" },
+      { photo: "zeeland-2024-beach-clean-up", year: 2024, place: "Beach clean-up, Zeeland", alt: "Four young people cheering on a sunny beach, raising litter grabbers and holding bags of collected rubbish" },
+      { photo: "denain-2025-group-riverbank", year: 2025, place: "Denain to Valenciennes", alt: "The whole group standing together on the riverbank in the sun" },
+      { photo: "zeeland-2025-group-arms-wide", year: 2025, place: "Zeeland", alt: "A group of young people from several countries laughing together on the grass, some with their arms spread wide" },
+      { photo: "ghent-2026-cafe", year: 2026, place: "Ghent", alt: "The group sitting together in a café with green walls, with Filip Watteeuw, deputy mayor of Ghent" },
+      { photo: "ghent-2026-bikes-selfie", year: 2026, place: "Ghent, by bike", alt: "Participants on bicycles in a Ghent street, taking a selfie" }
+    ] %}
+    {% include "blocks/photo-ribbon.njk" %}
+  </div>
+</section>
+
+{# GoodPlanet and water details in use on the site (chosen by Tine on 1 October 2026; brush buttons, torn edges,
+   water level, ripples, riverbank and wavy button edges were shown as options and left out). The classes are in site.css. #}
+<section class="container section" id="goodplanet-touches">
+  <div class="split" style="margin-bottom: var(--block)">
+    <h2>GoodPlanet and water details</h2>
+    <p class="sg-note">Details after goodplanet.be, drawn again for the SYP, plus the wave edge from our own waves. All are in use on the real pages. Every colour pair passes WCAG AA; the ratios are written beside each class in site.css.</p>
+  </div>
+</section>
+<section class="container section">
+  <div class="stack">
+    <div class="split">
+      <h3>Round social icons</h3>
+      <div>
+        {% set socialOnDark = false %}{% include "blocks/social-icons.njk" %}
+        <p class="sg-note" style="margin-top:16px">.social-icons: discs cut a little unevenly, as with scissors, 44 px so they are easy to tap. The name of each network is there for screen readers. On hover the disc turns a little. On a blue surface, such as the footer, they turn white:</p>
+        <div class="bg-deep on-dark" style="margin-top:16px; padding:24px; border-radius: var(--r-md)">
+          {% set socialOnDark = true %}{% include "blocks/social-icons.njk" %}
+        </div>
+      </div>
+    </div>
+
+    <div class="split">
+      <h3>Hand-drawn underline</h3>
+      <div>
+        <div class="sg-row" style="gap: 16px 32px">
+          <a class="link-arrow link-scribble" href="#">About the project</a>
+          <a class="link-arrow link-scribble link-scribble-lime" href="#">All news</a>
+          <a class="link-arrow link-scribble link-scribble-orange" href="#">See the full timeline</a>
+          <a class="link-arrow link-scribble link-scribble-pink" href="#">Youth voices</a>
+          <a class="link-arrow link-scribble link-scribble-green" href="#">All exchanges</a>
+        </div>
+        <p class="sg-note" style="margin-top:16px">.link-scribble on an arrow link, in GoodPlanet blue or with -lime, -orange, -pink or -green. The line is decoration only; the link text stays blue. goodplanet.be has a similar brush line under its "Meer info" links.</p>
+      </div>
+    </div>
+
+    <div class="split">
+      <h3>Sticker labels</h3>
+      <div>
+        <div class="card-grid-2">
+          <div class="has-stickers">
+            <ul class="stickers">
+              <li class="sticker">Exchange 4</li>
+              <li class="sticker sticker-lime">Ghent</li>
+            </ul>
+            {% photo "ghent-2026-paddles", "Four participants in life jackets holding red paddles before going on the water", { sizes: "(min-width: 900px) 360px, 100vw", class: "photo-rounded" } %}
+          </div>
+          <div class="has-stickers card-soft">
+            <ul class="stickers">
+              <li class="sticker sticker-orange">Workshop</li>
+              <li class="sticker sticker-green">Rights of nature</li>
+              <li class="sticker sticker-brown">2025</li>
+            </ul>
+            <h3 style="margin:24px 0 12px">Do rivers have rights?</h3>
+            <p>A weekend at the water in Zeeland, with kayaks and the Go with the flow game.</p>
+          </div>
+        </div>
+        <p class="sg-note" style="margin-top:16px">.stickers inside .has-stickers: small labels that hang over the corner of a photo or card, like the category labels on goodplanet.be. In blue, -lime, -orange, -green and -brown; not in pink, because white on pink is too weak for small text.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container section" id="water-touches">
+  <div class="stack">
+    <div class="split">
+      <h3>Wave edge on photos</h3>
+      <div>
+        <div class="card-grid-2">
+          <figure style="margin:0">
+            {% photo "ghent-2026-bikes-selfie", "Participants on bicycles in a Ghent street, taking a selfie", { class: "photo-wave-edge", sizes: "(min-width: 900px) 330px, 100vw" } %}
+            <figcaption class="sg-note" style="margin-top:8px">.photo-wave-edge, the bottom</figcaption>
+          </figure>
+          <figure style="margin:0">
+            {% photo "denain-2025-towpath", "Participants walking along the towpath beside the Scheldt, one of them pushing a bicycle", { class: "photo-wave-edge-top photo-wave-edge-tide", sizes: "(min-width: 900px) 330px, 100vw" } %}
+            <figcaption class="sg-note" style="margin-top:8px">.photo-wave-edge-top with .photo-wave-edge-tide</figcaption>
+          </figure>
+        </div>
+        <p class="sg-note" style="margin-top:16px">The edge follows the wave between the sections: lively on the left, calm on the right. Only the outer 16 to 28 px are cut away, so nobody in the photo is cut off. The thin line beside it is the tide line, like the high-water mark above the footer; it is optional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-foam section-sm">
+  <div class="container">
+    {% photo "denain-2025-group-riverbank", "The whole group standing together on the riverbank in the sun", { class: "photo-wave-edge-both photo-wave-edge-tide", sizes: "(min-width: 1240px) 1200px, 100vw" } %}
+    <p class="sg-note" style="margin-top:16px">.photo-wave-edge-both with the tide line, on a Foam band: a wide photo that floats between two waves.</p>
+  </div>
+</section>
+
+<section class="container" id="water-buttons" style="padding-bottom: var(--section)">
+  <div class="split">
+    <h2>Buttons</h2>
+    <p class="sg-note">The main button stays GoodPlanet blue; the second button is lime with dark text (7.6 to 1). At rest the buttons are plain; pointing at one brings up a thin layer of water with one long, slow wave in its lower part, which stands still for people who ask for less motion. The other GoodPlanet colours (.btn-tint-pink, -orange, -green) are there if a page needs them.</p>
+  </div>
+  <div class="btn-group" style="margin-top:24px">
+    <a class="btn btn-primary" href="#water-buttons">Join the next group</a>
+    <a class="btn btn-secondary" href="#water-buttons">See what we did</a>
+    <a class="btn btn-tint-orange" href="#water-buttons">Play the game</a>
+    <a class="btn btn-tint-green" href="#water-buttons">Read the letter</a>
+    <a class="btn btn-tint-pink" href="#water-buttons">Youth voices</a>
+  </div>
+</section>

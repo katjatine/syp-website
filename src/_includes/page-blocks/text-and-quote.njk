@@ -1,0 +1,11 @@
+{#- A heading, text and a participant quote beside it on a computer (under the heading on a phone).
+    Join: "Who can join? You can." with Bart; Exchanges: "Before 2025" with Ana.
+    "classes" (hidden in the editor) keeps each page's own spacing; "anchor" is the #name that links jump to.
+    "fullWidth: true" (Join, Tine file 87) puts heading, text and quote one under the other, over the full width. -#}
+<section class="{{ b.classes or 'page-block split has-aside' }}"{% if b.anchor %} id="{{ b.anchor }}"{% endif %}>
+  <h2>{{ b.heading | sentences | safe }}</h2>
+  <div class="{{ 'join-who-text' if b.fullWidth else 'article' }}">
+    {{ b.text | markdown | safe }}{% if b.link and b.link.url %}<p><a class="link-arrow" href="{{ b.link.url }}">{{ b.link.label }}</a></p>
+{% endif %}  </div>
+  {% if b.quote and b.quote.text %}{% set q = b.quote %}{% set qClass = "" if b.fullWidth else "quote-aside" %}{% include "blocks/quote-card.njk" %}{% endif %}
+</section>

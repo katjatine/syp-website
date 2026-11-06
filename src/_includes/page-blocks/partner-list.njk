@@ -1,0 +1,4 @@
+{#- The partner cards (blocks/partner-list.njk), from the page's "partners" list. An optional heading above them.
+    partnerScope is emptied: the top of the page set it to "lead" for the lead partner, and the list shows the others. -#}
+{% if b.heading %}<h2 class="block-heading">{{ b.heading }}</h2>
+{% endif %}{% set partnerScope = "" %}{% include "blocks/partner-list.njk" %}

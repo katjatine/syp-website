@@ -1,0 +1,149 @@
+{# Homepage structure. The texts and photo names come from src/index.md ("Home" in the browser editor); notes on them in src/index.11tydata.js. #}
+<section class="container home-hero">
+  <div>
+    {% if hero.eyebrow %}<div class="eyebrow">{{ hero.eyebrow }}</div>{% endif %}
+    <h1>{{ hero.headline }}</h1>
+    {# Why and what first, then who it is for and what it costs, right above the buttons (designer feedback, 5 October 2026) #}
+    <p class="lead">{{ hero.lede }}</p>
+    {% if hero.forWho %}<p class="hero-for">{{ hero.forWho }}</p>{% endif %}
+    <div class="btn-group">
+      <a class="btn btn-primary" href="{{ hero.button1.url }}">{{ hero.button1.label }}</a>
+      <a class="btn btn-secondary" href="{{ hero.button2.url }}">{{ hero.button2.label }}</a>
+    </div>
+  </div>
+  <picture class="home-hero-visual">
+    <source type="image/webp" srcset="/images/brand/keyvisual.webp">
+    <img src="/images/brand/keyvisual.png" alt="{{ hero.visualAlt }}" width="900" height="900" fetchpriority="high">
+  </picture>
+</section>
+
+{# The wave above the band sways slowly (Tine, file 62); a still wave for people who ask for less motion #}
+{% swayWave "var(--deep)" %}
+{# Why join, in four short points (designer feedback, 5 October 2026: the biggest reasons to join belong in this band). It used
+   to hold four figures (40 participants, 9 nationalities, 4 exchanges, 2012), which said little here and read as if they all
+   belonged to 2012; they moved to the Exchanges page, as the figures of the last group. The points come from
+   src/_data/whyJoin.json, which the join call at the bottom of the page uses too. Each point: the icon of the matching reason
+   on Join, on a disc in one of GoodPlanet's colours (lime, orange, pink, green), a short title and one line.
+   A list, so screen readers hear four points; the heading is for them only, the icons are decoration. #}
+<section class="figures why-band" aria-labelledby="why-title">
+  <h2 class="visually-hidden" id="why-title">{{ T.whyJoin }}</h2>
+  {% set tones = ["lime", "orange", "pink", "green"] %}
+  <ul class="container why-grid" role="list">
+    {% for w in (whyJoin | localize(L)).items %}
+    <li class="why-item">
+      <span class="icon-disc tone-{{ tones[loop.index0 % 4] }} why-icon">{% lineIcon w.icon %}</span>
+      <div>
+        <h3 class="why-title">{{ w.title }}</h3>
+        <p class="why-text">{{ w.text }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="container home-what">
+  <div class="split home-what-split">
+    {# The title is a slogan in two sentences (Tine, file 62, October 2026). Each sentence is kept together (site.css),
+       so in a narrow column "Neither do we." gets a line of its own instead of "borders. Neither do we." #}
+    <h2>{% for s in whatTitle.split(". ") %}<span>{{ s }}{% if not loop.last %}.{% endif %}</span>{% if not loop.last %} {% endif %}{% endfor %}</h2>
+    <div class="article">
+      {# Five points ("whatPoints" in src/index.md; Tine, file 62, October 2026), each with a Lucide icon on a disc in one of
+         GoodPlanet's colours: lime, orange, pink, green in turn, or the point's own "tone" (blue for GoodPlanet itself).
+         The words sit in their own <p>, so edit mode lets people change the text and leaves the icon alone.
+         role="list": Safari drops the list meaning of a list without bullets, as elsewhere on the site.
+         The text under the front matter of src/index.md is not shown here any more. #}
+      <ul class="home-what-points" role="list">
+        {% for p in whatPoints %}
+        <li>
+          <span class="icon-disc tone-{{ p.tone or ['lime', 'orange', 'pink', 'green'][loop.index0 % 4] }}">{% icon p.icon %}</span>
+          <p><strong>{{ p.lead | markdownInline | safe }}</strong> {{ p.text }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+      <a class="link-arrow" href="{{ whatLink.url }}">{{ whatLink.label }}</a>
+    </div>
+    {# The logo the members chose themselves, as a small badge (Facebook version until the original file arrives, recoloured in GoodPlanet blue by Tine's choice, 2 Oct).
+       On a computer it sits under the title, in the left column; on a phone after the text. #}
+    <figure class="logo-badge">
+      <img src="/images/brand/syp-logo.png" alt="{{ T.logoAlt }}" width="463" height="538" loading="lazy">
+    </figure>
+  </div>
+  <div class="home-what-photo">
+    {% photo whatPhoto.photo, whatPhoto.alt, { sizes: "(min-width: 900px) 1320px, 100vw" } %}
+    {% if whatPhoto.note %}<div class="photo-caption">{{ whatPhoto.note }}</div>{% endif %}
+  </div>
+</section>
+
+{# Made by members: things the young people made themselves, from the SYP Facebook page ("madeBy" in src/index.md) #}
+<section class="container home-made">
+  <h2 class="block-heading">{{ madeBy.title }}</h2>
+  {% if madeBy.subtitle %}<p class="lead block-intro">{{ madeBy.subtitle }}</p>{% endif %}
+  <div class="made-grid">
+    {% for m in madeBy.items %}
+    <article class="made-card">
+      {% if m.kind == "podcast" and m.episodes and m.photo %}
+      {# The podcast (Tine, file 62, option A): the label is the site's own sticker, and the play button on the photo is a real
+         link to the first episode, over the whole photo, so a big play button never does nothing. The photo keeps its alt text:
+         it is not inside the link, so the link is named by its own hidden text only. #}
+      <div class="made-visual has-stickers">
+        {% if m.badge %}<div class="stickers"><p class="sticker made-sticker">{% icon "headphones" %}{{ m.badge }}</p></div>{% endif %}
+        {% photo m.photo, m.alt, { sizes: "(min-width: 800px) 400px, 100vw" } %}
+        <a class="made-play" href="{{ m.episodes[0].url }}" rel="noopener"><span class="made-play-disc">{% icon "play" %}</span><span class="visually-hidden">{{ T.play }}{{ m.episodes[0].label }}{{ T.on }}{{ m.platform or "YouTube" }}</span></a>
+      </div>
+      {% elif m.photo %}{% photo m.photo, m.alt, { sizes: "(min-width: 800px) 400px, 100vw" } %}{% endif %}
+      <div class="made-body">
+        <h3>{{ m.title }}</h3>
+        <p>{{ m.text }}</p>
+        {% for l in m.links %}<a class="link-arrow" href="{{ l.url }}" rel="noopener">{{ l.label }}</a>{% endfor %}
+        {# Each episode a button; the hidden part tells screen readers where it goes, after the visible label (WCAG 2.5.3) #}
+        {% if m.episodes %}<div class="made-episodes">{% for e in m.episodes %}<a class="btn made-episode" href="{{ e.url }}" rel="noopener">{% icon "play" %}{{ e.label }}<span class="visually-hidden">{{ T.ofPodcastOn }}{{ m.platform or "YouTube" }}</span></a>{% endfor %}</div>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="bg-foam home-latest">
+  <div class="container">
+    <div class="section-head">
+      <h2>{{ latestTitle or T.latestNews }}</h2>
+      <a class="link-arrow" href="/news/">{{ latestLink or T.allNews }}</a>
+    </div>
+    {% set posts = collections.news | inLang(L) | homeNews %}
+    {# Four posts: the newest big, three beside it with the photo next to the text (Tine, file 62). Each post is one link. Its photo gets an empty alt; aria-labelledby names the link by its title and aria-describedby adds the date, so screen readers hear the title first and not the whole excerpt. #}
+    <div class="latest">
+      {% for post in posts %}
+        {% if loop.first %}
+        <a class="latest-main" href="{{ post.url }}" aria-labelledby="latest-{{ loop.index }}-title" aria-describedby="latest-{{ loop.index }}-date">
+          {% if post.data.photo %}{% photo post.data.photo, "", { sizes: "(min-width: 1100px) 640px, (min-width: 900px) 560px, 100vw" } %}{% endif %}
+          <div class="latest-date" id="latest-{{ loop.index }}-date">{{ post.data.dateLabel or (post.date | monthYear(L)) }}{% if post.data.place %}, {{ post.data.place }}{% endif %}</div>
+          <h3 class="latest-title" id="latest-{{ loop.index }}-title">{{ post.data.title }}</h3>
+          <p class="latest-text">{{ post.data.excerpt }}</p>
+        </a>
+        <div class="latest-list">
+        {% else %}
+        <a class="latest-item" href="{{ post.url }}" aria-labelledby="latest-{{ loop.index }}-title" aria-describedby="latest-{{ loop.index }}-date">
+          {% if post.data.photo %}{% photo post.data.photo, "", { sizes: "(min-width: 1100px) 270px, (min-width: 600px) 240px, 96px" } %}{% else %}<div class="latest-item-nophoto" aria-hidden="true"></div>{% endif %}
+          <div class="latest-item-body">
+            <div class="latest-date" id="latest-{{ loop.index }}-date">{{ post.data.dateLabel or (post.date | monthYear(L)) }}{% if post.data.place %}, {{ post.data.place }}{% endif %}</div>
+            <h3 class="latest-title" id="latest-{{ loop.index }}-title">{{ post.data.title }}</h3>
+            <p class="latest-text">{{ post.data.excerpt }}</p>
+          </div>
+        </a>
+        {% endif %}
+        {% if loop.last %}</div>{% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-river">
+  <div class="container section-head">
+    <h2 class="home-river-title">{{ riverTitle }}</h2>
+    <div class="river-legend"><span>{{ T.soFar }}</span><span class="is-upcoming">{{ T.comingUp }}</span></div>
+  </div>
+  {% river timeline | localize(L), "home" %}
+</section>
+
+{# A next step at the end of the page #}
+{% include "blocks/join-cta.njk" %}

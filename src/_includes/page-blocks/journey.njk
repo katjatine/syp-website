@@ -1,0 +1,8 @@
+{#- Steps drawn as stops along a small river (blocks/journey.njk): Join "How it works", Go with the flow "How to play".
+    Each step: title, text, an optional icon (lib/lucide-icons.js) and optional reeds or gulls ("nature"). -#}
+<section class="page-block"{% if b.anchor %} id="{{ b.anchor }}"{% endif %}>
+  <h2 class="block-heading">{{ b.heading }}</h2>
+  {% if b.intro %}<p class="lead block-intro">{{ b.intro }}</p>{% endif %}
+  {% set steps = b.steps %}{% include "blocks/journey.njk" %}
+  {% if b.note %}<p class="block-note">{{ b.note | markdownInline | safe }}</p>{% endif %}
+</section>

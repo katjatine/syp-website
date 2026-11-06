@@ -1,0 +1,39 @@
+{
+  "_note": "Width and height of each logo file in src/images/logos, so the page does not shift while logos load (partner-list.njk)",
+  "aeap-bloc-marque.png": [
+    326,
+    120
+  ],
+  "drinkablerivers.png": [
+    720,
+    185
+  ],
+  "eu-co-funded.png": [
+    685,
+    147
+  ],
+  "goodplanet.svg": [
+    229,
+    119
+  ],
+  "goodplanet-white.svg": [
+    229,
+    119
+  ],
+  "hz.svg": [
+    151,
+    39
+  ],
+  "isc.svg": [
+    444,
+    455
+  ],
+  "jint.svg": [
+    228,
+    168
+  ],
+  "joinforwater.svg": [
+    92,
+    70
+  ]
+}

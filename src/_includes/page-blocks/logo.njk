@@ -1,0 +1,3 @@
+{#- A partner's logo above its story. "wide" for a logo with small letters, as wide as the Partners card allows (the Agence de l'Eau). -#}
+{%- set logoFile = b.logo | fileName %}{% set sz = logoSizes[logoFile] %}
+<img class="partner-page-logo{% if b.wide %} partner-page-logo-wide{% endif %}" src="/images/logos/{{ logoFile }}"{% if b.logo2x %} srcset="/images/logos/{{ logoFile }} 1x, /images/logos/{{ b.logo2x | fileName }} 2x"{% endif %} alt="{{ b.alt }}"{% if sz %} width="{{ sz[0] }}" height="{{ sz[1] }}"{% endif %}>

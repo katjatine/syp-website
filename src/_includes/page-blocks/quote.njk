@@ -1,0 +1,2 @@
+{#- A quote as a colour card, on its own (the Agence de l'Eau's page; Tine, file 85). -#}
+{% if b.quote and b.quote.text %}{% set q = b.quote %}{% set qClass = "" %}{% include "blocks/quote-card.njk" %}{% endif %}

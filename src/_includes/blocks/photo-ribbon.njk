@@ -1,0 +1,39 @@
+{# A ribbon of photos that slowly slides to the left, edge to edge (About; Tine, file 63, option A, October 2026).
+   It replaced "Then and now" and the photos of "Earlier rounds". Set "ribbonItems" before including this block:
+     {% set ribbonItems = friends %}{% include "blocks/photo-ribbon.njk" %}
+   Each item: photo (name in src/images/photos, without ending, or its path as the browser editor writes it), year, place, alt. Oldest first.
+   Put it in the text column itself (in .prose or straight in a .container), not inside a grid such as .river-pair or
+   .card-pair: site.css takes it out of the column to the edges of the screen, measured from the edge of the column.
+   Every photo keeps its own shape at one height. The year hangs on it as a sticker, in turn lime, orange, green, blue and
+   brown; "Place, year" is written under it and shows again when the photo opens large.
+   Without JavaScript, or for people who ask for less motion, it is a strip to swipe, like a gallery on a phone.
+   js/ribbon.js makes it slide (and adds the Pause/Play button); the page needs "lightbox: true" for the large photos.
+   The dashes inside the tags trim the empty lines around them: on a Markdown page an empty line would end the HTML. #}
+{%- set stickerTones = ["sticker-lime", "sticker-orange", "sticker-green", "", "sticker-brown"] -%}
+{%- if ribbonItems and ribbonItems.length -%}
+<div class="ribbon" data-ribbon>
+<div class="ribbon-window">
+<div class="ribbon-track">
+<ul class="ribbon-list" role="list">
+{%- for item in ribbonItems %}
+{#- The browser editor writes a path ("/images/photos/name.jpg"); photoSlug makes it the name again #}
+{%- set slug = item.photo | photoSlug %}
+{%- set meta = photos[slug] %}
+{%- set ratio = ((meta.width / meta.height) if meta else 1.5) | round(4) %}
+{%- set label = item.place + ", " + item.year %}
+{%- set tone = stickerTones[loop.index0 % 5] %}
+{#- The photo is 230 px high on a computer and 180 px on a phone (site.css), so the browser picks a file of the right size #}
+{%- set sizes = "(min-width: 900px) " + ((230 * ratio) | round) + "px, calc((140px + 10vw) * " + ratio + ")" %}
+<li class="ribbon-item" style="--r: {{ ratio }}"><figure class="ribbon-figure has-stickers">
+<ul class="stickers" aria-hidden="true"><li class="sticker{% if tone %} {{ tone }}{% endif %}">{{ item.year }}</li></ul>
+<a class="lightbox-link ribbon-link" href="/images/photos/{{ slug }}.jpg" data-caption="{{ label }}">{% photo slug, item.alt, { sizes: sizes } %}<span class="visually-hidden">{{ T.openLarger }}</span></a>
+<figcaption class="ribbon-caption">{{ label }}</figcaption>
+</figure></li>
+{%- endfor %}
+</ul>
+</div>
+</div>
+<div class="ribbon-controls" hidden><button class="ribbon-toggle" type="button" aria-label="{{ T.pauseRibbon }}">{% icon "pause", "ribbon-icon-pause" %}{% icon "play", "ribbon-icon-play" %}</button></div>
+</div>
+<script src="/js/ribbon.js" defer></script>
+{%- endif %}

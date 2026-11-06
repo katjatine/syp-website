@@ -1,0 +1,10 @@
+{#- One participant quote as a colour card, like the quote on exchange pages. Set q first (text, name, meta, accent, source).
+    "accent" is orange, green, pink or lime (green if empty). Add class "quote-aside" through qClass to stand beside a .split. -#}
+{%- set accent = q.accent or "green" -%}
+<blockquote class="quote-block colour-card {{ qClass }}" style="--accent: var(--{{ accent }}){% if accent == 'pink' %}; --tint: 7%{% elif accent == 'lime' %}; --line: color-mix(in srgb, var(--lime) 80%, var(--ink)){% endif %}">
+  {% waveMark "sm" %}
+  <p>{{ q.text }}</p>
+  {% waveMark "sm", "end" %}
+  <footer class="quote-person"><cite>{{ q.name }}</cite>{% if q.meta %}<span class="quote-meta">{{ q.meta }}</span>{% endif %}</footer>
+  {% if q.source and site.showCandidateQuotes %}<div class="quote-source">{{ q.source }}</div>{% endif %}
+</blockquote>

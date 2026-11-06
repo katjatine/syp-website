@@ -1,0 +1,19 @@
+{#- Contact and social media (Join, #contact). The address comes from the Join details (site.json contactEmail),
+    the social links from site.json. "intro" replaces the greeting "Hi, salut, hoi. Questions? Write to us." -#}
+<section class="page-block join-contact" id="contact">
+  <div>
+    <h2>{{ T.contact }}</h2>
+    {% if b.intro %}<p>{{ b.intro | markdownInline | safe }}</p>{% else %}<p><span lang="en">Hi</span>, <span lang="fr">salut</span>, <span lang="nl">hoi</span>. {{ T.questions }}</p>{% endif %}
+    <ul class="contact-list">
+      <li>{{ T.emailLabel }}<a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2>{{ T.followUs }}</h2>
+    <ul class="contact-list social-list">
+      <li><a href="{{ site.social.facebook }}" rel="noopener">{% socialIcon "facebook" %}Facebook: Scheldt Youth Parliament</a></li>
+      <li><a href="{{ site.social.instagram }}" rel="noopener">{% socialIcon "instagram" %}Instagram: GoodPlanet Belgium</a></li>
+      <li><a href="{{ site.social.linkedin }}" rel="noopener">{% socialIcon "linkedin" %}LinkedIn: GoodPlanet Belgium</a></li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,2 @@
+{#- A photo over the whole width with a wavy top and bottom edge, and a caption under it (About: Ghent 2022). -#}
+<figure class="wave-band">{% photo b.photo, b.alt, { class: "photo-wave-edge-both photo-wave-edge-tide", sizes: "(min-width: 1240px) 1200px, 100vw" } %}{% if b.caption %}<figcaption>{{ b.caption }}</figcaption>{% endif %}</figure>

@@ -1,0 +1,8 @@
+{#- The old motto of the Scheldt Youth Parliament in its three languages, from its Facebook cover of 2013;
+    English first, the language of this site (Tine, file 65).
+    Set mottoCompact to true before the include for the small version inside the sign-up card on the Join page. -#}
+<figure class="motto{% if mottoCompact %} motto-compact{% endif %}">
+{%- if not mottoCompact %}{% waveMark "md" %}{% endif %}
+<blockquote><p lang="en">Many small flows create a big stream.</p><p lang="fr">Ce sont les petits ruisseaux qui font les grandes rivières.</p><p lang="nl">Vele kleine beekjes vormen een grote stroom.</p></blockquote>
+{%- if not mottoCompact %}{% waveMark "md", "end" %}<figcaption>{{ T.mottoSince }}</figcaption>{% endif %}
+</figure>

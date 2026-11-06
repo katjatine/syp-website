@@ -1,0 +1,12 @@
+---
+permalink: "sitemap.xml"
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{#- Every page search engines may show (Tine, file 81). Pages with "noindex: true" and the 404 page stay out. #}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in collections.all | sort(false, false, "url") %}{% if p.url and p.url.endsWith("/") and not p.data.noindex %}
+  <url><loc>{{ site.url }}{{ p.url }}</loc></url>
+{%- endif %}{% endfor %}
+</urlset>

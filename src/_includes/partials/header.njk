@@ -1,0 +1,27 @@
+<header class="site-header">
+  {#- The language switcher, top right (Tine, file 88): only on pages that exist in more than one language. Each name in
+      its own language, so a reader finds theirs. #}
+  {%- if translations.length %}
+  <div class="container lang-switch-row"><nav class="lang-switch" aria-label="{{ T.language }}"><ul role="list">
+    {%- for v in translations %}<li><a href="{{ v.url }}" hreflang="{{ v.code }}" lang="{{ v.code }}"{% if v.code == L %} aria-current="true"{% endif %}><abbr title="{{ v.name }}">{{ v.short }}</abbr></a></li>{% endfor %}
+  </ul></nav></div>
+  {%- endif %}
+  <div class="container site-header-inner">
+    {# Only the name of the project, without GoodPlanet's logo: with the logo the site looked like GoodPlanet's own website (Luc via Tine, 5 October 2026).
+       GoodPlanet still shows as the lead in the footer, on About and on Partners. #}
+    {%- set brandName = T.siteName or site.name %}
+    <a class="brand{% if brandName.length > 24 %} brand-long{% endif %}" href="{{ '/' | localUrl(L) }}">{{ brandName }}</a>
+    {# On phones and tablets Join stays in sight beside the menu icon; from 1100 px it is the last item of the menu. #}
+    <a class="btn btn-accent btn-nav btn-join-small" href="{{ site.joinUrl | localUrl(L) }}" data-goatcounter-click="join-menu" data-goatcounter-title="Join (menu)" data-goatcounter-referrer="{{ page.url }}"{% if page.url and page.url.startsWith(site.joinUrl) %} aria-current="page"{% endif %}>{{ T.join or site.joinLabel }}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{{ T.menu }}">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="{{ T.navMain }}">
+      {% for item in site.nav %}
+      {%- set itemUrl = item.url | localUrl(L) %}
+      <a href="{{ itemUrl }}"{% if page.url and (page.url == itemUrl or (itemUrl != "/" and page.url.startsWith(itemUrl))) %} aria-current="page"{% endif %}>{{ T.nav[item.url] or item.label }}</a>
+      {% endfor %}
+      <a class="btn btn-accent btn-nav" href="{{ site.joinUrl | localUrl(L) }}" data-goatcounter-click="join-menu" data-goatcounter-title="Join (menu)" data-goatcounter-referrer="{{ page.url }}"{% if page.url and page.url.startsWith(site.joinUrl) %} aria-current="page"{% endif %}>{{ T.join or site.joinLabel }}</a>
+    </nav>
+  </div>
+</header>

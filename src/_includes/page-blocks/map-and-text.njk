@@ -1,0 +1,7 @@
+{#- The map of the Scheldt in three countries (src/_data/countriesMap.js) beside one or more texts.
+    Each text: heading, text and an optional link with an arrow. -#}
+<div class="river-pair">
+<div class="river-pair-map">{% scheldtCountries countriesMap | localize(L) %}</div>
+<div>
+{% for s in b.sections %}{% include "page-blocks/_section.njk" %}{% endfor %}</div>
+</div>

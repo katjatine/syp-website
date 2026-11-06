@@ -1,0 +1,11 @@
+---
+permalink: "_headers"
+eleventyExcludeFromCollections: true
+layout: false
+---
+# Generated from src/headers.njk. Netlify reads this file.
+{% if site.noindex or deploy.preview %}# Preview: keep search engines out (flag "noindex" in src/_data/site.json).
+/*
+  X-Robots-Tag: noindex, nofollow
+{% else %}# Live: search engines allowed.
+{% endif %}

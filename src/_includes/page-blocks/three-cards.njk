@@ -1,0 +1,7 @@
+{#- Three soft colour cards in a row (one under the other on a phone). Each card: heading, text and an optional link (About, Where it led; Tine, file 85). -#}
+<div class="card-trio">
+{% for c in b.cards %}<div class="card-soft colour-card">
+{% if c.heading %}<h3>{{ c.heading | markdownInline | safe }}</h3>
+{% endif %}{% if c.text %}{{ c.text | markdown | safe }}{% endif %}{% if c.link and c.link.url %}<p><a class="link-arrow" href="{{ c.link.url }}">{{ c.link.label }}</a></p>
+{% endif %}</div>
+{% endfor %}</div>

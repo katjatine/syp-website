@@ -1,0 +1,17 @@
+{# One news post. #}
+<article class="container page-hero news-post">
+  <div class="page-hero-text">
+    <a class="link-back" href="/news/">{{ T.allNews }}</a>
+    <div class="eyebrow">{{ page.date | longDate(L) }}{% if place %}, {{ place }}{% endif %}</div>
+    <h1>{{ title }}</h1>
+  </div>
+  {% if photo %}<div class="news-photo">{% photo photo, alt, { sizes: "(min-width: 1240px) 1200px, 100vw", eager: true, class: "photo-wave-edge" } %}</div>{% endif %}
+  <div class="article">
+    {% if bodyTranslated %}{{ bodyTranslated | markdown | safe }}{% else %}{{ content | safe }}{% endif %}
+    {% if link %}<p><a class="link-arrow" href="{{ link }}">{{ linkLabel or (T.moreAboutExchange + place) }}</a></p>{% endif %}
+    <nav class="news-more" aria-label="{{ T.moreFromSyp }}">
+      <a class="link-arrow" href="/news/">{{ T.allNews }}</a>
+      <a class="link-arrow" href="/join/" data-goatcounter-click="join-news" data-goatcounter-title="Join the next group (news post)" data-goatcounter-referrer="{{ page.url }}">{{ T.joinNextGroup }}</a>
+    </nav>
+  </div>
+</article>

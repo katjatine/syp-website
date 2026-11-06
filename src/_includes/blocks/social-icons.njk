@@ -1,0 +1,15 @@
+{# Round social icons, after the footer of goodplanet.be but drawn for the SYP (lib/social-icons.js).
+   On white: blue discs with white symbols. On a blue surface, set socialOnDark first:
+   {% set socialOnDark = true %}{% include "blocks/social-icons.njk" %} gives white discs with blue symbols.
+   The e-mail icon goes to the contact block on the Join page until site.json has a real address. #}
+<ul class="social-icons{% if socialOnDark %} social-icons-on-dark{% endif %}" role="list">
+  <li><a href="{{ site.social.facebook }}" rel="noopener">{% socialIcon "facebook" %}<span class="visually-hidden">Facebook, Scheldt Youth Parliament</span></a></li>
+  <li><a href="{{ site.social.instagram }}" rel="noopener">{% socialIcon "instagram" %}<span class="visually-hidden">Instagram, GoodPlanet Belgium</span></a></li>
+  <li><a href="{{ site.social.linkedin }}" rel="noopener">{% socialIcon "linkedin" %}<span class="visually-hidden">LinkedIn, GoodPlanet Belgium</span></a></li>
+  {# Screen readers hear "Contact" while the icon leads to the contact block, "Email" once it opens an email. #}
+  {% if 'TODO' in site.contactEmail %}
+  <li><a href="{{ '/join/#contact' | localUrl(L) }}">{% socialIcon "mail" %}<span class="visually-hidden">{{ T.contact }}</span></a></li>
+  {% else %}
+  <li><a href="mailto:{{ site.contactEmail }}">{% socialIcon "mail" %}<span class="visually-hidden">{{ T.email }}</span></a></li>
+  {% endif %}
+</ul>

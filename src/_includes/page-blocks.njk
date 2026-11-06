@@ -1,0 +1,7 @@
+{#- A page built from blocks, for the browser editor Pages CMS (Output Claude/77_Keuze webeditor voor Raphael.html).
+    The page's front matter has "blocks": a list, each with a "type" that names a file in page-blocks/. Editors can add,
+    move and remove blocks; the look of each block stays in its file, in the site's house style.
+    Each block writes its own HTML. Its texts are Markdown and go through the "markdown" filters (eleventy.config.js),
+    the same Markdown library as the text of a page, so the page looks exactly as it did when it was written as text.
+    A block with "hidden: true" is kept but not shown. Block texts are never run as Nunjucks code. -#}
+{%- for b in blocks %}{% if b.type and not b.hidden %}{% include "page-blocks/" + b.type + ".njk" %}{% endif %}{% endfor -%}

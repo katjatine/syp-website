@@ -1,0 +1,84 @@
+<!doctype html>
+{#- The language of the page (Tine, file 88): L is en, fr or nl, T the fixed words in that language (src/_data/ui.js).
+    translations lists the versions of this page for the switcher in the header; empty when there is none. #}
+{%- set L = lang or "en" %}{% set T = ui[L] %}{% set translations = (page.url | translations) if lang else [] %}
+<html lang="{{ L }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- set pageTitle %}{% if title and type != "home" %}{{ (shortTitle or title) | safe }} | {{ (T.siteName or site.name) | safe }}{% else %}{{ (T.siteName or site.name) | safe }}{{ T.homeTagline }}{% endif %}{% endset %}
+  {%- set pageDescription = description or excerpt or teaser or site.description %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  {%- if noindex or site.noindex or deploy.preview %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  {#- Link previews in Teams, WhatsApp, LinkedIn (Tine, file 80): news posts and exchanges show their own photo, cut to
+      1200 x 630 after the build; every other page shows site.shareImage. These addresses must be absolute. #}
+  {%- set sharePhoto = (photo if type == "news" else (hero.photo if type == "exchange" and hero else "")) | sharePhoto %}
+  <meta property="og:type" content="{{ 'article' if type == 'news' else 'website' }}">
+  {%- if type == "news" and page.date %}
+  <meta property="article:published_time" content="{{ page.date | isoDate }}">
+  {%- endif %}
+  <meta property="og:site_name" content="{{ T.siteName or site.name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ sharePhoto or site.shareImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ (alt if type == 'news' else hero.alt) if sharePhoto else (T.shareImageAlt or site.shareImageAlt) }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {#- Search engines (file 81): the one address of this page, so goodplanet-syp.netlify.app or an address with ?v=2 never
+      counts as a second copy; and structured data (schema.org) on the homepage and the news posts. #}
+  {%- if not (noindex or site.noindex or deploy.preview) %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {%- for v in translations %}
+  <link rel="alternate" hreflang="{{ v.code }}" href="{{ site.url }}{{ v.url }}">
+  {%- endfor %}
+  {%- endif %}
+  {{- { url: page.url, type: type, title: title, description: pageDescription, date: page.date, image: sharePhoto or site.shareImage } | structuredData(site) | safe }}
+  {# The SYP drop, cut from the logo the members chose in 2019 (Facebook version until the original file arrives) #}
+  <link rel="icon" href="/images/brand/favicon-32.png?v=2" sizes="32x32" type="image/png">
+  <link rel="icon" href="/images/brand/favicon-48.png?v=2" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png?v=2">
+  {#- The two faces every page uses start loading at once, so text does not jump when Lato arrives #}
+  <link rel="preload" href="/fonts/lato-400-normal.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/fonts/lato-700-normal.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/site.css">
+  {#- Visitor counter (GoatCounter, servers in Finland and Germany): no cookies, nothing stored on the device, so no cookie banner.
+      It counts only on the addresses in site.goatcounterHosts; elsewhere it neither counts visits nor binds the click counts.
+      If the script is blocked (ad blocker, school filter), the site works as before. #}
+  {% if site.goatcounterCode %}
+  <script>if ({{ site.goatcounterHosts | dump | safe }}.indexOf(location.hostname.replace(/^www\./, "")) < 0) window.goatcounter = { no_onload: true, no_events: true };</script>
+  <script data-goatcounter="https://{{ site.goatcounterCode }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  {% endif %}
+</head>
+<body class="page-{{ type or 'default' }}" id="top">
+  <a class="skip-link" href="#main">{{ T.skip }}</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {% if type == "home" %}{% include "types/home.njk" %}
+    {% elif type == "exchange" %}{% include "types/exchange.njk" %}
+    {% elif type == "news" %}{% include "types/news.njk" %}
+    {% elif type == "voices" %}{% include "types/voices.njk" %}
+    {% elif type == "scheldt" %}{% include "types/scheldt.njk" %}
+    {% elif type == "raw" or type == "relecture" %}{{ content | safe }}
+    {% else %}{% include "types/page.njk" %}{% endif %}
+  </main>
+  {# At the end of every page: the footer, with 'Back to top' after the round icons (research 2 Oct 2026: calmer than a
+     floating button or a header that moves along; a short page can switch it off with "backToTop: false", relecture pages never show it) #}
+  {% include "partials/footer.njk" %}
+  <script src="/js/menu.js" defer></script>
+  {#- Every wave sways (the footer wave is on every page): sway.js gives each its own speed and rests it off screen #}
+  <script src="/js/sway.js" defer></script>
+  {% if type == "exchange" or type == "voices" or lightbox %}<script src="/js/lightbox.js" defer></script>{% endif %}
+  {% if type == "relecture" %}<script src="/js/relecture.js" defer></script>{% endif %}
+  {#- Edit mode (Tine, file 58): the pencil in the footer of About adds #edit to the address. Only then, or while edit mode
+      is still on in this browser, edit.js loads; ordinary visitors never download it. Not on the relecture pages. #}
+  {% if type != "relecture" %}<script id="syp-edit-loader" data-email="{{ site.editEmail }}">(function () { var on = location.hash === "#edit"; try { on = on || localStorage.getItem("syp-edit") === '"on"'; } catch (e) {} function go() { if (document.getElementById("syp-edit-js")) return; var s = document.createElement("script"); s.id = "syp-edit-js"; s.src = "/js/edit.js"; document.body.appendChild(s); } if (on) go(); addEventListener("hashchange", function () { if (location.hash === "#edit") go(); }); })();</script>{% endif %}
+  {# A page can load its own scripts with "scripts" in its front matter. #}
+  {% for s in scripts %}<script src="{{ s }}" defer></script>{% endfor %}
+</body>
+</html>

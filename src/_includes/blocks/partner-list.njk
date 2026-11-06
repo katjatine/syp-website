@@ -1,0 +1,45 @@
+{# Partner cards, from the "partners" list in the front matter of src/partners.md.
+   The partner with "lead" (GoodPlanet) gets a full-width card with that line above its name.
+   A partner with "photo" (and "alt") shows that photo beside its text, in its own shape.
+   The logo links to the partner's site too. The text link below already does that for keyboards and screen readers, so the logo link is skipped there.
+   "logoWide: true" gives a logo with small letters its own row, as wide as the card allows (the Agence de l'Eau, Tine, file 51);
+   "logo2x" names a sharper file for retina screens.
+   The dashes inside the tags trim empty lines: on this Markdown page an empty line would end the HTML
+   and leave stray paragraphs in the cards.
+   "leadInHero: true" puts the lead partner in the top of the page (types/page.njk includes this file there with partnerScope "lead")
+   and leaves it out of the list below. #}
+<div class="partner-list{% if partnerScope == 'lead' %} partner-list-hero{% endif %}">
+  {%- for p in partners %}
+  {%- if not leadInHero or ((partnerScope == "lead") == (p.lead | length > 0)) %}
+  {#- The browser editor writes a logo as a path ("/images/logos/hz.svg"); fileName keeps the name ("hz.svg") #}
+  {%- set logo = p.logo | fileName %}{% set logo2x = p.logo2x | fileName %}
+  <div class="partner{% if p.featured %} partner-featured{% endif %}{% if p.lead %} partner-lead{% endif %}{% if p.photo %} has-photo{% endif %}">
+    {%- if p.photo %}<div class="partner-body">{% endif %}
+    {%- if p.logo and p.url %}
+    <div class="partner-logo{% if p.logoWide %} partner-logo-wide{% endif %}"><a href="{{ p.url }}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/images/logos/{{ logo }}"{% if p.logo2x %} srcset="/images/logos/{{ logo }} 1x, /images/logos/{{ logo2x }} 2x"{% endif %} alt="{{ p.name }}"{% set sz = logoSizes[logo] %}{% if sz %} width="{{ sz[0] }}" height="{{ sz[1] }}"{% endif %} loading="lazy"></a></div>
+    {%- elif p.logo %}
+    <div class="partner-logo{% if p.logoWide %} partner-logo-wide{% endif %}"><img src="/images/logos/{{ logo }}"{% if p.logo2x %} srcset="/images/logos/{{ logo }} 1x, /images/logos/{{ logo2x }} 2x"{% endif %} alt="{{ p.name }}"{% set sz = logoSizes[logo] %}{% if sz %} width="{{ sz[0] }}" height="{{ sz[1] }}"{% endif %} loading="lazy"></div>
+    {%- elif not p.textOnly %}
+    <div class="partner-logo"><span class="partner-logo-todo">[TODO logo: {{ p.name }}]</span></div>
+    {%- endif %}
+    {%- if p.lead %}
+    <div class="label">{{ p.lead }}</div>
+    {%- endif %}
+    <h2>{{ p.name }}</h2>
+    <p>{{ p.text }}</p>
+    {%- if p.story %}
+    <a class="link-arrow" href="{{ p.story }}">{{ p.storyLabel or T.readOurStory }}</a>
+    {%- endif %}
+    {%- if p.url %}
+    <a class="link-arrow" href="{{ p.url }}" rel="noopener">{{ p.linkLabel or p.url | replace("https://", "") | replace("http://", "") | replace("www.", "") }}</a>
+    {%- endif %}
+    {%- if p.todo %}
+    <div class="text-grey" style="font-size:var(--fs-tiny)">{{ p.todo }}</div>
+    {%- endif %}
+    {%- if p.photo %}</div>
+    <div class="partner-photo">{% photo p.photo, p.alt, { sizes: "(min-width: 900px) 320px, 100vw" } %}</div>
+    {%- endif %}
+  </div>
+  {%- endif %}
+  {%- endfor %}
+</div>

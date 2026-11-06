@@ -1,0 +1,8 @@
+{#- The river timeline (Timeline page): the stops come from src/_data/timeline.json ("Timeline" in the editor).
+    "note" is the line beside the source of the river (Tine, file 53); a link in it is fine. -#}
+<div class="timeline-river">
+{#- Before the river is drawn: with JavaScript the texts of the small moments start folded, so nothing jumps.
+    Inside the river block, so the block stays the first thing on the page and keeps its spacing. -#}
+<script>document.documentElement.classList.add("js-fold")</script>
+{% river timeline | localize(L), "timeline", (b.note | markdownInline) %}
+</div>

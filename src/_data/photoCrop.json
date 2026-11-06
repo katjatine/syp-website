@@ -1,0 +1,7 @@
+{
+  "_note": "Which part of a photo stays visible when a frame crops it. Default is the centre. Use top, bottom, left, right, or two percentages like 50% 80% (left to right, top to bottom).",
+  "oudenaarde-2025-town-hall": "bottom",
+  "syp-2021-hoodie-logo": "50% 40%",
+  "ghent-2026-bikes-on-square": "50% 35%",
+  "zeeland-2025-kayak-paddles": "60% 50%"
+}

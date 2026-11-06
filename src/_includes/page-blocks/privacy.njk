@@ -1,0 +1,20 @@
+{#- "How we handle your details", folded (Join), with an optional short note under it.
+    The privacy texts themselves stay here, not in the editor: they follow from the form (site.json joinFormUrl)
+    and the visitor counter (site.json goatcounterCode). -#}
+<section class="page-block">
+  <details class="join-privacy">
+    <summary>{{ T.privacyTitle }}</summary>
+    {% if site.joinFormUrl %}
+    <p>{{ T.privacyForm1 }}</p>
+    <p>{{ T.privacyForm2 }}</p>
+    {% else %}
+    <p>{{ T.privacyMail }}</p>
+    {% endif %}
+    {% if site.goatcounterCode %}
+    <p>{{ T.privacyCount }}</p>
+    {% else %}
+    <p>{{ T.privacyNone }}</p>
+    {% endif %}
+  </details>
+  {% if b.note %}<p class="block-note">{{ b.note | markdownInline | safe }}</p>{% endif %}
+</section>

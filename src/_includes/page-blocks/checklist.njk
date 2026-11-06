@@ -1,0 +1,10 @@
+{#- A heading beside a list with tick boxes (Go with the flow: "What you need"). The boxes are for the visitor only;
+    nothing is saved or sent. -#}
+<section class="page-block split game-needs-block">
+  <h2>{{ b.heading }}</h2>
+  <div>
+    <ul class="game-needs">
+      {% for n in b.items %}<li><label><input type="checkbox"><span>{{ n }}</span></label></li>{% endfor %}
+    </ul>
+  </div>
+</section>

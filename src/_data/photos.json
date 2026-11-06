@@ -1,0 +1,250 @@
+{
+  "denain-2025-flood-basin": {
+    "width": 1201,
+    "height": 1600
+  },
+  "denain-2025-group-riverbank": {
+    "width": 1600,
+    "height": 766
+  },
+  "denain-2025-towpath": {
+    "width": 1201,
+    "height": 1600
+  },
+  "ghent-2026-bikes-selfie": {
+    "width": 1600,
+    "height": 1200
+  },
+  "ghent-2026-cafe": {
+    "width": 1600,
+    "height": 1200
+  },
+  "ghent-2026-paddles": {
+    "width": 1200,
+    "height": 1600
+  },
+  "ghent-2026-presenting-poster": {
+    "width": 1200,
+    "height": 1600
+  },
+  "oudenaarde-2025-break-on-wall": {
+    "width": 1201,
+    "height": 1600
+  },
+  "oudenaarde-2025-bridge": {
+    "width": 1201,
+    "height": 1600
+  },
+  "oudenaarde-2025-river-contract-tent": {
+    "width": 1201,
+    "height": 1600
+  },
+  "oudenaarde-2025-town-hall": {
+    "width": 1201,
+    "height": 1600
+  },
+  "tournai-2026-posters": {
+    "width": 1200,
+    "height": 1600
+  },
+  "tournai-2026-programme": {
+    "width": 1202,
+    "height": 1600
+  },
+  "tournai-2026-title-slide": {
+    "width": 1202,
+    "height": 1600
+  },
+  "youth-voices-recommendations-poster": {
+    "width": 1200,
+    "height": 1600
+  },
+  "youth-voices-rights-of-nature-poster": {
+    "width": 1200,
+    "height": 1600
+  },
+  "zeeland-2025-dinner-greenhouse": {
+    "width": 1600,
+    "height": 720
+  },
+  "zeeland-2025-group-arms-wide": {
+    "width": 1600,
+    "height": 1313
+  },
+  "zeeland-2025-kayak-paddles": {
+    "width": 1600,
+    "height": 720
+  },
+  "zeeland-2025-water-game": {
+    "width": 720,
+    "height": 1600
+  },
+  "timeline-2011-painted-escaut": {
+    "width": 1600,
+    "height": 1200
+  },
+  "project-2013-beach": {
+    "width": 1600,
+    "height": 1165
+  },
+  "antwerp-2019-boat-group": {
+    "width": 605,
+    "height": 403
+  },
+  "brussels-2015-senate-plenary": {
+    "width": 1600,
+    "height": 791
+  },
+  "ghent-2022-canal-cheering": {
+    "width": 1600,
+    "height": 969
+  },
+  "ghent-2022-roeland-group": {
+    "width": 1600,
+    "height": 900
+  },
+  "syp-2021-hoodie-logo": {
+    "width": 1200,
+    "height": 1600
+  },
+  "zagreb-2023-meadow-group": {
+    "width": 1600,
+    "height": 1052
+  },
+  "zeeland-2018-abbey-group": {
+    "width": 720,
+    "height": 480
+  },
+  "zeeland-2024-heart-sand": {
+    "width": 938,
+    "height": 1360
+  },
+  "denain-2025-river-guide": {
+    "width": 1537,
+    "height": 1153
+  },
+  "ghent-2022-pontoon-sampling": {
+    "width": 1600,
+    "height": 1068
+  },
+  "ghent-2022-water-sampling": {
+    "width": 1600,
+    "height": 1068
+  },
+  "ghent-2026-bikes-on-square": {
+    "width": 1200,
+    "height": 1600
+  },
+  "ghent-2026-carrying-kayaks": {
+    "width": 1200,
+    "height": 1600
+  },
+  "ghent-2026-explaining-poster": {
+    "width": 1152,
+    "height": 1536
+  },
+  "ghent-2026-groups-at-work": {
+    "width": 1200,
+    "height": 1600
+  },
+  "ghent-2026-holding-poster": {
+    "width": 1152,
+    "height": 1536
+  },
+  "ghent-2026-kayaks-graslei": {
+    "width": 1200,
+    "height": 1600
+  },
+  "ghent-2026-presenting-drawn-poster": {
+    "width": 1200,
+    "height": 1600
+  },
+  "isc-2024-plenary-speaking": {
+    "width": 1600,
+    "height": 901
+  },
+  "oudenaarde-2025-break-on-wall-tight": {
+    "width": 1537,
+    "height": 1153
+  },
+  "oudenaarde-2025-weir": {
+    "width": 1021,
+    "height": 1360
+  },
+  "tournai-2026-meeting-folder": {
+    "width": 735,
+    "height": 980
+  },
+  "tournai-2026-posters-landscape": {
+    "width": 1376,
+    "height": 1032
+  },
+  "tournai-2026-posters-tight": {
+    "width": 1200,
+    "height": 1600
+  },
+  "tournai-2026-title-slide-landscape": {
+    "width": 1208,
+    "height": 906
+  },
+  "zeeland-2024-beach-clean-up": {
+    "width": 1537,
+    "height": 1425
+  },
+  "zeeland-2024-delta-map": {
+    "width": 1200,
+    "height": 1600
+  },
+  "zeeland-2025-group-selfie": {
+    "width": 1600,
+    "height": 1201
+  },
+  "zeeland-2025-jetty-balance": {
+    "width": 1200,
+    "height": 1600
+  },
+  "zeeland-2025-kanoa-sign": {
+    "width": 1360,
+    "height": 1020
+  },
+  "zeeland-2025-kayak-selfie": {
+    "width": 1600,
+    "height": 1200
+  },
+  "zeeland-2025-playing-go-with-the-flow": {
+    "width": 1200,
+    "height": 1600
+  },
+  "zeeland-2025-tandem-kayak": {
+    "width": 1600,
+    "height": 720
+  },
+  "ghent-2026-poster-layered-defence": {
+    "width": 1160,
+    "height": 830
+  },
+  "ghent-2026-poster-public-space": {
+    "width": 1480,
+    "height": 1000
+  },
+  "ghent-2026-poster-water-system": {
+    "width": 1540,
+    "height": 1045
+  },
+  "isc-2024-plenary-speaking-stage": {
+    "width": 1600,
+    "height": 901
+  },
+  "ghent-2026-poster-detail-layered": {
+    "width": 585,
+    "height": 225
+  },
+  "ghent-2026-poster-detail-public-space": {
+    "width": 800,
+    "height": 440
+  },
+  "ghent-2026-poster-detail-water-wall": {
+    "width": 640,
+    "height": 390
+  }
+}

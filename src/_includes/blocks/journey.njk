@@ -1,0 +1,37 @@
+{# "How it works" as a small river: every step is a stop on a river drawn like the homepage river, after the bends of
+   the real Scheldt (lib/scheldt-river.js), rising from a drop at the first step, as the other two rivers do, wider
+   downstream, opening into the sea after the last step.
+   The steps come from "steps" in the front matter of the page; a step can ask for reeds or gulls with "nature":
+   reeds by the source, gulls over the sea, as on the Timeline page and the homepage.
+   Wide screens: the river runs across, with the text of each step under its stop. Phones: the river runs down on the left.
+   A step can have an "icon" (lib/lucide-icons.js, reviewer feedback 12): the stop then becomes a colour disc with the icon
+   in it, and the source a larger drop with its icon. Without icons (Go with the flow) the river draws as before. #}
+{% set river = steps | length | journeyRiver %}
+{% set withIcons = (steps | selectattr("icon") | length) > 0 %}
+{# The source is water, so its drop is blue; the other stops take GoodPlanet's secondary colours in turn #}
+{% set tones = ["lime", "orange", "green", "pink"] %}
+<ol class="journey{% if withIcons %} has-icons{% endif %}" role="list" style="--steps: {{ steps | length }}">
+  {% for s in steps %}
+  {% set i = loop.index0 %}
+  <li class="journey-step side-{{ river.sides[i] }}{% if river.decoBelow[i] %} deco-below{% endif %}" style="--c: {{ river.cross[i] }}; --cy: {{ river.crossY[i] }}">
+    <div class="journey-mid" aria-hidden="true">
+      {% if withIcons %}
+      {% if loop.first %}<span class="journey-dot is-source tone-blue">{{ river.source | safe }}{% if s.icon %}{% icon s.icon %}{% endif %}</span>{% else %}<span class="journey-dot icon-disc tone-{{ tones[(i - 1) % 4] }}">{% if s.icon %}{% icon s.icon %}{% endif %}</span>{% endif %}
+      {% elif loop.first %}<span class="journey-dot is-source">{{ river.source | safe }}</span>{% else %}<span class="journey-dot"></span>{% endif %}
+      {% if not loop.last %}
+      <svg class="journey-seg journey-seg-h" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="{{ river.across[i] }}" style="stroke-width:{{ river.widths[i] }}px"></path></svg>
+      <svg class="journey-seg journey-seg-v" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><path d="{{ river.down[i] }}" style="stroke-width:{{ river.widths[i] }}px"></path></svg>
+      {% else %}
+      <svg class="journey-mouth journey-mouth-h" viewBox="0 0 75 100" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="journey-sea-h" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1895D3" stop-opacity="0.5"></stop><stop offset="1" stop-color="#1895D3" stop-opacity="0"></stop></linearGradient></defs><path d="{{ river.mouthAcross.funnel }}" fill="url(#journey-sea-h)"></path><path class="journey-mouth-line" d="{{ river.mouthAcross.line }}" style="stroke-width:{{ river.endWidth }}px"></path></svg>
+      <svg class="journey-mouth journey-mouth-v" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="journey-sea-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1895D3" stop-opacity="0.5"></stop><stop offset="1" stop-color="#1895D3" stop-opacity="0"></stop></linearGradient></defs><path d="{{ river.mouthDown.funnel }}" fill="url(#journey-sea-v)"></path><path class="journey-mouth-line" d="{{ river.mouthDown.line }}" style="stroke-width:{{ river.endWidth }}px"></path></svg>
+      {% endif %}
+      {% if s.nature %}{% riverNature s.nature %}{% endif %}
+    </div>
+    <div class="journey-text">
+      <span class="label">{{ T.step }} {{ loop.index }}</span>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.text }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ol>

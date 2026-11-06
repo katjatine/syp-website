@@ -1,0 +1,7 @@
+{#- Texts with a standing photo beside them (Reports). On a computer the photo stays in view while you read; on a phone it
+    comes after the texts. Each text: heading, text (lists are fine) and an optional link with an arrow. -#}
+<div class="reports-layout">
+<div class="prose">
+{% for s in b.sections %}{% include "page-blocks/_section.njk" %}{% endfor %}</div>
+{% if b.photo %}<figure class="reports-photo">{% photo b.photo, b.alt, { sizes: "(min-width: 900px) 380px, 100vw" } %}</figure>
+{% endif %}</div>

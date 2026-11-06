@@ -1,0 +1,20 @@
+{
+  "_note": "The languages of the site (Tine, file 88, 5 November 2026). English stays on the current addresses, French under /fr/ and Dutch under /nl/. pages: for each English address, the French and Dutch one. A page under one of these addresses follows it: /news/a-post/ becomes /fr/actualites/a-post/ (lib/languages.js). Every page made with lib/languages.js exists in the three languages and shows the language switcher.",
+  "codes": ["en", "fr", "nl"],
+  "short": { "en": "EN", "fr": "FR", "nl": "NL" },
+  "names": { "en": "English", "fr": "Français", "nl": "Nederlands" },
+  "locales": { "en": "en-GB", "fr": "fr-BE", "nl": "nl-BE" },
+  "pages": {
+    "/": { "fr": "/fr/", "nl": "/nl/" },
+    "/about/": { "fr": "/fr/a-propos/", "nl": "/nl/over-ons/" },
+    "/join/": { "fr": "/fr/participer/", "nl": "/nl/doe-mee/" },
+    "/exchanges/": { "fr": "/fr/echanges/", "nl": "/nl/uitwisselingen/" },
+    "/news/": { "fr": "/fr/actualites/", "nl": "/nl/nieuws/" },
+    "/recommendations/": { "fr": "/fr/recommandations/", "nl": "/nl/aanbevelingen/" },
+    "/partners/": { "fr": "/fr/partenaires/", "nl": "/nl/partners/" },
+    "/timeline/": { "fr": "/fr/chronologie/", "nl": "/nl/tijdlijn/" },
+    "/go-with-the-flow/": { "fr": "/fr/go-with-the-flow/", "nl": "/nl/go-with-the-flow/" },
+    "/reports/": { "fr": "/fr/rapports/", "nl": "/nl/verslagen/" },
+    "/the-scheldt/": { "fr": "/fr/l-escaut/", "nl": "/nl/de-schelde/" }
+  }
+}

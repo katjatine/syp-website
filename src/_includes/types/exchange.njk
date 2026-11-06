@@ -1,0 +1,69 @@
+{# Exchange page. Everything comes from the front matter of the file in src/exchanges/, the story is the Markdown text. #}
+<section class="container page-hero">
+  <div class="page-hero-grid">
+    <div>
+      <a class="link-back" href="/exchanges/">{{ T.allExchanges }}</a>
+      <div class="eyebrow">{{ number }}, {{ country }}</div>
+      <h1>{{ title }}</h1>
+      <p class="lead measure-narrow">{{ lede }}</p>
+      <dl class="facts">
+        {% for f in facts %}
+        {% if f.label == "Where" and riverMap %}
+        {# "Where" as one piece: a small map of the Scheldt with the place name beside its dot. #}
+        {% set spot = riverMap | scheldtSpot %}
+        <div class="facts-where" style="--x: {{ spot.x }}; --y: {{ spot.y }}">
+          <dt class="label">{{ f.label }}</dt>
+          <dd class="facts-where-map">
+            {% scheldtMap riverMap, T.mapMarked | replace("{place}", linkName) %}
+            <div class="facts-where-place">{{ f.text }}</div>
+          </dd>
+        </div>
+        {% else %}
+        <div><dt class="label">{{ f.label }}</dt><dd>{{ f.text }}</dd></div>
+        {% endif %}
+        {% endfor %}
+      </dl>
+    </div>
+    <div class="page-hero-photo exchange-hero-photo"><a class="lightbox-link" href="/images/photos/{{ hero.photo | photoSlug }}.jpg" data-caption="{{ hero.caption }}">{% photo hero.photo, hero.alt, { sizes: "(min-width: 900px) 570px, 100vw", eager: true, class: "photo-wave-edge" } %}<span class="visually-hidden">{{ T.viewLarger }}</span></a></div>
+  </div>
+</section>
+
+{% wave "var(--foam)" %}
+{#- The quote stands beside the story on a computer, under "What we did" (Tine, file 55); on a phone it follows the story. -#}
+<section class="bg-foam section-foam-split">
+  <div class="container split{% if quote.text %} has-aside{% endif %}">
+    <h2>{{ T.whatWeDid }}</h2>
+    <div class="article">{% if bodyTranslated %}{{ bodyTranslated | markdown | safe }}{% else %}{{ content | safe }}{% endif %}</div>
+    {% if quote.text %}
+    {#- With a name, the quote is a colour card like the quotes on Youth voices: "accent" is orange, green, pink or lime (green if empty).
+        With only "cite", it stays a plain quote. -#}
+    {% set accent = quote.accent or "green" %}
+    {% set markSize = "sm" if quote.name else "md" %}
+    <blockquote class="quote-block exchange-aside{% if quote.name %} colour-card{% endif %}"{% if quote.name %} style="--accent: var(--{{ accent }}){% if accent == 'pink' %}; --tint: 7%{% elif accent == 'lime' %}; --line: color-mix(in srgb, var(--lime) 80%, var(--ink)){% endif %}"{% endif %}>
+      {% waveMark markSize %}
+      <p>{{ quote.text }}</p>
+      {% waveMark markSize, "end" %}
+      {% if quote.name %}<footer class="quote-person"><cite>{{ quote.name }}</cite>{% if quote.meta %}<span class="quote-meta">{{ quote.meta }}</span>{% endif %}</footer>{% else %}<cite>{{ quote.cite }}</cite>{% endif %}
+      {% if quote.source and site.showCandidateQuotes %}<div class="quote-source">{{ quote.source }}</div>{% endif %}
+    </blockquote>
+    {% endif %}
+  </div>
+</section>
+
+<section class="container exchange-gallery">
+  <div class="section-head-inline">
+    <h2>{{ T.inPictures }}</h2>
+    {% if galleryTodo %}<span class="text-grey">{{ galleryTodo }}</span>{% endif %}
+  </div>
+  {% set galleryItems = gallery %}
+  {% include "blocks/gallery.njk" %}
+</section>
+
+{# Previous and next before the call to action, so the page ends on the invitation #}
+{% set nb = collections.exchanges | inLang(L) | neighbours(page.url) %}
+<nav class="container pager" aria-label="{{ T.otherExchanges }}">
+  {% if nb.prev %}<a class="pager-prev" href="{{ nb.prev.url }}"><span>{{ T.previous }}</span>{{ nb.prev.data.title }}</a>{% endif %}
+  {% if nb.next %}<a class="pager-next" href="{{ nb.next.url }}"><span>{{ T.next }}</span>{{ nb.next.data.title }}</a>{% endif %}
+</nav>
+
+{% include "blocks/join-cta.njk" %}

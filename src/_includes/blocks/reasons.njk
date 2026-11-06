@@ -1,0 +1,16 @@
+{# The five reasons to join, from the "reasons" list in the front matter of src/join.md.
+   A large line icon at the top ("icon", names in lib/line-icons.js; no numbers: the order means nothing, Tine file 55),
+   and optionally a photo ("photo" and "alt"), which makes the card span the full width beside the photo.
+   Each card is a colour card in one GoodPlanet colour (site.css). #}
+<div class="reasons">
+  {% for r in reasons %}
+  <div class="card-soft colour-card reason{% if r.photo %} has-photo{% endif %}">
+    <div class="reason-head">
+      {% if r.icon %}{% lineIcon r.icon, "reason-icon" %}{% endif %}
+    </div>
+    <h3>{{ r.title }}</h3>
+    <p>{{ r.text }}</p>
+    {% if r.photo %}<div class="reason-photo">{% photo r.photo, r.alt, { sizes: "(min-width: 1240px) 560px, (min-width: 700px) 45vw, 100vw" } %}</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,63 @@
+{# Standard inner page: title, lede and optional photo from the front matter, then the Markdown text. #}
+<section class="container page-hero">
+  {% if photo %}
+  <div class="page-hero-grid">
+    <div>
+      {% if back %}<a class="link-back" href="{{ back.url }}">{{ back.label }}</a>{% endif %}
+      {% if eyebrow %}<div class="eyebrow">{{ eyebrow }}</div>{% endif %}
+      <h1>{{ headline or title }}</h1>
+      {% if lede %}<p class="lead">{{ lede }}</p>{% endif %}
+      {# Optional: short facts as labels ("chips") and buttons ("actions"), both from the front matter.
+         A chip is "text" with an optional "icon" (lib/lucide-icons.js), or a plain short text. A chip with an icon stands out
+         in lime (Join, reviewer feedback 14). #}
+      {% if chips %}<ul class="chips" aria-label="{{ T.atAGlance }}">{% for c in chips %}{% set chipText = c.text if c.text else c %}{% if c.icon %}<li class="chip-highlight">{% icon c.icon %}{{ chipText }}</li>{% else %}<li>{{ chipText }}</li>{% endif %}{% endfor %}</ul>{% endif %}
+      {% if actions %}<div class="btn-group page-hero-actions">{% for a in actions %}<a class="btn {{ 'btn-primary' if loop.first else 'btn-secondary' }}" href="{{ a.url }}"{% if a.count %} data-goatcounter-click="{{ a.count }}" data-goatcounter-title="{{ a.labelWaiting if (a.labelWaiting and not site.joinFormUrl) else a.label }} (top of page)" data-goatcounter-referrer="{{ page.url }}"{% endif %}>{{ a.labelWaiting if (a.labelWaiting and not site.joinFormUrl) else a.label }}</a>{% endfor %}</div>{% endif %}
+    </div>
+    {#- "photoLarge: true" makes the photo open large on click (reviewer feedback on Join, October 2026); the page also needs
+        "lightbox: true", which loads js/lightbox.js. "caption" shows under the large photo. #}
+    {% if photoLarge %}
+    <div class="page-hero-photo"><a class="lightbox-link hero-zoom" href="/images/photos/{{ photo | photoSlug }}.jpg" data-caption="{{ caption }}">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true } %}<span class="photo-enlarge">{% icon "maximize-2" %}</span><span class="visually-hidden">{{ T.viewLarger }}</span></a></div>
+    {% else %}
+    <div class="page-hero-photo">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true } %}</div>
+    {% endif %}
+  </div>
+  {% elif heroAside %}
+  {#- Title, lede and the lead partner on the left, a photo on the right beside all three (Partners: "leadInHero" and "heroAside").
+      On a phone the photo follows the lead partner. #}
+  <div class="page-hero-aside">
+    <div class="page-hero-aside-main">
+      <h1>{{ title }}</h1>
+      {% if lede %}<p class="lead">{{ lede }}</p>{% endif %}
+      {% if leadInHero %}{% set partnerScope = "lead" %}{% include "blocks/partner-list.njk" %}{% endif %}
+    </div>
+    <div class="page-hero-aside-photo">{% photo heroAside.photo, heroAside.alt, { sizes: "(min-width: 900px) 440px, 100vw", eager: true } %}</div>
+  </div>
+  {% else %}
+  <div class="page-hero-text">
+    {% if back %}<a class="link-back" href="{{ back.url }}">{{ back.label }}</a>{% endif %}
+    {% if eyebrow %}<div class="eyebrow">{{ eyebrow }}</div>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if lede %}<p class="lead">{{ lede }}</p>{% endif %}
+  </div>
+  {% endif %}
+</section>
+{#- Optional: a band of figures under the title, the same blue band as on The Scheldt page ("figures": number and label,
+    and "figuresTitle", which says whom or what they count). The Exchanges page shows the last group in figures
+    (designer feedback, 5 October 2026: on the homepage they said little and read as if they belonged to 2012). -#}
+{% if figures %}
+{% swayWave "var(--deep)" %}
+<section class="figures figures-page"{% if figuresTitle %} aria-labelledby="figures-title"{% else %} aria-label="{{ T.inFigures }}"{% endif %}>
+  <div class="container">
+    {% if figuresTitle %}<h2 class="figures-title" id="figures-title">{{ figuresTitle }}</h2>{% endif %}
+    <div class="figures-grid">
+      {% for f in figures %}<div><p class="figure-number">{{ f.number }}</p><p class="figure-label">{{ f.label }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+<div class="container page-body">
+  {#- A page written as blocks (the browser editor, Output Claude/77) shows its blocks where the text would be. -#}
+  {% if blocks %}{% set pageText %}{% include "page-blocks.njk" %}{% endset %}{% elif bodyTranslated %}{% set pageText = bodyTranslated | markdown %}{% else %}{% set pageText = content %}{% endif %}
+  {% if prose === false %}{{ pageText | safe }}{% else %}<div class="prose">{{ pageText | safe }}</div>{% endif %}
+</div>
+{% if joinCta %}{% include "blocks/join-cta.njk" %}{% endif %}

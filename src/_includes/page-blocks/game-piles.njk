@@ -1,0 +1,40 @@
+{#- The three piles of cards of Go with the flow, to try on the page: each pile a "key" (rapids, against or challenge:
+    it picks the drawing on the back), name, the square it belongs to, the rule and its cards. js/game.js draws the cards
+    from the JSON at the end. -#}
+<section class="page-block game" aria-labelledby="piles-title">
+  <h2 class="block-heading" id="piles-title">{{ b.heading }}</h2>
+  {% if b.intro %}<p class="lead block-intro">{{ b.intro }}</p>{% endif %}
+  <div class="game-piles">
+    {% for p in b.piles %}
+    <div class="game-pile pile-{{ p.key }}" data-pile="{{ p.key }}">
+      <div class="game-card" aria-hidden="true">
+        <div class="game-card-inner">
+          <div class="game-face game-back">
+            {% if p.key == "rapids" %}
+            <svg viewBox="0 0 100 100" focusable="false"><path class="game-river" d="M70,4 V30 Q70,40 60,40 H46 Q36,40 36,50 Q36,60 46,60 H70 Q80,60 80,70 Q80,80 70,80 H52 Q44,80 44,88 V98"></path><path class="game-arrows" d="M6,40 L15,32 L24,40 M6,51 L15,43 L24,51 M6,62 L15,54 L24,62 M84,20 L89,16 L94,20 M84,27 L89,23 L94,27"></path></svg>
+            {% elif p.key == "against" %}
+            <svg viewBox="0 0 100 100" focusable="false"><path class="game-river" d="M38,4 V20 Q38,30 28,30 H22 Q14,30 14,38 Q14,46 22,46 H30 Q38,46 38,54 V98"></path><path class="game-arrows" d="M60,22 L72,32 L84,22 M60,36 L72,46 L84,36 M60,50 L72,60 L84,50 M58,74 L63,78 L68,74 M58,82 L63,86 L68,82"></path></svg>
+            {% else %}
+            <svg viewBox="0 0 100 100" focusable="false"><path class="game-drop" d="M50,12 C50,12 34,32 34,44 A16,16 0 0 0 66,44 C66,32 50,12 50,12 Z"></path><path class="game-drop" d="M24,40 C24,40 15,51 15,58 A9,9 0 0 0 33,58 C33,51 24,40 24,40 Z"></path><path class="game-drop" d="M76,40 C76,40 67,51 67,58 A9,9 0 0 0 85,58 C85,51 76,40 76,40 Z"></path><path class="game-arrows" d="M10,80 C18,74 26,74 34,80 C42,86 50,86 58,80 C66,74 74,74 82,80 C86,83 88,84 90,84 M22,92 C28,88 34,88 40,92 C46,96 52,96 58,92 C64,88 70,88 76,92"></path></svg>
+            {% endif %}
+            <span class="game-back-name">{{ p.name }}</span>
+          </div>
+          <div class="game-face game-front">
+            <span class="game-front-type">{{ p.name }}</span>
+            <p class="game-front-text">{{ p.cards[0] }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="game-pile-text">
+        <span class="label">{{ p.square }}</span>
+        <h3 id="pile-{{ p.key }}">{{ p.name }}</h3>
+        <p>{{ p.rule }}</p>
+        <p class="game-example">{{ T.forExample }}{{ p.cards[0] }}</p>
+        <button type="button" class="btn btn-secondary game-draw" aria-describedby="pile-{{ p.key }}">{{ T.drawCard }}</button>
+        <p class="visually-hidden game-live" aria-live="polite"></p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <script type="application/json" id="game-cards">{{ b.piles | localize(L) | dump | safe }}</script>
+</section>

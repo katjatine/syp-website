@@ -1,0 +1,11 @@
+{#- Two soft colour cards side by side (one under the other on a phone). Each card: heading, text and an optional link.
+    "goodplanet: true" turns a card into the "Brought to you by" card: GoodPlanet's logo above the text and the logos of
+    the partners and funders under it (the same logos as on Partners; change them here). -#}
+<div class="card-pair">
+{% for c in b.cards %}<div class="card-soft colour-card{% if c.goodplanet %} brought-by{% endif %}">
+{% if c.heading %}<h2>{{ c.heading | markdownInline | safe }}</h2>
+{% endif %}{% if c.goodplanet %}<img class="brought-by-logo" src="/images/logos/goodplanet.svg" alt="" width="229" height="119">
+{% endif %}{% if c.text %}{{ c.text | markdown | safe }}{% endif %}{% if c.goodplanet %}<ul class="brought-by-partners" aria-label="{{ T.partnersAndFunders }}" role="list"><li><img src="/images/logos/hz.svg" alt="HZ University of Applied Sciences" width="151" height="39" style="--h: 28px" loading="lazy"></li><li><img src="/images/logos/aeap-bloc-marque.png" srcset="/images/logos/aeap-bloc-marque.png 1x, /images/logos/aeap-bloc-marque-2x.png 2x" alt="Agence de l'Eau Artois-Picardie" width="326" height="120" style="--h: 40px" loading="lazy"></li><li><img src="{{ T.euLogo.src }}" alt="{{ T.euCoFunded }}" width="{{ T.euLogo.width }}" height="147" style="--h: 30px" loading="lazy"></li></ul>
+{% endif %}{% if c.link and c.link.url %}<p><a class="link-arrow" href="{{ c.link.url }}">{{ c.link.label }}</a></p>
+{% endif %}</div>
+{% endfor %}</div>

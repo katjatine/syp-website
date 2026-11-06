@@ -1,0 +1,19 @@
+{# List of all news posts, newest first. Used on the news page.
+   The dashes inside the tags trim empty lines: on this Markdown page an empty line would end the HTML
+   and leave stray paragraphs in the list. #}
+<div class="teaser-list">
+  {%- for post in collections.news | inLang(L) %}
+  <article class="teaser teaser-small">
+    {#- A sticker with the place over the photo, in a colour per post. Without a photo: a coloured tile with an icon ("icon" and "tile" in the post) -#}
+    {% if post.data.photo %}<div class="teaser-photo has-stickers"><a href="{{ post.url }}" tabindex="-1" aria-hidden="true">{% photo post.data.photo, post.data.alt, { sizes: "(min-width: 1000px) 360px, (min-width: 700px) 280px, 100vw" } %}</a>{% if post.data.place %}<ul class="stickers" aria-hidden="true"><li class="sticker {{ ['sticker-lime', 'sticker-orange', 'sticker-green', ''][loop.index0 % 4] }}">{{ post.data.place.split(",")[0] }}</li></ul>{% endif %}</div>{% elif post.data.icon %}<div class="teaser-tile teaser-tile-{{ post.data.tile or 'blue' }}" aria-hidden="true">{% lineIcon post.data.icon %}{% wave "rgba(255, 255, 255, 0.3)", "b" %}</div>{% else %}<div class="teaser-photo-empty" aria-hidden="true"></div>{% endif %}
+    <div class="teaser-body">
+      <div class="label">{{ post.date | longDate(L) }}{% if post.data.place %}, {{ post.data.place }}{% endif %}</div>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <div class="teaser-text">{{ post.templateContent | trim | safe }}</div>
+      {%- if post.data.link %}
+      <a class="link-arrow" href="{{ post.data.link }}">{{ post.data.linkLabel or ("More about the exchange in " + post.data.place) }}</a>
+      {%- endif %}
+    </div>
+  </article>
+  {%- endfor %}
+</div>

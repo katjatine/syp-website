@@ -1,0 +1,25 @@
+{#- The call at the bottom of a page (Tine, file 62, October 2026, option A): a photo as a band edge to edge under GoodPlanet's dark blue, a big title, one line and a big
+    lime button, everywhere this block stood. The photo only sets the mood (alt=""); the band ends in the footer's wave.
+    An exchange can set its own "cta" in its front matter (title, text, label, url): same band, its own words.
+    The title, button and last line of the usual call are in src/_data/joinCall.json ("Join call" in the browser editor).
+    Styles: "Inner pages" in site.css, under .exchange-cta.
+    The photo: about twenty of us cheering by a canal in Ghent, 2022 (Tine, file 70, option A). Before it: the Senate
+    plenary of 2015 (far more people than a group has), the kayak paddles (did not speak to the imagination) and the
+    Zeeland group with arms wide (nearly square, so the wide band cut off too much), all 5 October 2026. -#}
+{%- set call = joinCall | localize(L) %}{% set why = whyJoin | localize(L) %}
+<section class="exchange-cta on-dark">
+  {% photo "ghent-2022-canal-cheering", "", { sizes: "100vw", class: "exchange-cta-photo" } %}
+  <div class="container">
+    <h2>{{ cta.title if cta else call.title }}</h2>
+    {#- Right above the button, the four reasons to join once more, short (designer feedback, 5 October 2026: the selling points
+        belong by the button; "no fee, travel, bed and meals" stays at the top of the homepage, on Join and on the four
+        exchange pages, under Cost). The same points and icons as the band at the top of the homepage (src/_data/whyJoin.json). -#}
+    {% if cta %}<p>{{ cta.text }}</p>{% else %}
+    <ul class="cta-why" role="list" aria-label="{{ T.whyJoin }}">
+      {% for w in why.items %}<li><span class="icon-disc tone-{{ ['lime', 'orange', 'pink', 'green'][loop.index0 % 4] }}">{% lineIcon w.icon %}</span>{{ w.title }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    <a class="btn btn-tint-lime" href="{{ cta.url if cta else ('/join/' | localUrl(L)) }}"{% if not cta %} data-goatcounter-click="join-cta" data-goatcounter-title="Join us (bottom of page)" data-goatcounter-referrer="{{ page.url }}"{% endif %}>{{ cta.label if cta else call.button }}</a>
+    {% if not cta and call.who %}<p class="cta-who">{{ call.who }}</p>{% endif %}
+  </div>
+</section>

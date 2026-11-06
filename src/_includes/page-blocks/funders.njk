@@ -1,0 +1,12 @@
+{#- The funders: a heading and a text beside their logos (Partners). The logos stay here: the EU logo and the bloc-marque
+    of the Agence de l'Eau may only be shown as they are. The EU disclaimer is not repeated here: it already stands in the
+    footer of every page (Tine, 5 October 2026). -#}
+<div class="funders">
+<div class="prose">
+{% if b.heading %}<h2>{{ b.heading | markdownInline | safe }}</h2>
+{% endif %}{{ b.text | markdown | safe }}</div>
+<ul class="funder-logos" aria-label="{{ T.funders }}" role="list">
+<li><a class="funder-eu" href="https://erasmus-plus.ec.europa.eu" rel="noopener"><img src="{{ T.euLogo.src }}" alt="{{ T.euCoFunded }}" width="{{ T.euLogo.width }}" height="147" style="--h: 104px" loading="lazy"></a></li>
+<li><a href="https://www.eau-artois-picardie.fr" rel="noopener"><img src="/images/logos/aeap-bloc-marque.png" srcset="/images/logos/aeap-bloc-marque.png 1x, /images/logos/aeap-bloc-marque-2x.png 2x" alt="Agence de l'Eau Artois-Picardie" width="326" height="120" style="--h: 104px" loading="lazy"></a></li>
+</ul>
+</div>

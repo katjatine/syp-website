@@ -1,0 +1,322 @@
+# The editor entries for news posts, timeline stops and join details, written by hand on 1 October 2026
+# (Output Claude/28). scripts/pages-config.js adds them to .pages.yml after the pages. Edit them here.
+# News posts keep "icon" and "tile" (the coloured tile of a post without a photo) through settings.content.merge.
+content:
+  # ----------------------------------------------------------------------------
+  - name: news
+    label: News posts
+    description: One post per event. Shown on the News page, and the three newest on Home.
+    type: collection
+    path: src/news
+    format: yaml-frontmatter
+    # Same pattern as the existing posts: 2026-06-25-our-recommendations-reached-....md
+    # The name is made once, when the post is created, and is part of the web address.
+    filename: "{fields.date}-{primary}.md"
+    exclude: [news.11tydata.json]
+    operations:
+      rename: false
+    view:
+      primary: title
+      fields: [title, date, place]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: shortTitle
+        label: Short title (optional)
+        description: A shorter version for the browser tab and small cards. Leave empty to use the title.
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: date
+        label: Date
+        description: The day of the event or of the Facebook post.
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: dateLabel
+        label: Date as shown (optional)
+        description: 'Only when the exact day does not matter, for example "October 2025". Leave empty to show the month and year.'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: place
+        label: Place
+        description: Town or city, for example Ghent.
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: latest
+        label: Show on Home
+        description: Switch off for a post that should not be among the three newest posts on Home.
+        type: boolean
+        default: true
+      - name: excerpt
+        label: Summary
+        description: One or two sentences. Shown on Home and in the news list.
+        type: text
+        required: true
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: photo
+        label: Photo (optional)
+        options:
+          media: photos
+        description: A .jpg or .png. Only photos with the consent of the people on them, and never one where a full name can be read. Best is the photo saved from the Facebook post itself; Facebook has already removed the location data from it.
+        type: image
+      - name: alt
+        label: What is on the photo
+        description: 'Required when there is a photo. One sentence for people who cannot see it, for example "Four participants in life jackets holding red paddles".'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: link
+        label: Link at the end (optional)
+        description: A page of this site, for example /exchanges/ghent-2026/, or a full address starting with https://
+        type: string
+        pattern:
+          regex: '^$|^/[^\s<>"]*$|^https://[^\s<>"]+$'
+          message: 'Start with / for a page of this site, or with https://'
+      - name: linkLabel
+        label: Text of that link (optional)
+        description: 'For example "Read the letter". Leave empty for "More about the exchange in" followed by the Place, so fill in Place then.'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: body
+        label: Text
+        description: The full post. Paste the Facebook text here; bold, links and lists are fine. Put the photo in the Photo field above, not in the text.
+        type: rich-text
+        required: true
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)'
+          message: 'No "[TODO" please: it stops the publication.'
+        options:
+          format: markdown
+          media: false
+          switcher: false
+
+  # ----------------------------------------------------------------------------
+  # The whole file is one list. Pages CMS saves every entry with exactly the fields
+  # below (settings.content.merge does not apply to list files), so every key used in
+  # timeline.json must stay listed here, even the hidden one.
+  - name: timeline
+    label: Timeline stops
+    description: The stops on the river, on Home and on the Timeline page, in this order. Keep them in time order, with the "Coming up" entries last.
+    type: file
+    path: src/_data/timeline.json
+    format: json
+    list: true
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: era
+        label: Part of the river
+        type: select
+        required: true
+        options:
+          values:
+            - name: history
+              label: History (Timeline page only)
+            - name: cohort
+              label: This group (exchanges and milestones)
+            - name: upcoming
+              label: Coming up
+      # Updated 8 October 2026: the homepage river shows only the entries with "home: true" (was "homepage" in this
+      # draft), each with a Lucide icon on its card; "id" names the place on the Timeline page that the card links to.
+      - name: id
+        label: Short name for links
+        description: 'Year and a few words, for example "2026-ghent". The card on Home links to /timeline/#this-name. Leave it as it is once the entry is online.'
+        type: string
+        required: true
+        pattern:
+          regex: '^[a-z0-9-]+$'
+          message: 'Small letters, numbers and dashes only.'
+      - name: home
+        label: Show on Home
+        description: Switch on for the few big moments on the river on the homepage.
+        type: boolean
+      - name: icon
+        label: Icon on the card on Home
+        type: select
+        options:
+          values: [route, landmark, flag, footprints, sparkles, megaphone, handshake, headphones, sprout, sailboat, scroll-text, user-plus, laptop, lightbulb, search]
+      - name: homeNature
+        label: Reeds or gulls beside the card on Home (optional)
+        type: select
+        options:
+          values: [reeds, gulls]
+      - name: homeCta
+        label: Button on the card on Home (optional)
+        description: 'Only for the last card, the invitation: for example "Join us". It links to the Link below.'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: date
+        label: Date
+        description: 'As it should read, for example "May 2026" or "2012 to 2024". Empty for coming up entries without a date.'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: title
+        label: Title
+        type: string
+        required: true
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: short
+        label: Short text for Home
+        description: One line on the small card on Home. Leave empty to use the full text.
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: text
+        label: Text for the Timeline page
+        description: Two or three sentences.
+        type: text
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: url
+        label: Link (optional)
+        description: A page of this site, for example /exchanges/ghent-2026/ or /join/
+        type: string
+        pattern:
+          regex: '^$|^/[^\s<>"]*$|^https://[^\s<>"]+$'
+          message: 'Start with / for a page of this site, or with https://'
+      - name: linkLabel
+        label: Text of that link (optional)
+        description: 'Leave empty for "Read about ..." with the card title.'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: nature
+        # Reeds or gulls drawn beside the river: a design choice, kept as it is.
+        type: select
+        hidden: true
+        options:
+          values: [gulls, reeds]
+      - name: cardTitle
+        label: Card title on Home (optional)
+        description: 'A shorter title for the small card on Home, for example "Ghent, Belgium".'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: chapter
+        label: Large year beside the river (optional)
+        description: 'Only on the first entry of a new period, on the Timeline page. First line the year, for example "2027"; an optional second line in small letters, for example "and 2028".'
+        type: string
+        list:
+          max: 2
+          collapsible: false
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: weight
+        label: Size on the Timeline page
+        description: Leave empty for a normal entry.
+        type: select
+        options:
+          values:
+            - name: milestone
+              label: Milestone (larger)
+            - name: minor
+              label: Minor (compact)
+      - name: _source
+        label: Where this comes from (not shown on the site)
+        type: text
+        readonly: true
+      - name: _cardTitleNote
+        label: Note on the card title (not shown on the site)
+        type: text
+        readonly: true
+      - name: _shortNote
+        label: Note on the short text (not shown on the site)
+        type: text
+        readonly: true
+      - name: _homeCtaNote
+        label: Note on the button (not shown on the site)
+        type: text
+        readonly: true
+      - name: figure
+        label: Key figure (optional)
+        description: 'One number with a few words, for example 40 and "young people, 9 nationalities".'
+        type: object
+        fields:
+          - name: number
+            label: Number
+            type: string
+            pattern:
+              regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+              message: 'No "[TODO" and no < or > please.'
+          - name: label
+            label: Words after the number
+            type: string
+            pattern:
+              regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+              message: 'No "[TODO" and no < or > please.'
+
+  # ----------------------------------------------------------------------------
+  # Only three keys of site.json are shown. settings.content.merge keeps all the
+  # others (name, nav, social, pincode, noindex, the show... switches) as they are,
+  # except keys with an empty value: Pages CMS drops those on every save. After the
+  # launch that is "pincode": "". The site reads a missing pincode as empty, so the
+  # PIN gate stays off.
+  # nextRound is new: it only shows on the site once the code change in the plan is made.
+  - name: join
+    label: Join details
+    description: The next recruitment round, the sign-up form and the contact address.
+    type: file
+    path: src/_data/site.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: nextRound
+        label: Next recruitment round
+        description: 'One sentence in the sign-up card on the Join page, for example "The next round opens in March 2027, with an online information session on 4 March." Also update the "Next recruitment" entry in Timeline.'
+        type: string
+        pattern:
+          regex: '^(?![\s\S]*\[TODO)[^<>]*$'
+          message: 'No "[TODO" and no < or > please.'
+      - name: joinFormUrl
+        label: Link to the sign-up form
+        description: The address of the Microsoft Forms form, starting with https://
+        type: string
+        required: true
+        pattern:
+          regex: '^https://[^\s<>"\[\]]+$'
+          message: 'Paste the full address, starting with https://'
+      - name: contactEmail
+        label: Contact e-mail address
+        description: Shown on the Join page.
+        type: string
+        required: true
+        pattern:
+          regex: '^[^\s@<>"]+@[^\s@<>"]+\.[A-Za-z]{2,}$'
+          message: 'This does not look like an e-mail address.'

@@ -1,0 +1,16 @@
+{# List of all exchanges, oldest first. Used on the exchanges overview page. #}
+<div class="teaser-list">
+  {% for ex in collections.exchanges | inLang(L) %}
+  <article class="teaser">
+    {#- Two stickers over the photo, as on goodplanet.be: the step and the place, the place in a colour per exchange. One line, so Markdown adds no paragraphs. -#}
+    <div class="teaser-photo has-stickers"><a href="{{ ex.url }}" tabindex="-1" aria-hidden="true">{% photo ex.data.hero.photo, ex.data.hero.alt, { sizes: "(min-width: 700px) 280px, 100vw" } %}</a><ul class="stickers" aria-hidden="true"><li class="sticker">{{ ex.data.number }}</li><li class="sticker {{ ['sticker-lime', 'sticker-orange', 'sticker-green', 'sticker-brown'][loop.index0 % 4] }}">{{ ex.data.linkName }}</li></ul></div>
+    <div class="teaser-body">
+      {#- Date and country only: the place is already in the sticker, the title and the link -#}
+      <div class="label">{{ ex.data.dateLabel }}, {{ ex.data.country }}</div>
+      <h2><a href="{{ ex.url }}">{{ ex.data.title }}</a></h2>
+      <p>{{ ex.data.teaser }}</p>
+      <a class="link-arrow" href="{{ ex.url }}">{{ T.readAbout }}{{ ex.data.linkName }}</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>

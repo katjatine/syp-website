@@ -1,0 +1,135 @@
+{# Recommendations page (was Youth voices; Tine, file 64). The letter is the Markdown text of src/youth-voices.md; the rest comes from its front matter. #}
+<section class="container page-hero">
+  <div class="page-hero-grid">
+    <div>
+      {% if eyebrow %}<div class="eyebrow">{{ eyebrow }}</div>{% endif %}
+      {#- A two-sentence title: one sentence per line (headlineLines; Tine, file 64) -#}
+      <h1>{% if headlineLines %}{% for l in headlineLines %}<span class="headline-line">{{ l }}</span>{% if not loop.last %} {% endif %}{% endfor %}{% else %}{{ headline or title }}{% endif %}</h1>
+      <p class="lead measure-narrow">{{ lede }}</p>
+    </div>
+    <div class="page-hero-photo"><a class="lightbox-link" href="/images/photos/{{ photo | photoSlug }}.jpg" data-caption="{{ caption }}">{% photo photo, alt, { sizes: "(min-width: 900px) 540px, 100vw", eager: true } %}<span class="visually-hidden">{{ T.viewLarger }}</span></a></div>
+  </div>
+</section>
+
+{% wave "var(--foam)" %}
+<section class="bg-foam section-foam-split" id="letter">
+  <div class="container">
+    <div class="brief-col">
+      <h2>{{ letter.title }}</h2>
+      <p class="text-grey brief-intro">{{ letter.intro }}</p>
+      {#- The letter as a policy brief (Tine, file 64, design B): our frame upright, their words in italics between big quotation marks.
+          The quotation marks come from CSS, so the Markdown text needs no extra characters. -#}
+      <article class="brief" aria-label="{{ letter.title }}">
+        {#- A letter, not a form: sender under the letterhead, place and date on the right, then the addressee and the subject (Tine, 5 Oct 2026) -#}
+        <header class="brief-head"><img class="brief-logo" src="/images/brand/syp-logo.png" alt="" width="463" height="538"><div><p class="brief-org">{{ T.siteName or site.name }}</p><p class="brief-from">{{ letter.from }}</p></div></header>
+        <div class="brief-address">
+          <p class="brief-date">{{ letter.date }}</p>
+          <p class="brief-to">{{ letter.to }}</p>
+          <p class="brief-subject"><span>Subject:</span> {{ letter.subject }}</p>
+        </div>
+        <div class="brief-rule" aria-hidden="true"></div>
+        <div class="brief-body">
+{#- A quotation in the letter ("> ..." in Markdown) is the large key sentence of the brief -#}
+{{ ((bodyTranslated | markdown) if bodyTranslated else content) | replace("<blockquote>", '<blockquote class="brief-key">') | safe }}
+        </div>
+        <footer class="brief-foot"><p><strong>{{ T.writtenTogether }}</strong> {{ letter.note }}</p></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="container section" id="recommendations">
+  <div class="section-head-inline" style="flex-direction:column;align-items:flex-start;gap:12px">
+    <h2>{{ recommendations.title }}</h2>
+    <p class="lead measure">{{ recommendations.intro }}</p>
+  </div>
+  <div class="card-grid">
+    {% for r in recommendations.groups %}
+    <div class="card-soft colour-card reco">
+      {# A line icon per recommendation ("icon" in src/youth-voices.md, drawings in lib/line-icons.js), in a GoodPlanet colour #}
+      <div class="reco-head"><span class="label">{{ T.group }} {{ loop.index }}</span>{% if r.icon %}{% lineIcon r.icon, "reco-icon" %}{% endif %}</div>
+      <h3>{{ r.title }}</h3>
+      {#- Their ask, after a bold "We ask" (Tine, file 64); without an ask, their conclusion -#}
+      {% if r.ask %}<p class="reco-ask"><strong>{{ T.weAsk }}</strong> {{ r.ask }}</p>{% else %}<p style="font-size:var(--fs-body);line-height:1.55;margin:0">{{ r.text }}</p>{% endif %}
+      {#- How the group got there, folded away so the page stays short -#}
+      {% if r.more %}<details class="reco-more"><summary>{{ recommendations.moreLabel }}</summary><p>{{ r.more }}</p></details>{% endif %}
+      {#- A detail of the group's own poster, at the bottom of the card -#}
+      {% if r.detail %}<figure class="reco-detail">{% photo r.detail, r.detailAlt, { sizes: "(min-width: 900px) 360px, 100vw" } %}<figcaption>{{ T.fromPoster }}</figcaption></figure>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {#- How the recommendations took shape: the groups presenting their posters (one section with the cards, 2 Oct) -#}
+  <div class="voices-posters" id="posters">
+    <h3>{{ posters.title }}</h3>
+    <p class="measure" style="margin-top:12px">{{ posters.text }}</p>
+    {#- The young people presenting their posters: people first, the sheets of paper second (Tine, 2 Oct) -#}
+    {% if posters.moments %}
+    {#- On phones a row to swipe sideways, so three tall photos do not stack -#}
+    <div class="posters-moments swipe-row" role="region" aria-label="{{ posters.title }}" tabindex="0">
+      {% for m in posters.moments %}
+      <figure>
+        <a class="lightbox-link" href="/images/photos/{{ m.photo | photoSlug }}.jpg" data-caption="{{ m.caption }}">{% photo m.photo, m.alt, { sizes: "(min-width: 900px) 240px, (min-width: 700px) 33vw, 80vw" } %}<span class="visually-hidden">{{ T.viewLarger }}</span></a>
+        {% if m.caption and site.showPhotoCaptions %}<figcaption>{{ m.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {#- The original posters, folded away for whoever wants to see the source -#}
+    {% if posters.gallery %}
+    <details class="posters-originals">
+      <summary>{{ posters.originalsLabel }} ({{ posters.gallery.length }})</summary>
+      <p class="text-grey">{{ posters.originalsText }}</p>
+      <div class="posters-thumbs">
+        {% for g in posters.gallery %}
+        <figure>
+          <a class="lightbox-link" href="/images/photos/{{ g.photo | photoSlug }}.jpg" data-caption="{{ g.caption }}">{% photo g.photo, g.alt, { sizes: "(min-width: 700px) 300px, 100vw" } %}<span class="visually-hidden">{{ T.viewLarger }}</span></a>
+          <figcaption>{{ g.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </details>
+    {% endif %}
+  </div>
+</section>
+
+{#- From Ghent to Tournai in four steps, with the Tournai photo and its button under them (Tine, file 64, 4c B) -#}
+<section class="container section voices-path" id="path">
+  <h2>{{ path.title }}</h2>
+  <p class="lead measure">{{ path.intro }}</p>
+  <ol class="path-steps" role="list">
+    {% for st in path.steps %}
+    <li><span class="icon-disc tone-{{ st.tone }}">{% icon st.icon %}</span><span class="label">{{ st.label }}</span><h3>{{ st.title }}</h3><p>{{ st.text }}</p></li>
+    {% endfor %}
+  </ol>
+  <div class="path-tournai">
+    <figure>{% photo path.photo, path.alt, { sizes: "(min-width: 900px) 560px, 100vw" } %}<figcaption>{{ path.caption }}</figcaption></figure>
+    <a class="btn btn-accent" href="{{ path.url }}">{{ path.label }}</a>
+  </div>
+</section>
+
+{#- One quote, said to the commission (Tine, file 64); the others are on Join and Exchanges, each in its own block -#}
+<section class="container voices-quote" id="participants">
+  <div class="voices-quote-pair">
+  {% set q = testimonials.quote %}{% set qClass = "" %}{% include "blocks/quote-card.njk" %}
+  {% if testimonials.commissionQuote and testimonials.commissionQuote.text %}{% set q = testimonials.commissionQuote %}{% include "blocks/quote-card.njk" %}{% endif %}
+  </div>
+  {% if site.showCandidateQuotes %}
+  <div class="candidates">
+    <div style="grid-column: 1 / -1">
+      <h3>{{ testimonials.candidatesTitle }}</h3>
+      <p class="text-grey" style="margin:8px 0 0;max-width:60ch">{{ testimonials.candidatesIntro }}</p>
+    </div>
+    {% for c in testimonials.candidates %}
+    <div class="candidate">
+      <span class="label-grey">{{ c.source }}</span>
+      <p>{{ c.text }}</p>
+      {% if c.todo %}<p>{{ c.todo }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+
+{# A next step at the end of the page #}
+{% include "blocks/join-cta.njk" %}

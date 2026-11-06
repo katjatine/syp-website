@@ -1,0 +1,15 @@
+{#- A dark card with a heading, a text and a download button, with a note under it (Go with the flow: "Print it and play").
+    "file" is the file in src/downloads; "fileNote" says what it is ("PDF, 2.5 MB"). "anchor" is the #name that links
+    jump to ("Download the game" at the top of the page goes to #download). -#}
+<section class="page-block"{% if b.anchor %} id="{{ b.anchor }}"{% endif %}>
+  <div class="card-dark join-signup">
+    <div class="join-signup-text">
+      <h2>{{ b.heading }}</h2>
+      {{ b.text | markdown | safe }}    </div>
+    <div class="join-signup-action">
+      <a class="btn btn-accent" href="/downloads/{{ b.file | fileName }}" download>{{ b.button }}</a>
+      {% if b.fileNote %}<p class="form-note">{{ b.fileNote }}</p>{% endif %}
+    </div>
+  </div>
+  {% if b.note %}<p class="block-note">{{ b.note | markdownInline | safe }}</p>{% endif %}
+</section>

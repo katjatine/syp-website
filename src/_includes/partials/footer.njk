@@ -1,0 +1,45 @@
+{% wave "var(--deep)", "b", "tide" %}
+{# The footer in two layers (Tine, file 50, choice A): a blue band with everything you act on, then a white strip with the
+   funder, the partners and the EU disclaimer, closed by a thin blue line. #}
+<footer class="site-footer">
+  <div class="footer-main on-dark"><div class="container site-footer-inner">
+    {# GoodPlanet leads the project: its white logo, never taller than the EU flag below (EU rule) #}
+    <a class="footer-goodplanet" href="https://www.goodplanet.be" rel="noopener"><span>{{ T.projectOf }}</span><img src="/images/logos/goodplanet-white.svg" alt="GoodPlanet Belgium" width="229" height="119" loading="lazy"></a>
+    {# The main menu and Join (site.nav), then the other pages in smaller type (footerNav in site.json) #}
+    <div class="footer-navs">
+      <nav class="footer-sections" aria-label="{{ T.siteSections }}">
+        {% for item in site.nav %}{% set itemUrl = item.url | localUrl(L) %}<a href="{{ itemUrl }}"{% if page.url and page.url.startsWith(itemUrl) %} aria-current="page"{% endif %}>{{ T.nav[item.url] or item.label }}</a>{% endfor %}
+        <a class="btn btn-accent btn-nav" href="{{ site.joinUrl | localUrl(L) }}" data-goatcounter-click="join-footer" data-goatcounter-title="Join (footer)" data-goatcounter-referrer="{{ page.url }}"{% if page.url and page.url.startsWith(site.joinUrl) %} aria-current="page"{% endif %}>{{ T.join or site.joinLabel }}</a>
+      </nav>
+      <nav class="footer-links" aria-label="{{ T.morePages }}">
+        {% for item in site.footerNav %}{% set itemUrl = item.url | localUrl(L) %}<a href="{{ itemUrl }}"{% if page.url == itemUrl %} aria-current="page"{% endif %}>{{ T.footerNav[item.url] or item.label }}</a>{% endfor %}
+      </nav>
+    </div>
+    {# The round icons, then the way back up: a real link to the body (id "top"), so keyboard focus goes back to the top too.
+       A short page can switch it off with "backToTop: false"; the relecture pages never show it. #}
+    <div class="footer-follow">
+      {% set socialOnDark = true %}{% include "blocks/social-icons.njk" %}
+      {% if backToTop !== false and type != "relecture" %}<a class="to-top" href="#top">{{ T.backToTop }}</a>{% endif %}
+      {#- Edit mode (Tine, file 58): only About shows the pencil ("editPencil: true" in its front matter). Lucide "pencil", ISC licence. #}
+      {% if editPencil %}<a class="edit-pencil" href="#edit" aria-label="{{ T.suggestChanges }}" title="{{ T.suggestChanges }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg></a>{% endif %}
+    </div>
+    {#- The form Netlify reads at publication to accept edit suggestions (sent by src/js/edit.js; Netlify mails them on). #}
+    {% if editPencil %}<form name="edit-suggestions" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input name="bot-field"><input name="name"><textarea name="message"></textarea><input name="count"><textarea name="summary"></textarea><input type="file" name="file">
+    </form>{% endif %}
+  </div></div>
+  {# Funder and partners on white, so every logo keeps its own colours (the Agence de l'Eau logo may only be shown on white).
+     EU rules: the EU emblem comes first and is the largest logo at every width (at least as large as the biggest other logo,
+     the flag at least 1 cm), its statement unchanged, never faded; Erasmus+ is named apart from it (JINT asks for this).
+     --h is the height of each partner logo, chosen so wide and compact logos look equally large.
+     The Agence de l'Eau comes first among the partners and is as high as the EU emblem, never higher (Raphaël, 22 October 2026; Tine, file 83). #}
+  <div class="footer-funding"><div class="container footer-funding-inner">
+    <a class="footer-eu" href="https://erasmus-plus.ec.europa.eu" rel="noopener"><img src="{{ T.euLogo.src }}" alt="{{ T.euCoFunded }}" width="{{ T.euLogo.width }}" height="147" loading="lazy"></a>
+    <ul class="footer-logos" aria-label="{{ T.partners }}" role="list">
+      <li class="footer-logo-agence"><a href="https://www.eau-artois-picardie.fr" rel="noopener"><img src="/images/logos/aeap-bloc-marque.png" srcset="/images/logos/aeap-bloc-marque.png 1x, /images/logos/aeap-bloc-marque-2x.png 2x" alt="Agence de l'Eau Artois-Picardie" width="326" height="120" loading="lazy"></a></li>
+      <li><a href="https://hz.nl" rel="noopener"><img src="/images/logos/hz.svg" alt="HZ University of Applied Sciences" width="151" height="39" style="--h: 32px" loading="lazy"></a></li>
+      <li><a href="https://www.isc-cie.org/en/" rel="noopener"><img src="/images/logos/isc.svg" alt="{{ T.isc }}" width="444" height="455" style="--h: 44px" loading="lazy"></a></li>
+    </ul>
+    <p class="footer-disclaimer"><strong class="footer-programme">Erasmus+</strong> {{ T.disclaimer or site.disclaimer }}</p>
+  </div></div>
+</footer>

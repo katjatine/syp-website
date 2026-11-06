@@ -1,0 +1,18 @@
+---
+permalink: "_redirects"
+eleventyExcludeFromCollections: true
+layout: false
+---
+# Generated from src/redirects.njk. Netlify reads this file.
+# The Netlify address sends everyone on to the real domain, so search engines see one site and not two (Tine, file 81).
+# When the site moves to GoodPlanet's own Netlify account, put its new .netlify.app address here.
+https://goodplanet-syp.netlify.app/*  {{ site.url }}/:splat  301!
+# Old addresses keep working (Tine, file 60, October 2026): they send the visitor on to the new one, permanently (301).
+/project/  /about/  301
+/project   /about/  301
+# Youth voices became Recommendations (Tine, file 64)
+/youth-voices/  /recommendations/  301
+/youth-voices   /recommendations/  301
+# News posts lost the date in their address: /news/2026-05-08-three-days-flooding-climate-ghent/ became /news/three-days-flooding-climate-ghent/
+{% for post in collections.news | inLang("en") %}/news/{{ post.inputPath | baseName }}/  {{ post.url }}  301
+{% endfor %}

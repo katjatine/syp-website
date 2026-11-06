@@ -1,0 +1,7 @@
+{#- A dark card with a heading, a text and a button (Reports: Go with the flow). "anchor" is the #name that links jump to. -#}
+<div class="card-dark download-card">
+  <div>
+    <h2{% if b.anchor %} id="{{ b.anchor }}"{% endif %}>{{ b.heading }}</h2>
+    {{ b.text | markdown | safe }}  </div>
+  {% if b.button and b.button.url %}<a class="btn btn-accent" href="{{ b.button.url }}">{{ b.button.label }}</a>{% endif %}
+</div>

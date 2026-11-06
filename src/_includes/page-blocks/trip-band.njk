@@ -1,0 +1,6 @@
+{#- A centred call with a sailing boat on a slow wave from edge to edge (Join: "Pack your bag."). The heading breaks
+    between its sentences when both do not fit on one line. -#}
+<section class="page-block trip-band">
+  <h2>{{ b.heading | sentences | safe }}</h2>
+  {{ b.text | markdown | safe }}  {% boatWave %}
+</section>

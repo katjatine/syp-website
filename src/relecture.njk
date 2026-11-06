@@ -1,0 +1,225 @@
+---
+title: Missing information
+description: What is still missing on the Scheldt Youth Parliament website, for Raphaël to fill in or correct.
+lang: en
+type: relecture
+noindex: true
+eleventyExcludeFromCollections: true
+store: syp-missing-info-v2
+
+# What only Raphaël can answer, and what we filled in ourselves from the reports and the SharePoint archive (2 October 2026).
+# A normal section has questions: title, url (the page it is about), help, now, draft, options or input "text"/"longtext", fallback.
+# A section with kind "checks" lists what we filled in: title, text, url, source. He only ticks "Not right" where something is wrong.
+sections:
+  - key: ask
+    title: "Only you know this"
+    intro: "Four short questions, and a fifth one only if you have it. A few words per answer is enough. Skip what you do not know: under each question it says what happens then."
+    items:
+      - key: "form-link"
+        title: "The sign-up form for the next group"
+        url: "/join/#sign-up"
+        help: "The button on the Join page needs a link to a Microsoft Forms form. The form of the last group (autumn 2024, “Scheldt Youth Parliament form”) still exists."
+        options:
+          - "Use the 2024 form"
+          - "A new form (link in the box)"
+          - "Not ready yet"
+        fallback: "no button; the sign-up card points to the contact address instead."
+      - key: "next-round"
+        title: "When do the next call and the information session start?"
+        url: "/join/#sign-up"
+        help: "A month is enough. “Not known yet” is a fine answer too."
+        input: "text"
+        fallback: "the site says “The next group is being prepared”, without a date."
+      - key: "quotes"
+        title: "Quotes from participants: from earlier groups for now, one or two from this group?"
+        url: "/recommendations/#participants"
+        help: "We found no quote with a first name from the 2024 to 2026 group. The Recommendations page showed three published quotes from earlier members: Bart (brochure 2017), Shérazade (to the commission, 2021) and Ana (press release 2013). If you can, ask one or two young people of this group for a sentence, first name and country, with their OK. And may we use this one from Ewout, an alumnus from Belgium (e-mail of November 2024)?"
+        draft: "“Participating in the events has been fun and nice to make those international contacts while working on our local river basins. This 3 country exchange-partnership can be really beneficial!”"
+        input: "longtext"
+        fallback: "The site keeps the three quotes from earlier groups."
+      - key: "fwle"
+        title: "Future Water Leaders Europe: can we announce it?"
+        url: "/timeline/"
+        help: "The final report says it was submitted for Erasmus+ (round 2, deadline 1 October 2026), with a start on 1 January 2027."
+        options:
+          - "Submitted: call it a project in preparation"
+          - "Accepted (start date in the box)"
+          - "Not to be announced yet"
+        fallback: "it is removed from Coming up and from the Partners page."
+      - key: "photo-tournai"
+        title: "Only if you have it: a photo of a young person speaking at the plenary in Tournai"
+        url: "/exchanges/isc-tournai-2026/"
+        help: "The SharePoint folder 2026_ISC has none. Without a legible full name, for example on a badge. A link or “no” is enough."
+        input: "text"
+        fallback: "the page keeps the photos it has."
+  - key: checks
+    kind: checks
+    title: "We filled these in from the reports. Anything wrong?"
+    intro: "From the final report, the activity reports, the SharePoint archive and the ISC website. Only click “Not right” where something is wrong; the rest counts as fine."
+    items:
+      - key: "c-age"
+        title: "Age"
+        text: "Participants are 16 to 26."
+        url: "/join/"
+        source: "final report, poster and call of 2024"
+      - key: "c-free"
+        title: "Free"
+        text: "We arrange travel, accommodation and meals during the exchanges; there is no fee."
+        url: "/join/#how-it-works"
+        source: "JINT check, Zeeland programme"
+      - key: "c-round"
+        title: "How long one group runs"
+        text: "About a year and a half, from the information session to the plenary of the commission."
+        url: "/join/#how-it-works"
+        source: "the 2025 to 2026 group, March 2025 to June 2026"
+      - key: "c-contact"
+        title: "Contact address on the Join page"
+        text: "r.loubert@goodplanet.be"
+        url: "/join/#contact"
+        source: "goodplanet.be and the recruitment mails of 2025"
+      - key: "c-observer"
+        title: "Observer status"
+        text: "As observers we may attend the commission's plenary and speak, but not vote."
+        url: "/about/"
+        source: "isc-cie.org, the observers page"
+      - key: "c-eypw"
+        title: "European Youth Parliament for Water"
+        text: "Taken off Coming up: it took place in Strasbourg from 20 to 26 September 2026, and we found no SYP delegation."
+        url: "/timeline/"
+        source: "sie-see.org"
+      - key: "c-start"
+        title: "Start"
+        text: "The timeline now starts with our first plenary, in Antwerp in October 2008, and the first commission plenary as observers, in Ostend in December 2012."
+        url: "/timeline/"
+        source: "SJP website history 2013, report 2014"
+      - key: "c-history"
+        title: "Timeline 2013 to 2024"
+        text: "Fourteen more moments, from Lake Sevan in 2013 to the plenary in Valenciennes in June 2024. Please glance over the Timeline page."
+        url: "/timeline/"
+        source: "activity reports 2012 to 2024 and the archive"
+      - key: "c-logo"
+        title: "Our logo"
+        text: "The members chose the drop in an online vote in May 2020, not in Antwerp in 2019."
+        url: "/"
+        source: "results of the virtual meetings of May 2020"
+      - key: "c-news"
+        title: "Two news dates"
+        text: "Recruitment opened in October 2024 and ran until 10 March 2025; the first online meeting was on 14 March 2025."
+        url: "/news/"
+        source: "newsletter of 11 October 2024, recruitment mails, activity report December 2024"
+      - key: "c-watteeuw"
+        title: "Filip Watteeuw"
+        text: "The group photo in the café on the Ghent page is the one with him."
+        url: "/exchanges/ghent-2026/"
+        source: "Ghent exchange report"
+      - key: "c-letter"
+        title: "The letter"
+        text: "Now as on the three handwritten pages: “not as a monster”, “to trust nature”, “angry and scared”."
+        url: "/recommendations/#letter"
+        source: "annex 2 of the Ghent exchange report"
+      - key: "c-posters"
+        title: "The posters"
+        text: "The three posters are on the Recommendations page. No names on them."
+        url: "/recommendations/#posters"
+        source: "annex 1 of the Ghent exchange report"
+      - key: "c-members"
+        title: "Made by members"
+        text: "We name Emma (two podcasts) and Jan (a beach clean-up), first names only, as GoodPlanet did on Facebook."
+        url: "/"
+        source: "SYP Facebook page"
+      - key: "c-game"
+        title: "Go with the flow"
+        text: "Developed with Join for Water. 2 to 8 players, from age 9."
+        url: "/go-with-the-flow/"
+        source: "action plan 2025, the English rules"
+      - key: "c-rights"
+        title: "Rights for the Scheldt"
+        text: "The English name we use everywhere."
+        url: "/partners/"
+        source: "the name used most in the project documents"
+---
+<div class="rel-page" data-rel-lang="en">
+<section class="container page-hero rel-hero">
+  <div class="page-hero-text">
+    <div class="eyebrow">For Raphaël</div>
+    <h1>What is still missing</h1>
+    <p class="lead measure">About ten minutes. We filled in almost everything ourselves, from the reports and the archive on SharePoint. Only a few questions are left for you, and a list to glance over. At the end, copy your answers into an e-mail to Tine.</p>
+    <ul class="rel-facts">
+      <li>Skip what you do not know. Under each question it says what happens then.</li>
+      <li>You can write in French. Tine translates.</li>
+      <li>Your answers are saved in this browser, so you can stop and come back later.</li>
+    </ul>
+  </div>
+</section>
+
+<form id="relecture" class="container rel-form" novalidate data-rel-store="{{ store }}" data-rel-who="Raphaël">
+  {% for s in sections %}
+  <section class="rel-section" aria-labelledby="rel-{{ s.key }}-title">
+    <div class="rel-section-head">
+      <h2 id="rel-{{ s.key }}-title">{{ loop.index }}. {{ s.title }}</h2>
+      {% if s.intro %}<p class="rel-help">{{ s.intro }}</p>{% endif %}
+    </div>
+    {% if s.kind == "checks" %}
+    {# What we filled in ourselves: one line each. Nothing to do when it is right; "Not right" opens a box for the correction. #}
+    <ul class="rel-checks">
+      {% for c in s.items %}
+      <li class="rel-check" data-rel-item="{{ c.key }}" data-rel-kind="check" data-rel-title="{{ c.title }}: {{ c.text }}" data-rel-path="{{ c.url }}">
+        <div class="rel-check-main">
+          <p class="rel-check-text"><strong>{{ c.title }}:</strong> {{ c.text }}{% if c.url %} <a href="{{ c.url }}" target="_blank" rel="noopener">See the page</a>{% endif %}</p>
+          {% if c.source %}<p class="rel-check-source">Source: {{ c.source }}</p>{% endif %}
+        </div>
+        <label class="rel-flag"><input type="checkbox" name="{{ c.key }}" value="not right"><span>Not right<span class="visually-hidden">: {{ c.title }}</span></span></label>
+        <div class="rel-check-fix">
+          <label class="rel-note-label" for="{{ c.key }}-note">What is right? (French is fine)</label>
+          <textarea class="rel-note" id="{{ c.key }}-note" name="{{ c.key }}-note" rows="2"></textarea>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <div class="rel-list">
+      {% for q in s.items %}
+      <fieldset class="rel-item" data-rel-item="{{ q.key }}" data-rel-title="{{ q.title }}" data-rel-path="{{ q.url }}">
+        <legend class="rel-title">{{ q.title }}</legend>
+        <p class="rel-help">{{ q.help }} <a href="{{ q.url }}" target="_blank" rel="noopener">See the page</a></p>
+        {% if q.now %}<p class="rel-quote"><span class="rel-quote-label">On the site now</span> {{ q.now }}</p>{% endif %}
+        {% if q.draft %}<p class="rel-quote"><span class="rel-quote-label">Draft</span> {{ q.draft | replace("\n", "<br>") | safe }}</p>{% endif %}
+        {% if q.options %}
+        <div class="rel-options">
+          {% for opt in q.options %}
+          <label class="rel-choice"><input type="radio" name="{{ q.key }}" value="{{ opt }}"><span>{{ opt }}</span></label>
+          {% endfor %}
+        </div>
+        <label class="rel-note-label" for="{{ q.key }}-note">Correction or remark (optional)</label>
+        <textarea class="rel-note" id="{{ q.key }}-note" name="{{ q.key }}-note" rows="2"></textarea>
+        {% else %}
+        <label class="rel-note-label" for="{{ q.key }}-answer">Your answer</label>
+        <textarea class="rel-note" id="{{ q.key }}-answer" name="{{ q.key }}" rows="{{ 4 if q.input == 'longtext' else 1 }}"></textarea>
+        {% endif %}
+        <p class="rel-fallback">Without an answer: {{ q.fallback }}</p>
+      </fieldset>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+
+  <section class="rel-section rel-send" aria-labelledby="rel-send-title">
+    <div class="rel-item">
+      <label class="rel-title" for="autre">Anything else?</label>
+      <textarea class="rel-note" id="autre" name="autre" rows="4"></textarea>
+    </div>
+    <div class="card-dark rel-send-card">
+      <div>
+        <h2 id="rel-send-title">Send your answers to Tine</h2>
+        <p><span id="rel-progress" aria-live="polite">0</span>. Click the button to copy your answers, then paste them into an e-mail to Tine. If copying does not work, the text appears below: select it and copy it yourself.</p>
+      </div>
+      <button type="button" class="btn btn-accent" id="rel-copy">Copy my answers</button>
+    </div>
+    <p class="rel-status" id="rel-status" role="status"></p>
+    <label class="rel-note-label" for="rel-output" id="rel-output-label" hidden>Your answers as text</label>
+    <textarea class="rel-output" id="rel-output" rows="16" readonly hidden></textarea>
+    <p><button type="button" class="rel-reset" id="rel-reset">Clear everything and start again</button></p>
+  </section>
+</form>
+</div>
