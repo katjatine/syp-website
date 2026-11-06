@@ -617,6 +617,16 @@ module.exports = function (eleventyConfig) {
       : tag.replace(/\bhref="(\/(?!\/)[^"]*)"/, (m, url) => `href="${localUrl(url, lang)}"`)));
   });
 
+  // French pages: the space before : ; ? ! » and after « becomes a non-breaking space, so the sign never starts a new line
+  // (Tine, 6 November 2026). Only in the text between tags, never in tags, scripts or styles. The texts themselves stay
+  // as they are, so a save in the editor never changes them.
+  eleventyConfig.addTransform("frenchSpaces", function (content) {
+    const out = this.page && this.page.outputPath;
+    if (!out || !out.endsWith(".html") || !/^\/fr\//.test(String(this.page.url || ""))) return content;
+    return content.replace(/(<(script|style|textarea)\b[\s\S]*?<\/\2>)|>([^<]+)</g, (m, skip, tag, text) => skip ? skip
+      : ">" + text.replace(/ ([:;?!\u00bb])/g, "\u00a0$1").replace(/\u00ab /g, "\u00ab\u00a0") + "<");
+  });
+
   // Make every root-relative link relative, so the site works on any domain, subdomain or folder.
   eleventyConfig.addTransform("relativeLinks", function (content) {
     const out = this.page && this.page.outputPath;
