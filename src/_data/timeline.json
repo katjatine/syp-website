@@ -134,9 +134,9 @@
     "title": "Armenia and the Flemish Parliament",
     "title_fr": "L'Arménie et le Parlement flamand",
     "title_nl": "Armenië en het Vlaams Parlement",
-    "text": "A delegation at the European Youth Parliament for Water by Lake Sevan in May, and a speech to the environment committee of the Flemish Parliament in November.",
-    "text_fr": "Une délégation au Parlement européen de la Jeunesse pour l'Eau au bord du lac Sevan en mai, et un discours devant la commission de l'environnement du Parlement flamand en novembre.",
-    "text_nl": "Een delegatie op het Europese Jeugdparlement voor Water aan het Sevanmeer in mei, en een toespraak voor de commissie Leefmilieu van het Vlaams Parlement in november.",
+    "text": "A delegation at the European Youth Parliament for Water by Lake Sevan in May, and a speech to the environment committee of the Flemish Parliament in November. That delegation then set up Step by Step: water workshops for primary schools.",
+    "text_fr": "Une délégation au Parlement européen de la Jeunesse pour l'Eau au bord du lac Sevan en mai, et un discours devant la commission de l'environnement du Parlement flamand en novembre. Cette délégation a ensuite lancé Step by Step : des ateliers sur l'eau pour l'école primaire.",
+    "text_nl": "Een delegatie op het Europese Jeugdparlement voor Water aan het Sevanmeer in mei, en een toespraak voor de commissie Leefmilieu van het Vlaams Parlement in november. Die delegatie zette daarna Step by Step op: waterworkshops voor de lagere school.",
     "weight": "minor"
   },
   {
@@ -166,6 +166,22 @@
     "text_fr": "Une plénière a adopté cinq messages sur l'eau.",
     "text_nl": "Een plenaire vergadering keurde vijf boodschappen over water goed.",
     "weight": "minor"
+  },
+  {
+    "id": "2014-young-water-solutions",
+    "era": "history",
+    "date": "2014",
+    "title": "Young Water Solutions",
+    "title_fr": "Young Water Solutions",
+    "title_nl": "Young Water Solutions",
+    "text": "Members of the Scheldt Youth Parliament and the World Youth Parliament for Water set up a fund for water projects of young people around the world. It still exists.",
+    "text_fr": "Des membres du Parlement des Jeunes de l'Escaut et du Parlement mondial de la Jeunesse pour l'Eau ont créé un fonds pour les projets autour de l'eau de jeunes du monde entier. Il existe toujours.",
+    "text_nl": "Leden van het Schelde Jongerenparlement en het World Youth Parliament for Water richtten een fonds op voor waterprojecten van jongeren wereldwijd. Het bestaat nog altijd.",
+    "weight": "minor",
+    "url": "/projects/",
+    "linkLabel": "Projects members started",
+    "linkLabel_fr": "Les projets lancés par nos membres",
+    "linkLabel_nl": "Projecten die leden startten"
   },
   {
     "id": "2015-senate-plenary",
@@ -304,9 +320,9 @@
     "title": "Ghent and Zagreb, with the Sava Youth Parliament",
     "title_fr": "Gand et Zagreb, avec le Parlement des Jeunes de la Save",
     "title_nl": "Gent en Zagreb, met het Sava-jongerenparlement",
-    "text": "Two exchanges: first in Ghent, then in Zagreb (Croatia).",
-    "text_fr": "Deux échanges : d'abord à Gand, puis à Zagreb (Croatie).",
-    "text_nl": "Twee uitwisselingen: eerst in Gent, daarna in Zagreb (Kroatië).",
+    "text": "Two exchanges: first in Ghent, then in Zagreb (Croatia). Emma, one of our members, made a podcast about each.",
+    "text_fr": "Deux échanges : d'abord à Gand, puis à Zagreb (Croatie). Emma, membre du groupe, a réalisé un podcast sur chacun.",
+    "text_nl": "Twee uitwisselingen: eerst in Gent, daarna in Zagreb (Kroatië). Emma, een van onze leden, maakte er telkens een podcast over.",
     "weight": "minor"
   },
   {
@@ -346,9 +362,9 @@
     "title": "Exchange at HZ, Middelburg (the Netherlands)",
     "title_fr": "Échange à la HZ, Middelbourg (Pays-Bas)",
     "title_nl": "Uitwisseling aan HZ, Middelburg (Nederland)",
-    "text": "Workshops on the rights of the Scheldt at HZ University of Applied Sciences and a beach clean-up in Vlissingen, on 25 and 26 January.",
-    "text_fr": "Des ateliers sur les droits de l'Escaut à la HZ University of Applied Sciences et un nettoyage de plage à Flessingue, les 25 et 26 janvier.",
-    "text_nl": "Workshops over de rechten van de Schelde aan HZ University of Applied Sciences en een strandopruiming in Vlissingen, op 25 en 26 januari."
+    "text": "Workshops on the rights of the Scheldt at HZ University of Applied Sciences and a beach clean-up in Vlissingen led by Jan, one of our members, on 25 and 26 January.",
+    "text_fr": "Des ateliers sur les droits de l'Escaut à la HZ University of Applied Sciences et un nettoyage de plage à Flessingue mené par Jan, membre du groupe, les 25 et 26 janvier.",
+    "text_nl": "Workshops over de rechten van de Schelde aan HZ University of Applied Sciences en een strandopruiming in Vlissingen onder leiding van Jan, een van onze leden, op 25 en 26 januari."
   },
   {
     "id": "2024-commission-valenciennes",
