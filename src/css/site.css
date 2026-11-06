@@ -2152,6 +2152,8 @@ main > section:nth-of-type(4n+4), .teaser:nth-child(4n+4), .partner:nth-child(4n
 @media (min-width: 800px) { .made-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; } }
 .made-card { display: flex; flex-direction: column; gap: 14px; }
 .made-card picture, .made-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); }
+.made-logo { box-sizing: border-box; display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; overflow: hidden; padding: 8%; border-radius: var(--r-md); background: var(--foam); }   /* a logo instead of a photo (made-card.njk) */
+.made-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .made-body { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
 .made-body h3 { font-size: var(--fs-h3); }
 .made-body p { margin: 0; line-height: 1.55; }

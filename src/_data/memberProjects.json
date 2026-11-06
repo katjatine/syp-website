@@ -1,5 +1,5 @@
 {
-  "_note": "Projects that members started themselves (Tine, file 92, 6 November 2026). Shown newest first, by the last year in \"year\": on the homepage the newest three of those marked \"home\" (Tine, 6 November: Young Water Solutions instead of the T-shirts; without any marked, the three newest) (under \"Small streams, big river\"), all of them on the page Member projects (/projects/). Young Water Solutions and Step by Step come from the 10-year brochure (2017), with its photos; the others from the SYP Facebook page.",
+  "_note": "Projects that members started themselves (Tine, file 92, 6 November 2026). Shown newest first, by the last year in \"year\": on the homepage the newest three of those marked \"home\" (Tine, 6 November: Young Water Solutions instead of the T-shirts; without any marked, the three newest) (under \"Small streams, big river\"), all of them on the page Member projects (/projects/). Young Water Solutions and Step by Step come from the 10-year brochure (2017), with the brochure photo for Step by Step and the logo of Young Water Solutions (from youngwatersolutions.org, 6 November 2026); the others from the SYP Facebook page.",
   "items": [
     {
       "year": "2024",
@@ -67,10 +67,10 @@
       "text": "Bart Devos and other members set up a fund with the World Youth Parliament for Water. It helps young people around the world start their own water projects, and it still does.",
       "text_fr": "Bart Devos et d'autres membres ont créé, avec le Parlement mondial de la Jeunesse pour l'Eau, un fonds qui aide des jeunes du monde entier à lancer leurs propres projets autour de l'eau. Il existe toujours.",
       "text_nl": "Bart Devos en andere leden richtten samen met het World Youth Parliament for Water een fonds op dat jongeren wereldwijd helpt om hun eigen waterprojecten te starten. Het bestaat nog altijd.",
-      "photo": "/images/photos/brochure-2017-bart-devos.jpg",
-      "alt": "Bart Devos, smiling, in a dark jacket and white shirt, with green leaves behind him",
-      "alt_fr": "Bart Devos, souriant, en veste sombre et chemise blanche, devant un feuillage vert",
-      "alt_nl": "Bart Devos, lachend, in een donker jasje en wit hemd, met groene bladeren achter hem",
+      "logo": "/images/logos/young-water-solutions.png",
+      "alt": "Logo of Young Water Solutions: the name beside a blue water drop with a leaf in it",
+      "alt_fr": "Logo de Young Water Solutions : le nom à côté d'une goutte d'eau bleue avec une feuille",
+      "alt_nl": "Logo van Young Water Solutions: de naam naast een blauwe waterdruppel met een blad erin",
       "links": [
         {
           "label": "Young Water Solutions",

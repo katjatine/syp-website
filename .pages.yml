@@ -7455,6 +7455,11 @@ content:
             type: image
             options:
               media: photos
+          - name: logo
+            label: Logo instead of a photo (optional)
+            type: image
+            options:
+              media: logos
           - name: alt
             label: What is on the photo · English
             type: string
