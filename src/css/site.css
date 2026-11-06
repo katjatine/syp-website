@@ -1043,10 +1043,10 @@ dl.facts { margin-bottom: 0; }
 .home-what-points p { margin: 0; padding-top: max(0px, (var(--disc-size) - 1.55em) / 2); }
 /* The link lines up with the text of the points, not with the discs */
 .home-what .link-arrow { display: inline-block; padding-top: 8px; margin-left: calc(var(--disc-size) + var(--point-gap)); }
-.home-what-photo { margin-top: 32px; margin-right: calc(-1 * var(--gutter)); }
+.home-what-photo { margin-top: 32px; margin-inline: calc(-1 * var(--gutter)); }   /* over the whole width of the screen, straight edges (Tine, 6 November 2026: the white edge on the left looked unintended) */
 .home-what-photo picture { display: block; }
-.home-what-photo img { display: block; width: 100%; height: auto; max-height: 600px; object-fit: cover; border-radius: var(--r-md) 0 0 var(--r-md); }
-@media (min-width: 900px) { .home-what-photo { margin-top: 0; margin-right: calc(-1 * max(var(--gutter), (100vw - var(--content)) / 2)); } .home-what-photo img { border-radius: var(--r-lg) 0 0 var(--r-lg); } }
+.home-what-photo img { display: block; width: 100%; height: auto; max-height: 600px; object-fit: cover; }
+@media (min-width: 900px) { .home-what-photo { margin-top: 0; margin-inline: calc(-1 * max(var(--gutter), (100vw - var(--content)) / 2)); } }
 
 .home-latest { padding-top: clamp(56px, 3rem + 3vw, 96px); padding-bottom: var(--section); }
 .home-river { padding-top: clamp(56px, 3rem + 2.5vw, 88px); padding-bottom: var(--section-sm); overflow: hidden; }
