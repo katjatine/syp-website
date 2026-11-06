@@ -597,13 +597,14 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+        description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
         type: string
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
           message: No "[TODO" and no < or > please.
-        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+        description: 'Two short parts with · between them: the first over the top, the second under the bottom. For example: Making waves · since 2008'
       - name: stamp_fr
         label: Round stamp on that photo (optional) · Français
         type: string
@@ -1192,13 +1193,14 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+        description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
         type: string
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
           message: No "[TODO" and no < or > please.
-        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+        description: 'Two short parts with · between them: the first over the top, the second under the bottom. For example: Making waves · since 2008'
       - name: stamp_fr
         label: Round stamp on that photo (optional) · Français
         type: string
@@ -4095,13 +4097,14 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+        description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
         type: string
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
           message: No "[TODO" and no < or > please.
-        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+        description: 'Two short parts with · between them: the first over the top, the second under the bottom. For example: Making waves · since 2008'
       - name: stamp_fr
         label: Round stamp on that photo (optional) · Français
         type: string
@@ -4655,13 +4658,14 @@ content:
           values:
             - name: free
               label: Free, wavy shape with a thin line around it
+        description: Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners.
       - name: stamp
         label: Round stamp on that photo (optional) · English
         type: string
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
           message: No "[TODO" and no < or > please.
-        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+        description: 'Two short parts with · between them: the first over the top, the second under the bottom. For example: Making waves · since 2008'
       - name: stamp_fr
         label: Round stamp on that photo (optional) · Français
         type: string

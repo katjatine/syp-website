@@ -1,9 +1,17 @@
-{#- A round stamp over the corner of a photo (types/page.njk, "stamp"): the text runs once around the circle (smaller for a
-    longer text, so it always fits), a small wave in the middle. Decorative: the same words are on the page or say nothing new, so screen readers skip it. -#}
-{%- set stampSize = (340 / (stamp | length)) | round(1) %}{% if stampSize > 14 %}{% set stampSize = 14 %}{% endif %}
+{#- A round stamp over the corner of a photo (types/page.njk, "stamp"). The text is split at "·": the first part runs over
+    the top (a little more than half the circle), the second under the bottom, both the right way up (Tine, 6 November 2026: readable, even on a stamp). The
+    letters get smaller for a longer part, so it always fits; a small wave in the middle. Decorative, so screen readers
+    skip it. -#}
+{%- set stampParts = [] %}{% for part in stamp.split("·") %}{% if part | trim %}{% set stampParts = (stampParts.push(part | trim), stampParts) %}{% endif %}{% endfor %}
+{%- set stampLong = 0 %}{% for part in stampParts %}{% if part.length > stampLong %}{% set stampLong = part.length %}{% endif %}{% endfor %}
+{%- set stampSize = (190 / stampLong) | round(1) %}{% if stampSize > 13 %}{% set stampSize = 13 %}{% endif %}
 <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
   <circle cx="60" cy="60" r="58"/>
-  <path id="stamp-ring-{{ page.fileSlug }}" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0" fill="none"/>
-  <text style="font-size: {{ stampSize }}px"><textPath href="#stamp-ring-{{ page.fileSlug }}" textLength="254" lengthAdjust="spacing">{{ stamp }}</textPath></text>
+  <path id="stamp-top-{{ page.fileSlug }}" d="M20.4,70.6 A41,41 0 1,1 99.6,70.6" fill="none"/>
+  <path id="stamp-bottom-{{ page.fileSlug }}" d="M11,60 A49,49 0 0,0 109,60" fill="none"/>
+  <text style="font-size: {{ stampSize }}px"><textPath href="#stamp-top-{{ page.fileSlug }}" startOffset="50%" text-anchor="middle">{{ stampParts[0] }}</textPath></text>
+  {%- if stampParts[1] %}
+  <text style="font-size: {{ stampSize }}px"><textPath href="#stamp-bottom-{{ page.fileSlug }}" startOffset="50%" text-anchor="middle">{{ stampParts[1] }}</textPath></text>
+  {%- endif %}
   <path class="stamp-wave" d="M40,62 q5,-7 10,0 t10,0 t10,0 t10,0"/>
 </svg>

@@ -112,8 +112,8 @@ blocks:
     heading_fr: Neuf nationalités, une seule équipe
     heading_nl: Negen nationaliteiten, één team
     text: "The last group came from nine countries and lived in France, Belgium and the Netherlands. Different languages, backgrounds and ages, from 16 to 26, working in mixed groups in English. That mix is our strength: a flood looks different from Valenciennes than from Zeeland, and the best ideas come when you hear both sides."
-    text_fr: "Le dernier groupe venait de neuf pays et vivait en France, en Belgique et aux Pays-Bas. Des langues, des parcours et des âges différents, de 16 à 26 ans, qui travaillent en groupes mixtes, en anglais. Ce mélange fait notre force : une inondation ne se vit pas de la même façon à Valenciennes qu'en Zélande, et les meilleures idées naissent quand on entend les deux côtés."
-    text_nl: "De laatste groep kwam uit negen landen en woonde in Frankrijk, België en Nederland. Verschillende talen, achtergronden en leeftijden, van 16 tot 26, die in gemengde groepen in het Engels samenwerken. Die mix is onze kracht: een overstroming ziet er vanuit Valenciennes anders uit dan vanuit Zeeland, en de beste ideeën ontstaan als je beide kanten hoort."
+    text_fr: "Le groupe le plus récent venait de neuf pays et vivait en France, en Belgique et aux Pays-Bas. Des langues, des parcours et des âges différents, de 16 à 26 ans, qui travaillent en groupes mixtes, en anglais. Ce mélange fait notre force : une inondation ne se vit pas de la même façon à Valenciennes qu'en Zélande, et les meilleures idées naissent quand on entend les deux côtés."
+    text_nl: "De meest recente groep kwam uit negen landen en woonde in Frankrijk, België en Nederland. Verschillende talen, achtergronden en leeftijden, van 16 tot 26, die in gemengde groepen in het Engels samenwerken. Die mix is onze kracht: een overstroming ziet er vanuit Valenciennes anders uit dan vanuit Zeeland, en de beste ideeën ontstaan als je beide kanten hoort."
   - type: wide-photo
     photo: /images/photos/ghent-2022-roeland-group.jpg
     alt: "A large group of young people waving together in front of a big bronze bell in Ghent"

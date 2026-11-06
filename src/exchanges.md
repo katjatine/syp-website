@@ -13,8 +13,8 @@ alt: "A group of young people from several countries laughing together on the gr
 alt_fr: "Un groupe de jeunes de plusieurs pays qui rient ensemble sur l'herbe, certains les bras grands ouverts"
 alt_nl: "Een groep jongeren uit verschillende landen die samen lachen op het gras, sommigen met de armen wijd open"
 figuresTitle: "Our latest group, 2025 and 2026"
-figuresTitle_fr: "Notre dernier groupe, 2025 et 2026"
-figuresTitle_nl: "Onze laatste groep, 2025 en 2026"
+figuresTitle_fr: "Notre groupe le plus récent, 2025 et 2026"
+figuresTitle_nl: "Onze meest recente groep, 2025 en 2026"
 figures:
   - number: "40"
     label: participants

@@ -90,7 +90,7 @@ blocks:
       - **2012, Marseille.** L'Agence, GoodPlanet et le Secrétariat International de l'Eau ont organisé ce premier Parlement mondial de la Jeunesse pour l'Eau au Forum mondial de l'eau.
       - **2016, Marrakech.** Lors du sommet climat de la COP22, nos membres ont signé un accord avec la nouvelle assemblée des jeunes du Sebou, au Maroc. L'Agence en a signé un avec l'agence de bassin du Sebou.
       - **2023, Lille.** Le Parlement des Jeunes pour l'Eau a fêté ses vingt ans, et deux de nos membres y ont présenté leurs projets.
-      - **De 2024 à 2026.** L'Agence a cofinancé notre dernier groupe, aux côtés d'Erasmus+.
+      - **De 2024 à 2026.** L'Agence a cofinancé notre groupe le plus récent, aux côtés d'Erasmus+.
 
       L'Agence est aussi l'interlocutrice des participants venus de France.
     text_nl: |-
@@ -98,7 +98,7 @@ blocks:
       - **2012, Marseille.** Het Agence, GoodPlanet en het Internationaal Secretariaat voor Water organiseerden dat eerste World Youth Parliament for Water op het Wereldwaterforum.
       - **2016, Marrakech.** Op de klimaattop COP22 ondertekenden onze leden een overeenkomst met de nieuwe jongerenvergadering van de Sebou in Marokko. Het Agence ondertekende er een met het wateragentschap van de Sebou.
       - **2023, Lille.** Het Parlement des Jeunes pour l'Eau werd twintig, en twee van onze leden stelden er op het feest hun projecten voor.
-      - **2024 tot 2026.** Het Agence financierde onze laatste groep mee, naast Erasmus+.
+      - **2024 tot 2026.** Het Agence financierde onze meest recente groep mee, naast Erasmus+.
 
       Het Agence is ook het aanspreekpunt voor deelnemers uit Frankrijk.
     link: { label: eau-artois-picardie.fr, label_fr: eau-artois-picardie.fr, label_nl: eau-artois-picardie.fr, url: "https://www.eau-artois-picardie.fr" }

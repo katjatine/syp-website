@@ -488,12 +488,15 @@ a.lightbox-link:hover .photo-enlarge { background: var(--white); }
    Youth voices and the two cards at the bottom of About. The tint is 10%, pink 7% and blue 8% (--tint), so small
    blue text stays at least 4.5:1. Set --accent per card; for lime also --line, a darker lime for thin lines. */
 .colour-card { --scribble: var(--line, var(--accent)); position: relative; overflow: hidden; border: 0; padding-top: 44px; background: color-mix(in srgb, var(--accent) var(--tint, 10%), var(--white)); }
-.colour-card::before {
+/* Since 6 November 2026 (Tine: the moving wave on every colour was too much, and childish on the other colours) a card
+   has a straight, still band in its colour on top. Only a blue card keeps the wave, and its motion below. */
+.colour-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 10px; background: var(--accent); }
+.colour-card:is(.reasons .reason:nth-child(5n+5), [style*="var(--water)"])::before {
   --band-shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 24' preserveAspectRatio='none'%3E%3Cpath d='M0,0 H400 V9 C340,9 300,20 220,20 C140,20 90,7 0,13 Z'/%3E%3C/svg%3E");
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 26px; background: var(--accent);
+  height: 26px;
   -webkit-mask: var(--band-shape) 0 0 / 100% 100% no-repeat; mask: var(--band-shape) 0 0 / 100% 100% no-repeat;
 }
-/* The band sways, in the rhythm of the wave above the homepage band (Tine, file 63, point 10, October 2026).
+/* The blue band sways, in the rhythm of the wave above the homepage band (Tine, file 63, point 10, October 2026).
    As there, a strip twice the card's width slides by half its width to the right, 16.9 s across (30% faster since 5 October 2026), and rises and falls
    a little from the top, 5 s each way, so it never comes loose from the top of the card. Its wave repeats once per
    card width, so the slide has no seam; the edge stays between 9 and 20 of 24, as deep as the still band, drawn the way
@@ -502,7 +505,7 @@ a.lightbox-link:hover .photo-enlarge { background: var(--white); }
    people who ask for less motion. Cards side by side never move in step: each place in a row gets its own speed
    (15.8 to 18.1 s and 4.8 to 5.3 s) and starts at another point of its slide and breath (the negative delays). */
 @media (prefers-reduced-motion: no-preference) {
-  .colour-card::before {
+  .colour-card:is(.reasons .reason:nth-child(5n+5), [style*="var(--water)"])::before {
     --band-shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 24' preserveAspectRatio='none'%3E%3Cpath d='M0,14.5 C72,21.83 128,21.83 200,14.5 C272,7.17 328,7.17 400,14.5 C472,21.83 528,21.83 600,14.5 C672,7.17 728,7.17 800,14.5 V0 H0 Z'/%3E%3C/svg%3E");
     right: auto; width: 200%; transform-origin: 50% 0;
     animation: band-drift var(--band-drift, 16.9s) linear var(--band-drift-delay, 0s) infinite, band-breathe var(--band-breathe, 5s) ease-in-out var(--band-breathe-delay, 0s) infinite alternate;
