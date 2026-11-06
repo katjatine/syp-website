@@ -11,7 +11,7 @@ const { execFileSync } = require("child_process");
 const ROOT = path.join(__dirname, "..");
 
 // Keys that are never translated: addresses, photos, choices, numbers, settings.
-const SINGLE = /^(type|url|photo|logo|logo2x|file|icon|tone|accent|anchor|year|date|places|permalink|layout|tags|kind|id|hidden|featured|goodplanet|wide|logoWide|latest|count|src|href|width|height|crop|order|map|coords|lat|lng|zoom|code|slug|pdf|video|youtube|episodes|tile|classes|nature|homeNature|era|weight|key)$/;
+const SINGLE = /^(type|url|photo|photoShape|logo|logo2x|file|icon|tone|accent|anchor|year|date|places|permalink|layout|tags|kind|id|hidden|featured|goodplanet|wide|logoWide|latest|count|src|href|width|height|crop|order|map|coords|lat|lng|zoom|code|slug|pdf|video|youtube|episodes|tile|classes|nature|homeNature|era|weight|key)$/;
 const isTwin = (k) => /_(fr|nl)$/.test(k);
 const looksLikeText = (s) => /[A-Za-z]{2}/.test(s) && !/^(\/|#|https?:|mailto:)\S*$/.test(s) && !/^[\w-]+\.(jpe?g|png|svg|pdf|webp)$/.test(s);
 

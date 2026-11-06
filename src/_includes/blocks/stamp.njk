@@ -1,0 +1,9 @@
+{#- A round stamp over the corner of a photo (types/page.njk, "stamp"): the text runs once around the circle (smaller for a
+    longer text, so it always fits), a small wave in the middle. Decorative: the same words are on the page or say nothing new, so screen readers skip it. -#}
+{%- set stampSize = (340 / (stamp | length)) | round(1) %}{% if stampSize > 14 %}{% set stampSize = 14 %}{% endif %}
+<svg class="stamp" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  <circle cx="60" cy="60" r="58"/>
+  <path id="stamp-ring-{{ page.fileSlug }}" d="M60,60 m-41,0 a41,41 0 1,1 82,0 a41,41 0 1,1 -82,0" fill="none"/>
+  <text style="font-size: {{ stampSize }}px"><textPath href="#stamp-ring-{{ page.fileSlug }}" textLength="254" lengthAdjust="spacing">{{ stamp }}</textPath></text>
+  <path class="stamp-wave" d="M40,62 q5,-7 10,0 t10,0 t10,0 t10,0"/>
+</svg>

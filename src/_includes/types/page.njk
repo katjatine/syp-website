@@ -16,9 +16,16 @@
     {#- "photoLarge: true" makes the photo open large on click (reviewer feedback on Join, October 2026); the page also needs
         "lightbox: true", which loads js/lightbox.js. "caption" shows under the large photo. #}
     {% if photoLarge %}
-    <div class="page-hero-photo"><a class="lightbox-link hero-zoom" href="/images/photos/{{ photo | photoSlug }}.jpg" data-caption="{{ caption }}">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true } %}<span class="photo-enlarge">{% icon "maximize-2" %}</span><span class="visually-hidden">{{ T.viewLarger }}</span></a></div>
+    <div class="page-hero-photo"><a class="lightbox-link hero-zoom" href="/images/photos/{{ photo | photoSlug }}.jpg" data-caption="{{ caption }}">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true } %}<span class="photo-enlarge">{% icon "maximize-2" %}</span><span class="visually-hidden">{{ T.viewLarger }}</span>{% if stamp %}{% include "blocks/stamp.njk" %}{% endif %}</a></div>
     {% else %}
+    {#- Two optional touches, only for a photo that stands alone (Tine, 6 November 2026, inspired by youngwatersolutions.org):
+        "photoShape: free" gives the photo a soft, wavy outline with a thin orange line around it, and "stamp" puts a round
+        orange stamp with that text over its corner (both in the editor, under the photo at the top). -#}
+    {%- if photoShape == "free" or stamp %}
+    <div class="page-hero-photo"><div class="hero-photo-wrap{% if photoShape == 'free' %} is-free{% endif %}">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true } %}{% if stamp %}{% include "blocks/stamp.njk" %}{% endif %}</div></div>
+    {%- else %}
     <div class="page-hero-photo">{% photo photo, alt, { sizes: "(min-width: 900px) 560px, 100vw", eager: true } %}</div>
+    {%- endif %}
     {% endif %}
   </div>
   {% elif heroAside %}

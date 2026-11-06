@@ -7,10 +7,12 @@
   </ul></nav></div>
   {%- endif %}
   <div class="container site-header-inner">
-    {# Only the name of the project, without GoodPlanet's logo: with the logo the site looked like GoodPlanet's own website (Luc via Tine, 5 October 2026).
+    {# The name of the project, without GoodPlanet's logo: with that logo the site looked like GoodPlanet's own website (Luc via Tine, 5 October 2026).
        GoodPlanet still shows as the lead in the footer, on About and on Partners. #}
     {%- set brandName = T.siteName or site.name %}
-    <a class="brand{% if brandName.length > 24 %} brand-long{% endif %}" href="{{ '/' | localUrl(L) }}">{{ brandName }}</a>
+    {#- The project's own drop logo before the name (Tine, 6 November 2026: the header should look more official). It is the
+        logo of the Scheldt Youth Parliament itself, not GoodPlanet's, so the site still reads as the project's own. #}
+    <a class="brand{% if brandName.length > 24 %} brand-long{% endif %}" href="{{ '/' | localUrl(L) }}"><img class="brand-mark" src="/images/brand/syp-logo.png" alt="" width="463" height="538"><span class="brand-name">{{ brandName }}</span></a>
     {# On phones and tablets Join stays in sight beside the menu icon; from 1100 px it is the last item of the menu. #}
     <a class="btn btn-accent btn-nav btn-join-small" href="{{ site.joinUrl | localUrl(L) }}" data-goatcounter-click="join-menu" data-goatcounter-title="Join (menu)" data-goatcounter-referrer="{{ page.url }}"{% if page.url and page.url.startsWith(site.joinUrl) %} aria-current="page"{% endif %}>{{ T.join or site.joinLabel }}</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{{ T.menu }}">

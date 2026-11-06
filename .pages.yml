@@ -590,6 +590,32 @@ content:
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
           message: No "[TODO" and no < or > please.
+      - name: photoShape
+        label: Shape of that photo (optional)
+        type: select
+        options:
+          values:
+            - name: free
+              label: Free, wavy shape with a thin line around it
+      - name: stamp
+        label: Round stamp on that photo (optional) · English
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+      - name: stamp_fr
+        label: Round stamp on that photo (optional) · Français
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: stamp_nl
+        label: Round stamp on that photo (optional) · Nederlands
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
       - name: description
         label: Description for search engines · English
         type: text
@@ -1155,6 +1181,32 @@ content:
           message: No "[TODO" and no < or > please.
       - name: alt_nl
         label: What is on that photo · Nederlands
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: photoShape
+        label: Shape of that photo (optional)
+        type: select
+        options:
+          values:
+            - name: free
+              label: Free, wavy shape with a thin line around it
+      - name: stamp
+        label: Round stamp on that photo (optional) · English
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+      - name: stamp_fr
+        label: Round stamp on that photo (optional) · Français
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: stamp_nl
+        label: Round stamp on that photo (optional) · Nederlands
         type: string
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
@@ -4036,6 +4088,32 @@ content:
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$
           message: No "[TODO" and no < or > please.
+      - name: photoShape
+        label: Shape of that photo (optional)
+        type: select
+        options:
+          values:
+            - name: free
+              label: Free, wavy shape with a thin line around it
+      - name: stamp
+        label: Round stamp on that photo (optional) · English
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+      - name: stamp_fr
+        label: Round stamp on that photo (optional) · Français
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: stamp_nl
+        label: Round stamp on that photo (optional) · Nederlands
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
       - name: description
         label: Description for search engines · English
         type: text
@@ -4566,6 +4644,32 @@ content:
           message: No "[TODO" and no < or > please.
       - name: alt_nl
         label: What is on that photo · Nederlands
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: photoShape
+        label: Shape of that photo (optional)
+        type: select
+        options:
+          values:
+            - name: free
+              label: Free, wavy shape with a thin line around it
+      - name: stamp
+        label: Round stamp on that photo (optional) · English
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+        description: 'A short text that runs around the stamp, for example: Making waves · since 2008 ·'
+      - name: stamp_fr
+        label: Round stamp on that photo (optional) · Français
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: stamp_nl
+        label: Round stamp on that photo (optional) · Nederlands
         type: string
         pattern:
           regex: ^(?![\s\S]*\[TODO)[^<>]*$

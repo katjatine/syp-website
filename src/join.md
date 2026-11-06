@@ -32,6 +32,9 @@ chips:
     text_fr: Aucune expérience requise
     text_nl: Geen ervaring nodig
 photo: /images/photos/brussels-2015-senate-plenary.jpg
+stamp: Making waves · since 2008 ·
+stamp_fr: "On fait des vagues · depuis 2008 ·"
+stamp_nl: We maken golven · sinds 2008 ·
 alt: "Nearly a hundred young people with the flag of the youth parliament, gathered in the plenary hall of the Belgian Senate"
 alt_fr: "Près d'une centaine de jeunes avec le drapeau du parlement des jeunes, réunis dans l'hémicycle du Sénat belge"
 alt_nl: "Bijna honderd jongeren met de vlag van het jongerenparlement, samen in de plenaire zaal van de Belgische Senaat"

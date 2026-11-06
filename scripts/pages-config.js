@@ -58,6 +58,8 @@ const heroFields = (extra = []) => [
   txt("lede", "Intro", { description: "The larger text under the title." }),
   photo("photo", "Photo at the top", { description: "A .jpg or .png, only with the consent of the people on it, and never one where a full name can be read." }),
   str("alt", "What is on that photo", { description: "One sentence for people who cannot see it." }),
+  select("photoShape", "Shape of that photo (optional)", [{ name: "free", label: "Free, wavy shape with a thin line around it" }], { description: "Only for a photo that stands alone. The corners get rounder, so choose a photo without faces in the corners." }),
+  str("stamp", "Round stamp on that photo (optional)", { description: "A short text that runs around the stamp, for example: Making waves · since 2008 ·" }),
   ...extra,
   txt("description", "Description for search engines", { description: "One or two sentences. Google shows it under the title, and it shows when someone shares the page." }),
 ];
@@ -124,7 +126,7 @@ const blocks = (names) => ({
 // Empty twins show the English text. The English field says "· English" too, so the three read alike (Tine, 5 November).
 // Every page and data file gets them (step 4 of the languages, 5 November 2026).
 const LANG_NAMES = { en: "English", fr: "Français", nl: "Nederlands" };
-const SINGLE = ["year", "classes", "nature", "homeNature", "key", "era", "weight", "tile", "anchor"];
+const SINGLE = ["year", "photoShape", "classes", "nature", "homeNature", "key", "era", "weight", "tile", "anchor"];
 const samePattern = (a, b) => a && b && (a === b || a.regex === b.regex);
 const isText = (f) => ["string", "text", "rich-text"].includes(f.type) && !samePattern(f.pattern, URL) && !samePattern(f.pattern, PLACES) && !SINGLE.includes(f.name) && !/_(fr|nl)$/.test(f.name);
 const threeLanguages = (fields) => fields.flatMap((f) => {

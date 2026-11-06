@@ -46,7 +46,7 @@
   --fs-tiny: 1rem;        /* 16 px */
 
   /* Layout, 8 px grid */
-  --content: 1200px;
+  --content: 1320px;   /* 1200 px until 6 November 2026; wider so a large screen is filled better (Tine, after youngwatersolutions.org) */
   --gutter: clamp(20px, 3vw, 40px);
   --section: clamp(56px, 2.5rem + 4vw, 112px);       /* 64 mobile to 112 desktop */
   --section-sm: clamp(40px, 1.5rem + 3.5vw, 96px);
@@ -185,18 +185,22 @@ a, button, summary, label { -webkit-tap-highlight-color: transparent; }
 .link-back:hover { text-decoration: underline; }
 
 /* ---------- Header ---------- */
-.site-header { position: relative; z-index: 20; background: var(--white); }
+.site-header { position: relative; z-index: 20; background: var(--white); box-shadow: 0 1px 0 rgba(20, 38, 58, 0.08); }   /* a thin line under the header (Tine, 6 November 2026) */
 .site-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; padding-top: 18px; padding-bottom: 18px; }
 @media (min-width: 960px) { .site-header-inner { padding-top: 28px; padding-bottom: 28px; } }
 /* The name of the project top left, without GoodPlanet's logo: with it the site looked like GoodPlanet's own website
    (Luc via Tine, 5 October 2026). 16 px on phones, 30 px on a computer, because the whole site is about it
    (reviewer feedback, file 61, October 2026). On phones under 420 px it stands on two lines. */
-.brand { font-family: var(--font-head); font-weight: 700; font-size: 1rem; line-height: 1.15; color: var(--heading); text-decoration: none; max-width: 9.5em; }
-@media (min-width: 420px) { .brand { max-width: none; white-space: nowrap; } }
-@media (min-width: 960px) { .brand { font-size: 1.875rem; } }
+.brand { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 700; font-size: 1rem; line-height: 1.15; color: var(--heading); text-decoration: none; }
+.brand-name { max-width: 9.5em; }
+.brand-mark { display: none; flex: none; width: 30px; height: auto; }   /* the SYP drop logo before the name (header.njk); from 420 px, so on narrow phones the long Dutch name still fits beside Join and the menu */
+@media (min-width: 420px) { .brand-mark { display: block; } }
+@media (min-width: 420px) { .brand-name { max-width: none; white-space: nowrap; } .brand-long .brand-name { white-space: normal; max-width: 10em; } }   /* a long name (French, Dutch) on two lines, so Join and the menu icon stay in sight (before 6 November 2026 it overflowed from 420 px) */
+@media (min-width: 960px) { .brand { gap: 14px; font-size: 1.875rem; } .brand-mark { width: 44px; } }
+@media (min-width: 1100px) { .brand { flex-shrink: 0; } }   /* beside the full menu the name keeps its two lines */
 .brand:hover { color: var(--deep-hover); }
 /* A long name (the French and Dutch names) stands on two lines beside the full menu, so the menu still fits */
-@media (min-width: 1100px) { .brand-long { white-space: normal; max-width: 10em; } }
+
 /* The language switcher, top right above the name and the menu (Tine, file 88): EN · FR · NL, the current one bold and
    underlined. Each link is 44 px high to tap, pulled up so the header does not grow more than needed. */
 .lang-switch-row { display: flex; justify-content: flex-end; margin-bottom: -18px; }
@@ -233,10 +237,11 @@ a, button, summary, label { -webkit-tap-highlight-color: transparent; }
 /* 360 to 374 px: with the 16 px site name (file 61) the smaller gap keeps the name on two lines instead of three */
 @media (max-width: 374px) { .site-header-inner { column-gap: 10px; } }
 
-.site-nav { display: flex; align-items: center; gap: 32px; font-size: var(--fs-body); font-weight: 400; }
+.site-nav { display: flex; align-items: center; gap: 32px; font-size: var(--fs-body); font-weight: 700; }   /* bold since 6 November 2026 (Tine): reads more official */
+@media (min-width: 1100px) and (max-width: 1299px) { .site-nav { gap: 18px; } }   /* with the logo and bold words the long French and Dutch names still fit on two lines */
 .site-nav a { color: var(--ink); text-decoration: none; white-space: nowrap; }
 .site-nav a:hover { color: var(--deep-hover); }
-.site-nav a[aria-current="page"] { color: var(--water-ink); font-weight: 700; }
+.site-nav a[aria-current="page"] { color: var(--water-ink); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .site-nav .btn-nav, .site-nav .btn-nav:hover, .site-nav .btn-nav[aria-current="page"] { color: var(--white); }
 @media (max-width: 1099px) {
   .site-nav {
@@ -950,6 +955,19 @@ dl.facts { margin-bottom: 0; }
 @media (min-width: 900px) { .page-hero h1 { margin-bottom: 28px; } }
 .page-hero .lead { margin-bottom: 28px; }
 .page-hero-photo picture { display: block; }
+/* A hero photo with a free shape or a stamp (types/page.njk, Tine, 6 November 2026). The wrapper hugs the photo, so the
+   stamp sits on its corner and the line follows its shape. Only on pages that ask for it: every other photo is unchanged. */
+.hero-photo-wrap { position: relative; width: fit-content; max-width: 100%; margin-inline: auto; }
+@media (min-width: 900px) { .hero-photo-wrap { margin-right: 0; } }
+.hero-photo-wrap.is-free { margin-block: 14px; }   /* the curves stay soft, so faces near the edge are not cut off (Tine) */
+.hero-photo-wrap.is-free img { border-radius: 32% 40% 30% 38% / 38% 30% 40% 32%; outline: 2px solid var(--orange); outline-offset: 6px; }
+@media (min-width: 900px) { .hero-photo-wrap.is-free img { outline-offset: 10px; } }
+.stamp { position: absolute; left: -10px; bottom: -18px; width: 96px; height: 96px; transform: rotate(-12deg); }
+@media (min-width: 900px) { .stamp { left: -34px; bottom: -26px; width: 124px; height: 124px; } }
+.stamp circle { fill: var(--orange); }
+.stamp text { fill: var(--white); font-family: var(--font-head); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.stamp-wave { fill: none; stroke: var(--white); stroke-width: 3; stroke-linecap: round; }
+
 .page-hero-photo img { display: block; width: auto; height: auto; max-width: 100%; max-height: 420px; margin-inline: auto; border-radius: var(--r-md); }
 @media (min-width: 900px) { .page-hero-photo img { max-height: 560px; margin-right: 0; border-radius: var(--r-lg); } }   /* flush with the right edge of the page */
 

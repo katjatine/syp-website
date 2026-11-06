@@ -12,6 +12,7 @@ lede: "We are young people from France, Belgium and the Netherlands, aged 16 to 
 lede_fr: "Nous sommes des jeunes de France, de Belgique et des Pays-Bas, âgés de 16 à 26 ans. L'Escaut relie nos pays, et il est sous pression. Alors nous le parcourons à pied, nous l'étudions et nous écrivons des recommandations pour celles et ceux qui décident. C'est sérieux et c'est fun : une marche le long du fleuve, un feu de camp, une soirée avec un échevin. En anglais, nous sommes le Scheldt Youth Parliament, en néerlandais le Schelde Jongerenparlement."
 lede_nl: "We zijn jongeren uit Frankrijk, België en Nederland, van 16 tot 26 jaar. De Schelde verbindt onze landen, en ze staat onder druk. Daarom wandelen we langs de rivier, onderzoeken we ze en schrijven we aanbevelingen voor wie beslist. Het is serieus en leuk: een wandeling langs de rivier, een kampvuur, een avond met een schepen. In het Engels zijn we het Scheldt Youth Parliament, in het Frans het Parlement des Jeunes de l'Escaut."
 photo: /images/photos/zeeland-2025-group-selfie.jpg
+photoShape: free
 alt: "A close-up group selfie of about a dozen smiling young people outdoors"
 alt_fr: "Un selfie de groupe en gros plan : une douzaine de jeunes souriants, en plein air"
 alt_nl: "Een groepsselfie van dichtbij: een tiental lachende jongeren, buiten"
