@@ -858,14 +858,14 @@ dl.facts { margin-bottom: 0; }
   .river-timeline .side-b.river-stop:last-child .river-deco-gulls { left: auto; right: calc((1 - var(--c, 0)) * var(--river-w) + 56px); }
 }
 
-/* The river flows on as you scroll down, as far as a line at 65% of the screen height (Tine, file 50): each piece is uncovered
-   from the top while it crosses that line (the inset moves the bottom of the screen up by 35%), so the pieces follow on
-   as one river. Only in browsers that know scroll-driven animations, never with reduced motion; elsewhere the river
-   is simply there. The dotted part, what is still to come, flows on the same way, and so does the sea it opens into (Tine, 3 Oct). */
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .river-timeline .river-seg, .river-timeline .river-sea { view-timeline: --river-piece block; view-timeline-inset: 0% 35%; animation: river-flow linear both; animation-timeline: --river-piece; animation-range: entry 0% entry 100%; }
-  }
+/* The river flows slowly from source to sea, on its own from the moment the page opens and without stopping at a moment
+   (Tine, 6 November 2026; before, it flowed as you scrolled, file 50). One front goes down at one even speed: each piece
+   starts when the front reaches its top and takes as long as its height, so the pieces follow on as one river. The whole
+   flow lasts as long as reading the texts beside it (the script at the end of page-blocks/timeline-river.njk sets
+   --flow-start and --flow-d). Never with reduced motion, and not when someone arrives at one moment (#name). */
+@media (prefers-reduced-motion: no-preference) {
+  .river-timeline.is-flowing .river-seg, .river-timeline.is-flowing .river-sea { animation: river-flow var(--flow-d, 1s) linear var(--flow-start, 0s) both; }
+  .river-timeline.is-waiting .river-seg, .river-timeline.is-waiting .river-sea { clip-path: inset(0 -48px 100% -48px); }
 }
 /* The sides stay open: a bend may swing up to a quarter of the band beyond it (lib/scheldt-river.js) */
 @keyframes river-flow { from { clip-path: inset(0 -48px 100% -48px); } to { clip-path: inset(0 -48px 0 -48px); } }
@@ -2401,3 +2401,4 @@ main > section:nth-of-type(4n+4), .teaser:nth-child(4n+4), .partner:nth-child(4n
    script, so nothing moves when the strip starts. */
 @media (prefers-reduced-motion: no-preference) { .ribbon { margin-bottom: 96px; } }
 @media (forced-colors: active) { .ribbon-toggle { border-color: ButtonText; } }
+

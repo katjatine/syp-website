@@ -5,4 +5,48 @@
     Inside the river block, so the block stays the first thing on the page and keeps its spacing. -#}
 <script>document.documentElement.classList.add("js-fold")</script>
 {% river timeline | localize(L), "timeline", (b.note | markdownInline) %}
+{#- The slow flow (Tine, 6 November 2026; css "river-flow"): right after the river is drawn, before the first paint, so it
+    never shows whole first. One front goes down at one speed: a piece starts when the front reaches its top on the page
+    and lasts as long as its height, so pieces that touch or overlap are uncovered at the same height at the same moment
+    and the river never stops or splits. The whole flow lasts as long as reading the visible texts (200 words a minute,
+    at least 20 s). Not with reduced motion, and not when arriving at one moment (#name): then the river is simply there. -#}
+<script>
+(function () {
+  var river = document.querySelector(".river-timeline");
+  if (!river || location.hash || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  // Covered until the letters have loaded (at most 1.5 s), so the heights are the final ones when the flow starts.
+  river.classList.add("is-waiting");
+  var perPixel = 0, top = 0;
+  function time() {
+    var pieces = [].slice.call(river.querySelectorAll(".river-seg, .river-sea")).filter(function (p) { return p.getBoundingClientRect().height > 0; });
+    if (!pieces.length) return false;
+    var boxes = pieces.map(function (p) { return p.getBoundingClientRect(); });
+    var riverTop = Math.min.apply(null, boxes.map(function (b) { return b.top; }));
+    if (!perPixel) {
+      var bottom = Math.max.apply(null, boxes.map(function (b) { return b.bottom; }));
+      var words = (river.innerText.match(/\S+/g) || []).length;
+      perPixel = Math.max(20, words / 200 * 60) / Math.max(1, bottom - riverTop);
+    }
+    top = riverTop;
+    pieces.forEach(function (p, i) {
+      p.style.setProperty("--flow-start", ((boxes[i].top - top) * perPixel).toFixed(3) + "s");
+      p.style.setProperty("--flow-d", (boxes[i].height * perPixel).toFixed(3) + "s");
+    });
+    return true;
+  }
+  var started = false;
+  function start() {
+    if (started) return;
+    started = true;
+    if (!time()) { river.classList.remove("is-waiting"); return; }
+    river.classList.add("is-flowing");
+    river.classList.remove("is-waiting");
+    // When the river changes height (a small moment opens, the window turns), every piece is timed again at the same
+    // speed from the same top, so the front goes on where it was: the parts above it stay, the parts below it wait.
+    if (window.ResizeObserver) new ResizeObserver(function () { time(); }).observe(river);
+  }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(start);
+  setTimeout(start, 1500);
+})();
+</script>
 </div>
