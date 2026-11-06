@@ -77,6 +77,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("baseName", (p) => path.basename(String(p), path.extname(String(p))));
   eleventyConfig.addFilter("isoDate", (d) => toDate(d).toISOString().slice(0, 10));
   eleventyConfig.addFilter("limit", (arr, n) => (arr || []).slice(0, n));
+  // Projects of members, newest first: by the last year in "year" ("2022-2023" counts as 2023); the same year keeps the order of the file.
+  eleventyConfig.addFilter("newestFirst", (items) => (items || []).map((x, i) => [x, i])
+    .sort((a, b) => (Math.max(0, ...String(b[0].year || "").match(/\d{4}/g) || []) - Math.max(0, ...String(a[0].year || "").match(/\d{4}/g) || [])) || a[1] - b[1])
+    .map(([x]) => x));
   eleventyConfig.addFilter("where", (arr, key, value) => (arr || []).filter((x) => x[key] === value));
   // The four newest news posts for the homepage (one big, three beside it; Tine, file 62), skipping posts with "latest: false".
   eleventyConfig.addFilter("homeNews", (posts) => (posts || []).filter((p) => p.data.latest !== false).slice(0, 4));

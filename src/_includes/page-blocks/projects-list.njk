@@ -1,0 +1,5 @@
+{#- All projects of members, newest first (src/_data/memberProjects.json; the cards are blocks/made-card.njk). An optional heading. -#}
+{% if b.heading %}<h2 class="block-heading">{{ b.heading }}</h2>
+{% endif %}<div class="made-grid">
+  {% for m in (memberProjects.items | localize(L) | newestFirst) %}{% include "blocks/made-card.njk" %}{% endfor %}
+</div>

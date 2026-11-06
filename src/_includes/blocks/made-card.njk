@@ -1,0 +1,22 @@
+{#- One project of a member (src/_data/memberProjects.json), as a card: on the homepage and on Member projects. "m" is the
+    project, already in the language of the page. -#}
+<article class="made-card">
+  {% if m.kind == "podcast" and m.episodes and m.photo %}
+  {# The podcast (Tine, file 62, option A): the label is the site's own sticker, and the play button on the photo is a real
+     link to the first episode, over the whole photo, so a big play button never does nothing. The photo keeps its alt text:
+     it is not inside the link, so the link is named by its own hidden text only. #}
+  <div class="made-visual has-stickers">
+    {% if m.badge %}<div class="stickers"><p class="sticker made-sticker">{% icon "headphones" %}{{ m.badge }}</p></div>{% endif %}
+    {% photo m.photo, m.alt, { sizes: "(min-width: 800px) 400px, 100vw" } %}
+    <a class="made-play" href="{{ m.episodes[0].url }}" rel="noopener"><span class="made-play-disc">{% icon "play" %}</span><span class="visually-hidden">{{ T.play }}{{ m.episodes[0].label }}{{ T.on }}{{ m.platform or "YouTube" }}</span></a>
+  </div>
+  {% elif m.photo %}{% photo m.photo, m.alt, { sizes: "(min-width: 800px) 400px, 100vw" } %}{% endif %}
+  <div class="made-body">
+    {% if m.year %}<span class="label">{{ m.year | replace("-", "–") }}</span>{% endif %}
+    <h3>{{ m.title }}</h3>
+    <p>{{ m.text }}</p>
+    {% for l in m.links %}<a class="link-arrow" href="{{ l.url }}" rel="noopener">{{ l.label }}</a>{% endfor %}
+    {# Each episode a button; the hidden part tells screen readers where it goes, after the visible label (WCAG 2.5.3) #}
+    {% if m.episodes %}<div class="made-episodes">{% for e in m.episodes %}<a class="btn made-episode" href="{{ e.url }}" rel="noopener">{% icon "play" %}{{ e.label }}<span class="visually-hidden">{{ T.ofPodcastOn }}{{ m.platform or "YouTube" }}</span></a>{% endfor %}</div>{% endif %}
+  </div>
+</article>

@@ -15,6 +15,7 @@
     "/timeline/": { "fr": "/fr/chronologie/", "nl": "/nl/tijdlijn/" },
     "/go-with-the-flow/": { "fr": "/fr/go-with-the-flow/", "nl": "/nl/go-with-the-flow/" },
     "/reports/": { "fr": "/fr/rapports/", "nl": "/nl/verslagen/" },
-    "/the-scheldt/": { "fr": "/fr/l-escaut/", "nl": "/nl/de-schelde/" }
+    "/the-scheldt/": { "fr": "/fr/l-escaut/", "nl": "/nl/de-schelde/" },
+    "/projects/": { "fr": "/fr/projets/", "nl": "/nl/projecten/" }
   }
 }

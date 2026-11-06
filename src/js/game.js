@@ -51,7 +51,13 @@
       }
     }
 
+    // A click on the card only turns it over, like a real card (Tine, 6 November 2026): front, back, front, the same card.
+    // Drawing a new card is what the button under it is for.
+    function turn() {
+      card.classList.toggle("is-flipped");
+    }
+
     button.addEventListener("click", draw);
-    card.addEventListener("click", draw);
+    card.addEventListener("click", turn);
   });
 })();

@@ -32,52 +32,12 @@ madeBy:
   title: Small streams, big river
   title_fr: Petits ruisseaux, grand fleuve
   title_nl: Kleine beekjes, grote rivier
-  subtitle: Got an idea of your own? Members started all of these.
-  subtitle_fr: Tu as une idée à toi ? Ce sont nos membres qui ont lancé tout ça.
-  subtitle_nl: Zelf een idee? Al deze projecten zijn door leden gestart.
-  items:
-    - title: A beach clean-up
-      title_fr: Un nettoyage de plage
-      title_nl: Een strandopruiming
-      text: Jan, one of our members, led a beach clean-up in Zeeland in January 2024.
-      text_fr: Jan, l'un de nos membres, a mené un nettoyage de plage en Zélande en janvier 2024.
-      text_nl: Jan, een van onze leden, leidde in januari 2024 een strandopruiming in Zeeland.
-      photo: /images/photos/zeeland-2024-beach-clean-up.jpg
-      alt: Four young people cheering on a sunny beach, raising litter grabbers and holding bags of collected rubbish
-      alt_fr: Quatre jeunes qui se réjouissent sur une plage ensoleillée, pinces à déchets levées et sacs de déchets ramassés à la main
-      alt_nl: Vier juichende jongeren op een zonnig strand, met afvalgrijpers in de lucht en zakken vol verzameld afval
-    - title: Two podcasts
-      title_fr: Deux podcasts
-      title_nl: Twee podcasts
-      kind: podcast
-      text: Emma made two podcasts about our exchanges with the Sava Youth Parliament from the Balkans, in Ghent (2022) and Zagreb (2023).
-      text_fr: Emma a réalisé deux podcasts sur nos échanges avec le Parlement des Jeunes de la Save, venu des Balkans, à Gand (2022) et à Zagreb (2023).
-      text_nl: Emma maakte twee podcasts over onze uitwisselingen met het Sava-jongerenparlement uit de Balkan, in Gent (2022) en Zagreb (2023).
-      photo: /images/photos/ghent-2022-water-sampling.jpg
-      alt: Young people crouching on a pontoon by a canal, scooping and pouring water samples with colourful buckets
-      alt_fr: Des jeunes accroupis sur un ponton au bord d'un canal, qui puisent et versent des échantillons d'eau avec des seaux colorés
-      alt_nl: Jongeren gehurkt op een ponton aan een kanaal, die met kleurrijke emmers waterstalen scheppen en uitgieten
-      badge: Podcast · 2 episodes
-      badge_fr: Podcast · 2 épisodes
-      badge_nl: Podcast · 2 afleveringen
-      platform: YouTube
-      platform_fr: YouTube
-      platform_nl: YouTube
-      episodes:
-        - label: Episode 1
-          url: https://youtu.be/4aEFWqX_JRs
-        - label: Episode 2
-          url: https://youtu.be/DePyFcN0fzk
-    - title: T-shirt & hoodie design
-      title_fr: Design de T-shirts et de sweats
-      title_nl: Ontwerp voor T-shirts en hoodies
-      text: In 2021 our logo went onto hand-printed T-shirts and hoodies.
-      text_fr: En 2021, notre logo a été imprimé à la main sur des T-shirts et des sweats à capuche.
-      text_nl: In 2021 kwam ons logo op met de hand bedrukte T-shirts en hoodies.
-      photo: /images/photos/syp-2021-hoodie-logo.jpg
-      alt: Someone seen from behind in a navy hoodie with the drop logo of the Scheldt Youth Parliament
-      alt_fr: Une personne vue de dos, en sweat bleu marine avec le logo en forme de goutte du Parlement des Jeunes de l'Escaut
-      alt_nl: Iemand van achteren gezien in een marineblauwe hoodie met het druppellogo van het Schelde Jongerenparlement
+  subtitle: Got an idea? Members have started lots of projects, like these.
+  subtitle_fr: Tu as une idée ? Nos membres ont déjà lancé plein de projets, comme ceux-ci.
+  subtitle_nl: Zelf een idee? Leden startten al heel wat projecten, zoals deze.
+  link: All member projects
+  link_fr: Tous les projets des membres
+  link_nl: Alle projecten van leden
 whatTitle: Rivers don't stop at borders. Neither do we.
 whatTitle_fr: Les fleuves ne s'arrêtent pas aux frontières. Nous non plus.
 whatTitle_nl: Rivieren stoppen niet aan de grens. Wij ook niet.

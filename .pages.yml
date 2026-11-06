@@ -407,171 +407,25 @@ content:
             pattern:
               regex: ^(?![\s\S]*\[TODO)[^<>]*$
               message: No "[TODO" and no < or > please.
-          - name: items
-            label: Cards
-            type: object
-            fields:
-              - name: title
-                label: Title · English
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: title_fr
-                label: Title · Français
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: title_nl
-                label: Title · Nederlands
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: kind
-                label: Kind (optional)
-                type: select
-                options:
-                  values:
-                    - name: podcast
-                      label: 'Podcast: play button on the photo'
-              - name: text
-                label: Text · English
-                type: text
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: text_fr
-                label: Text · Français
-                type: text
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: text_nl
-                label: Text · Nederlands
-                type: text
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: photo
-                label: Photo
-                type: image
-                options:
-                  media: photos
-              - name: alt
-                label: What is on the photo · English
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: alt_fr
-                label: What is on the photo · Français
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: alt_nl
-                label: What is on the photo · Nederlands
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: badge
-                label: Label on the photo (podcast) · English
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: badge_fr
-                label: Label on the photo (podcast) · Français
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: badge_nl
-                label: Label on the photo (podcast) · Nederlands
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: platform
-                label: Where it plays (podcast), for example YouTube · English
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: platform_fr
-                label: Where it plays (podcast), for example YouTube · Français
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: platform_nl
-                label: Where it plays (podcast), for example YouTube · Nederlands
-                type: string
-                pattern:
-                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                  message: No "[TODO" and no < or > please.
-              - name: episodes
-                label: Episodes (podcast)
-                type: object
-                fields:
-                  - name: label
-                    label: Text on the button · English
-                    type: string
-                    pattern:
-                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                      message: No "[TODO" and no < or > please.
-                  - name: label_fr
-                    label: Text on the button · Français
-                    type: string
-                    pattern:
-                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                      message: No "[TODO" and no < or > please.
-                  - name: label_nl
-                    label: Text on the button · Nederlands
-                    type: string
-                    pattern:
-                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                      message: No "[TODO" and no < or > please.
-                  - name: url
-                    label: Link
-                    type: string
-                    pattern:
-                      regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
-                      message: 'Start with / for a page of this site, # for a place on this page, or https://'
-                list: true
-              - name: links
-                label: Links (optional)
-                type: object
-                fields:
-                  - name: label
-                    label: Text · English
-                    type: string
-                    pattern:
-                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                      message: No "[TODO" and no < or > please.
-                  - name: label_fr
-                    label: Text · Français
-                    type: string
-                    pattern:
-                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                      message: No "[TODO" and no < or > please.
-                  - name: label_nl
-                    label: Text · Nederlands
-                    type: string
-                    pattern:
-                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
-                      message: No "[TODO" and no < or > please.
-                  - name: url
-                    label: Link
-                    type: string
-                    pattern:
-                      regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
-                      message: 'Start with / for a page of this site, # for a place on this page, or https://'
-                list: true
-            list: true
+          - name: link
+            label: Link to all projects · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+            description: The three newest projects show here. All projects are under Member projects.
+          - name: link_fr
+            label: Link to all projects · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: link_nl
+            label: Link to all projects · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
       - name: latestTitle
         label: Title above the news · English
         type: string
@@ -4875,6 +4729,181 @@ content:
                       regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
                       message: 'Start with / for a page of this site, # for a place on this page, or https://'
                     description: A page of this site, for example /join/ or /join/#how-it-works, or a full address starting with https://
+  - name: projects-page
+    label: Member projects page
+    description: The page with all projects of members. The projects themselves are under Member projects.
+    type: file
+    path: src/projects.md
+    format: yaml-frontmatter
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: title
+        label: Title · English
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: title_fr
+        label: Title · Français
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: title_nl
+        label: Title · Nederlands
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: lede
+        label: Line under the title · English
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: lede_fr
+        label: Line under the title · Français
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: lede_nl
+        label: Line under the title · Nederlands
+        type: string
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: description
+        label: Description for search engines · English
+        type: text
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: description_fr
+        label: Description for search engines · Français
+        type: text
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: description_nl
+        label: Description for search engines · Nederlands
+        type: text
+        pattern:
+          regex: ^(?![\s\S]*\[TODO)[^<>]*$
+          message: No "[TODO" and no < or > please.
+      - name: blocks
+        label: Blocks
+        description: The parts of the page, from top to bottom. Add, move or remove them; the look stays in the house style.
+        type: block
+        list: true
+        blockKey: type
+        blocks:
+          - name: projects-list
+            label: All member projects
+            fields:
+              - name: heading
+                label: Heading (optional) · English
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+                description: The projects are under Member projects.
+              - name: heading_fr
+                label: Heading (optional) · Français
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: heading_nl
+                label: Heading (optional) · Nederlands
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+          - name: text
+            label: Text
+            fields:
+              - name: heading
+                label: Heading (optional) · English
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: heading_fr
+                label: Heading (optional) · Français
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: heading_nl
+                label: Heading (optional) · Nederlands
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: text
+                label: Text · English
+                type: rich-text
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)
+                  message: 'No "[TODO" please: it stops the publication.'
+                options:
+                  format: markdown
+                  media: false
+                  switcher: false
+                description: Bold, links and lists are fine.
+              - name: text_fr
+                label: Text · Français
+                type: rich-text
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)
+                  message: 'No "[TODO" please: it stops the publication.'
+                options:
+                  format: markdown
+                  media: false
+                  switcher: false
+              - name: text_nl
+                label: Text · Nederlands
+                type: rich-text
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)
+                  message: 'No "[TODO" please: it stops the publication.'
+                options:
+                  format: markdown
+                  media: false
+                  switcher: false
+              - name: link
+                label: Link with an arrow (optional)
+                type: object
+                fields:
+                  - name: label
+                    label: Text of the link · English
+                    type: string
+                    pattern:
+                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                      message: No "[TODO" and no < or > please.
+                  - name: label_fr
+                    label: Text of the link · Français
+                    type: string
+                    pattern:
+                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                      message: No "[TODO" and no < or > please.
+                  - name: label_nl
+                    label: Text of the link · Nederlands
+                    type: string
+                    pattern:
+                      regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                      message: No "[TODO" and no < or > please.
+                  - name: url
+                    label: Where it goes
+                    type: string
+                    pattern:
+                      regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
+                      message: 'Start with / for a page of this site, # for a place on this page, or https://'
+                    description: A page of this site, for example /join/ or /join/#how-it-works, or a full address starting with https://
   - name: news-page
     label: News page
     description: The page with all news. The posts themselves are under News posts.
@@ -7345,6 +7374,190 @@ content:
         pattern:
           regex: ^[^\s@<>"]+@[^\s@<>"]+\.[A-Za-z]{2,}$
           message: This does not look like an e-mail address.
+  - name: member-projects
+    label: Member projects
+    description: 'Projects that members started themselves. Newest first by year: the three newest on Home, all of them on the page Member projects. Add a project with the + button.'
+    type: file
+    path: src/_data/memberProjects.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: items
+        label: Projects
+        type: object
+        fields:
+          - name: year
+            label: Year
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+            required: true
+            description: For example 2024, or 2022-2023. The newest come first.
+          - name: title
+            label: Title · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: title_fr
+            label: Title · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: title_nl
+            label: Title · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: kind
+            label: Kind (optional)
+            type: select
+            options:
+              values:
+                - name: podcast
+                  label: 'Podcast: play button on the photo'
+          - name: text
+            label: Text · English
+            type: text
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: text_fr
+            label: Text · Français
+            type: text
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: text_nl
+            label: Text · Nederlands
+            type: text
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: photo
+            label: Photo
+            type: image
+            options:
+              media: photos
+          - name: alt
+            label: What is on the photo · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: alt_fr
+            label: What is on the photo · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: alt_nl
+            label: What is on the photo · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: badge
+            label: Label on the photo (podcast) · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: badge_fr
+            label: Label on the photo (podcast) · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: badge_nl
+            label: Label on the photo (podcast) · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: platform
+            label: Where it plays (podcast), for example YouTube · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: platform_fr
+            label: Where it plays (podcast), for example YouTube · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: platform_nl
+            label: Where it plays (podcast), for example YouTube · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: episodes
+            label: Episodes (podcast)
+            type: object
+            fields:
+              - name: label
+                label: Text on the button · English
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: label_fr
+                label: Text on the button · Français
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: label_nl
+                label: Text on the button · Nederlands
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: url
+                label: Link
+                type: string
+                pattern:
+                  regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
+                  message: 'Start with / for a page of this site, # for a place on this page, or https://'
+            list: true
+          - name: links
+            label: Links (optional)
+            type: object
+            fields:
+              - name: label
+                label: Text · English
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: label_fr
+                label: Text · Français
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: label_nl
+                label: Text · Nederlands
+                type: string
+                pattern:
+                  regex: ^(?![\s\S]*\[TODO)[^<>]*$
+                  message: No "[TODO" and no < or > please.
+              - name: url
+                label: Link
+                type: string
+                pattern:
+                  regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
+                  message: 'Start with / for a page of this site, # for a place on this page, or https://'
+            list: true
+        list: true
   - name: why-join
     label: Why join (four points)
     description: The four points in the blue band on Home and, as titles only, in the call at the bottom of most pages.

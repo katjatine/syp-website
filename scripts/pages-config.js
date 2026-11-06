@@ -95,6 +95,7 @@ const BLOCKS = {
   "text-with-photo": { label: "Texts with a photo beside them", fields: [list(obj("sections", "Texts", [str("heading", "Heading"), md("text", "Text", { description: "Lists are fine." }), arrowLink()])), photo("photo", "Photo"), str("alt", "What is on the photo")] },
   "link-card": { label: "Dark card with a button", fields: [str("heading", "Heading"), md("text", "Text"), obj("button", "Button", [str("label", "Text on the button"), url("url", "Where it goes")]), str("anchor", "Name for links to this block (optional)")] },
   "exchange-list": { label: "All exchanges", fields: [str("heading", "Heading (optional)", { description: "The cards come from the exchange pages themselves." })] },
+  "projects-list": { label: "All member projects", fields: [str("heading", "Heading (optional)", { description: "The projects are under Member projects." })] },
   "news-list": { label: "All news", fields: [str("heading", "Heading (optional)", { description: "The posts are under News posts." })] },
   "timeline-river": { label: "The river timeline", fields: [md("note", "Line beside the source of the river", { description: "The stops are under Timeline stops." })] },
   motto: { label: "Motto in three languages", fields: [str("caption", "Caption (optional)", { description: 'Leave empty for "Our motto since 2013".' })] },
@@ -148,7 +149,7 @@ const content = [
     obj("madeBy", "Made by members", [
       str("title", "Title"),
       str("subtitle", "Line under the title"),
-      list(obj("items", "Cards", [str("title", "Title"), select("kind", "Kind (optional)", [{ name: "podcast", label: "Podcast: play button on the photo" }]), txt("text", "Text"), photo("photo", "Photo"), str("alt", "What is on the photo"), str("badge", "Label on the photo (podcast)"), str("platform", "Where it plays (podcast), for example YouTube"), list(obj("episodes", "Episodes (podcast)", [str("label", "Text on the button"), url("url", "Link")])), list(obj("links", "Links (optional)", [str("label", "Text"), url("url", "Link")]))])),
+      str("link", "Link to all projects", { description: "The three newest projects show here. All projects are under Member projects." }),
     ]),
     str("latestTitle", "Title above the news"),
     str("latestLink", "Link to all news"),
@@ -204,6 +205,7 @@ const content = [
     md("sources", "Sources at the bottom", { description: "Links are fine." }),
   ]),
   page("timeline-page", "Timeline page", "src/timeline.md", "The Timeline page. The stops on the river are under Timeline stops.", [str("title", "Title"), ...heroFields().filter((f) => f.name !== "headline"), blocks(["timeline-river", "motto", "text"])]),
+  page("projects-page", "Member projects page", "src/projects.md", "The page with all projects of members. The projects themselves are under Member projects.", [str("title", "Title"), str("lede", "Line under the title"), txt("description", "Description for search engines"), blocks(["projects-list", "text"])]),
   page("news-page", "News page", "src/news.md", "The page with all news. The posts themselves are under News posts.", [txt("description", "Description for search engines"), blocks(["news-list", "text"])]),
   page("partners", "Partners", "src/partners.md", "The Partners page. The partner with a lead line (GoodPlanet) stands at the top.", [
     txt("lede", "Intro"),
@@ -231,6 +233,11 @@ const content = [
 const lists = yaml.load(fs.readFileSync(path.join(__dirname, "pages-config-lists.yml"), "utf8"));
 
 const shared = [
+  {
+    name: "member-projects", label: "Member projects", description: "Projects that members started themselves. Newest first by year: the three newest on Home, all of them on the page Member projects. Add a project with the + button.",
+    type: "file", path: "src/_data/memberProjects.json", format: "json", operations: { create: false, rename: false, delete: false },
+    fields: [list(obj("items", "Projects", [str("year", "Year", { required: true, description: "For example 2024, or 2022-2023. The newest come first." }), str("title", "Title"), select("kind", "Kind (optional)", [{ name: "podcast", label: "Podcast: play button on the photo" }]), txt("text", "Text"), photo("photo", "Photo"), str("alt", "What is on the photo"), str("badge", "Label on the photo (podcast)"), str("platform", "Where it plays (podcast), for example YouTube"), list(obj("episodes", "Episodes (podcast)", [str("label", "Text on the button"), url("url", "Link")])), list(obj("links", "Links (optional)", [str("label", "Text"), url("url", "Link")]))]))],
+  },
   {
     name: "why-join", label: "Why join (four points)", description: "The four points in the blue band on Home and, as titles only, in the call at the bottom of most pages.",
     type: "file", path: "src/_data/whyJoin.json", format: "json", operations: { create: false, rename: false, delete: false },

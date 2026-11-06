@@ -1,0 +1,95 @@
+{
+  "_note": "Projects that members started themselves (Tine, file 92, 6 November 2026). Shown newest first, by the last year in \"year\": the three newest on the homepage (under \"Small streams, big river\"), all of them on the page Member projects (/projects/). Young Water Solutions and Step by Step come from the 10-year brochure (2017), with its photos; the others from the SYP Facebook page.",
+  "items": [
+    {
+      "year": "2024",
+      "title": "A beach clean-up",
+      "title_fr": "Un nettoyage de plage",
+      "title_nl": "Een strandopruiming",
+      "text": "Jan, one of our members, led a beach clean-up in Zeeland in January 2024.",
+      "text_fr": "Jan, l'un de nos membres, a mené un nettoyage de plage en Zélande en janvier 2024.",
+      "text_nl": "Jan, een van onze leden, leidde in januari 2024 een strandopruiming in Zeeland.",
+      "photo": "/images/photos/zeeland-2024-beach-clean-up.jpg",
+      "alt": "Four young people cheering on a sunny beach, raising litter grabbers and holding bags of collected rubbish",
+      "alt_fr": "Quatre jeunes qui se réjouissent sur une plage ensoleillée, pinces à déchets levées et sacs de déchets ramassés à la main",
+      "alt_nl": "Vier juichende jongeren op een zonnig strand, met afvalgrijpers in de lucht en zakken vol verzameld afval"
+    },
+    {
+      "year": "2022-2023",
+      "title": "Two podcasts",
+      "title_fr": "Deux podcasts",
+      "title_nl": "Twee podcasts",
+      "kind": "podcast",
+      "text": "Emma made two podcasts about our exchanges with the Sava Youth Parliament from the Balkans, in Ghent (2022) and Zagreb (2023).",
+      "text_fr": "Emma a réalisé deux podcasts sur nos échanges avec le Parlement des Jeunes de la Save, venu des Balkans, à Gand (2022) et à Zagreb (2023).",
+      "text_nl": "Emma maakte twee podcasts over onze uitwisselingen met het Sava-jongerenparlement uit de Balkan, in Gent (2022) en Zagreb (2023).",
+      "photo": "/images/photos/ghent-2022-water-sampling.jpg",
+      "alt": "Young people crouching on a pontoon by a canal, scooping and pouring water samples with colourful buckets",
+      "alt_fr": "Des jeunes accroupis sur un ponton au bord d'un canal, qui puisent et versent des échantillons d'eau avec des seaux colorés",
+      "alt_nl": "Jongeren gehurkt op een ponton aan een kanaal, die met kleurrijke emmers waterstalen scheppen en uitgieten",
+      "badge": "Podcast · 2 episodes",
+      "badge_fr": "Podcast · 2 épisodes",
+      "badge_nl": "Podcast · 2 afleveringen",
+      "platform": "YouTube",
+      "platform_fr": "YouTube",
+      "platform_nl": "YouTube",
+      "episodes": [
+        {
+          "label": "Episode 1",
+          "url": "https://youtu.be/4aEFWqX_JRs"
+        },
+        {
+          "label": "Episode 2",
+          "url": "https://youtu.be/DePyFcN0fzk"
+        }
+      ]
+    },
+    {
+      "year": "2021",
+      "title": "T-shirt & hoodie design",
+      "title_fr": "Design de T-shirts et de sweats",
+      "title_nl": "Ontwerp voor T-shirts en hoodies",
+      "text": "In 2021 our logo went onto hand-printed T-shirts and hoodies.",
+      "text_fr": "En 2021, notre logo a été imprimé à la main sur des T-shirts et des sweats à capuche.",
+      "text_nl": "In 2021 kwam ons logo op met de hand bedrukte T-shirts en hoodies.",
+      "photo": "/images/photos/syp-2021-hoodie-logo.jpg",
+      "alt": "Someone seen from behind in a navy hoodie with the drop logo of the Scheldt Youth Parliament",
+      "alt_fr": "Une personne vue de dos, en sweat bleu marine avec le logo en forme de goutte du Parlement des Jeunes de l'Escaut",
+      "alt_nl": "Iemand van achteren gezien in een marineblauwe hoodie met het druppellogo van het Schelde Jongerenparlement"
+    },
+    {
+      "year": "2014",
+      "title": "Young Water Solutions",
+      "title_fr": "Young Water Solutions",
+      "title_nl": "Young Water Solutions",
+      "text": "Bart Devos and other members set up a fund with the World Youth Parliament for Water. It helps young people around the world start their own water projects, and it still does.",
+      "text_fr": "Bart Devos et d'autres membres ont créé, avec le Parlement mondial de la Jeunesse pour l'Eau, un fonds qui aide des jeunes du monde entier à lancer leurs propres projets autour de l'eau. Il existe toujours.",
+      "text_nl": "Bart Devos en andere leden richtten samen met het World Youth Parliament for Water een fonds op dat jongeren wereldwijd helpt om hun eigen waterprojecten te starten. Het bestaat nog altijd.",
+      "photo": "/images/photos/brochure-2017-bart-devos.jpg",
+      "alt": "Bart Devos, smiling, in a dark jacket and white shirt, with green leaves behind him",
+      "alt_fr": "Bart Devos, souriant, en veste sombre et chemise blanche, devant un feuillage vert",
+      "alt_nl": "Bart Devos, lachend, in een donker jasje en wit hemd, met groene bladeren achter hem",
+      "links": [
+        {
+          "label": "Young Water Solutions",
+          "label_fr": "Young Water Solutions",
+          "label_nl": "Young Water Solutions",
+          "url": "https://youngwatersolutions.org/"
+        }
+      ]
+    },
+    {
+      "year": "2013",
+      "title": "Step by Step",
+      "title_fr": "Step by Step",
+      "title_nl": "Step by Step",
+      "text": "Our delegation to the European Youth Parliament for Water in Armenia designed water workshops for primary schools. They found the schools and the money themselves.",
+      "text_fr": "Notre délégation au Parlement européen de la Jeunesse pour l'Eau, en Arménie, a conçu des ateliers sur l'eau pour l'école primaire. Elle a trouvé elle-même les écoles et le financement.",
+      "text_nl": "Onze delegatie naar het Europese Jeugdparlement voor Water in Armenië ontwierp waterworkshops voor de lagere school. Ze zochten zelf de scholen en het geld.",
+      "photo": "/images/photos/step-by-step-2013-hidrodoe.jpg",
+      "alt": "A child in a blue tracksuit standing under a big splash of water at an outdoor water playground",
+      "alt_fr": "Un enfant en survêtement bleu sous une grande gerbe d'eau, dans une aire de jeux d'eau en plein air",
+      "alt_nl": "Een kind in een blauw trainingspak onder een grote plons water in een speeltuin met water in openlucht"
+    }
+  ]
+}
