@@ -74,7 +74,7 @@ blocks:
         text_nl: Rond 1990 telden ze in de hele Nederlandse delta maar 14 gewone zeehonden. In juni 2025 waren het er bijna 600, alleen al in de Westerschelde. Er is nog werk aan de winkel.
       - title: Have a good time
         title_fr: Passe du bon temps
-        title_nl: Heb het naar je zin
+        title_nl: Amuseer je
         icon: sun
         photo: /images/photos/zeeland-2025-jetty-balance.jpg
         alt: "A participant balancing on a wooden jetty over a lake, laughing with one arm stretched out, while two others sit on the edge"

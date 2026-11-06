@@ -4,6 +4,6 @@
     { "icon": "voice", "title": "Be heard", "text": "Your ideas go to the people who manage the river.", "title_fr": "Fais-toi entendre", "title_nl": "Laat je horen", "text_fr": "Tes idées vont aux personnes qui gèrent le fleuve.", "text_nl": "Je ideeën gaan naar de mensen die de rivier beheren." },
     { "icon": "people", "title": "Make friends", "text": "From three countries and all kinds of backgrounds.", "title_fr": "Fais-toi des amis", "title_nl": "Maak vrienden", "text_fr": "De trois pays et de tous les horizons.", "text_nl": "Uit drie landen en met allerlei achtergronden." },
     { "icon": "skills", "title": "Learn by doing", "text": "Research, debate and present, in English.", "title_fr": "Apprends en faisant", "title_nl": "Leer door te doen", "text_fr": "Recherche, débat et présentation, en anglais.", "text_nl": "Onderzoeken, debatteren en presenteren, in het Engels." },
-    { "icon": "sun", "title": "Have a good time", "text": "Kayaks, campfires and dinners together.", "title_fr": "Passe de bons moments", "title_nl": "Heb een goede tijd", "text_fr": "Kayak, feux de camp et repas ensemble.", "text_nl": "Kajakken, kampvuren en samen eten." }
+    { "icon": "sun", "title": "Have a good time", "text": "Kayaks, campfires and dinners together.", "title_fr": "Passe de bons moments", "title_nl": "Amuseer je", "text_fr": "Kayak, feux de camp et repas ensemble.", "text_nl": "Kajakken, kampvuren en samen eten." }
   ]
 }
