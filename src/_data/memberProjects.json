@@ -1,5 +1,5 @@
 {
-  "_note": "Projects that members started themselves (Tine, file 92, 6 November 2026). Shown newest first, by the last year in \"year\": the three newest on the homepage (under \"Small streams, big river\"), all of them on the page Member projects (/projects/). Young Water Solutions and Step by Step come from the 10-year brochure (2017), with its photos; the others from the SYP Facebook page.",
+  "_note": "Projects that members started themselves (Tine, file 92, 6 November 2026). Shown newest first, by the last year in \"year\": on the homepage the newest three of those marked \"home\" (Tine, 6 November: Young Water Solutions instead of the T-shirts; without any marked, the three newest) (under \"Small streams, big river\"), all of them on the page Member projects (/projects/). Young Water Solutions and Step by Step come from the 10-year brochure (2017), with its photos; the others from the SYP Facebook page.",
   "items": [
     {
       "year": "2024",
@@ -12,7 +12,8 @@
       "photo": "/images/photos/zeeland-2024-beach-clean-up.jpg",
       "alt": "Four young people cheering on a sunny beach, raising litter grabbers and holding bags of collected rubbish",
       "alt_fr": "Quatre jeunes qui se réjouissent sur une plage ensoleillée, pinces à déchets levées et sacs de déchets ramassés à la main",
-      "alt_nl": "Vier juichende jongeren op een zonnig strand, met afvalgrijpers in de lucht en zakken vol verzameld afval"
+      "alt_nl": "Vier juichende jongeren op een zonnig strand, met afvalgrijpers in de lucht en zakken vol verzameld afval",
+      "home": true
     },
     {
       "year": "2022-2023",
@@ -42,7 +43,8 @@
           "label": "Episode 2",
           "url": "https://youtu.be/DePyFcN0fzk"
         }
-      ]
+      ],
+      "home": true
     },
     {
       "year": "2021",
@@ -76,7 +78,8 @@
           "label_nl": "Young Water Solutions",
           "url": "https://youngwatersolutions.org/"
         }
-      ]
+      ],
+      "home": true
     },
     {
       "year": "2013",

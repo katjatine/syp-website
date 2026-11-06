@@ -81,6 +81,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("newestFirst", (items) => (items || []).map((x, i) => [x, i])
     .sort((a, b) => (Math.max(0, ...String(b[0].year || "").match(/\d{4}/g) || []) - Math.max(0, ...String(a[0].year || "").match(/\d{4}/g) || [])) || a[1] - b[1])
     .map(([x]) => x));
+  // The projects on the homepage: those marked "home" in the editor, else all of them; newestFirst and limit(3) follow.
+  eleventyConfig.addFilter("homeProjects", (items) => { const marked = (items || []).filter((x) => x.home); return marked.length ? marked : items || []; });
   eleventyConfig.addFilter("where", (arr, key, value) => (arr || []).filter((x) => x[key] === value));
   // The four newest news posts for the homepage (one big, three beside it; Tine, file 62), skipping posts with "latest: false".
   eleventyConfig.addFilter("homeNews", (posts) => (posts || []).filter((p) => p.data.latest !== false).slice(0, 4));

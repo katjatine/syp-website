@@ -74,7 +74,7 @@
   </div>
 </section>
 
-{# Made by members: projects the young people started themselves (src/_data/memberProjects.json), the three newest.
+{# Made by members: projects the young people started themselves (src/_data/memberProjects.json): the newest three marked "home".
    All of them are on Member projects (/projects/), like the news (Tine, file 92). Title, line and link: "madeBy" in src/index.md. #}
 <section class="container home-made">
   <div class="section-head">
@@ -83,7 +83,7 @@
   </div>
   {% if madeBy.subtitle %}<p class="lead block-intro">{{ madeBy.subtitle }}</p>{% endif %}
   <div class="made-grid">
-    {% for m in (memberProjects.items | localize(L) | newestFirst | limit(3)) %}{% include "blocks/made-card.njk" %}{% endfor %}
+    {% for m in (memberProjects.items | localize(L) | homeProjects | newestFirst | limit(3)) %}{% include "blocks/made-card.njk" %}{% endfor %}
   </div>
 </section>
 

@@ -7403,6 +7403,10 @@ content:
               message: No "[TODO" and no < or > please.
             required: true
             description: For example 2024, or 2022-2023. The newest come first.
+          - name: home
+            label: Show on Home
+            type: boolean
+            description: Home shows the newest three that have this on.
           - name: title
             label: Title · English
             type: string
