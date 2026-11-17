@@ -642,7 +642,9 @@ dl.facts { margin-bottom: 0; }
    three are as tall as the big post and the empty space under them is gone (Tine, file 62, October 2026, option A).
    Side by side only from 1100 px: narrower, the right column has no room for a large photo and a title next to each other,
    so the three stand under the big post, as on a phone. */
-.latest { display: grid; gap: 36px; align-items: start; }
+/* minmax(0, 1fr): the one column never grows wider than the page. Without it a long word in the big title ("Scheldecommissie",
+   "internationale") pushed the whole block off the right edge between 900 and 975 px in French and Dutch (17 November 2026). */
+.latest { display: grid; grid-template-columns: minmax(0, 1fr); gap: 36px; align-items: start; }
 @media (min-width: 1100px) { .latest { grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: stretch; } }   /* 5:4 instead of 3:2: the wider right column lets the photos double without squeezing the titles */
 .latest a { text-decoration: none; color: var(--ink); }
 .latest-main { display: flex; flex-direction: column; gap: 12px; }
@@ -1143,14 +1145,20 @@ dl.facts { margin-bottom: 0; }
 /* The four reasons to join above the button (designer feedback, 5 October 2026): each its icon on a colour disc and a short
    title, white on the blue (8.6 to 1 on --deep-hover, 4.6 to 1 or more over the faint photo). One column on a small phone,
    two by two up to 960 px (one row of four needs about 860 px), then one row. */
-.cta-why { list-style: none; display: grid; grid-template-columns: repeat(2, max-content); justify-content: center; gap: 18px 24px; margin: 28px auto 0; padding: 0; text-align: left; }
+.cta-why { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, max-content)); justify-content: center; gap: 18px 24px; margin: 28px auto 0; padding: 0; text-align: left; }
 .cta-why li { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.125rem; line-height: 1.2; color: var(--white); }
 .cta-why .icon-disc { --disc-size: 44px; --line-icon-stroke: 3px; }
 .cta-why .line-icon { width: 62%; height: 62%; color: currentColor; }
 .cta-why .line-icon path { stroke-width: var(--line-icon-stroke); }
 @media (max-width: 439px) { .cta-why { grid-template-columns: max-content; } }   /* "Have a good time" keeps one line */
+@media (max-width: 529px) { :lang(fr) .cta-why { grid-template-columns: max-content; } }   /* the French points need 486px side by side: one column until they fit (17 November 2026) */
 @media (min-width: 800px) { .cta-why { margin-top: 36px; } .cta-why li { font-size: 1.25rem; } .cta-why .icon-disc { --disc-size: 52px; } }
-@media (min-width: 960px) { .cta-why { grid-template-columns: repeat(4, max-content); gap: 20px 40px; } }
+/* Four in a row when they fit. minmax(0, ...): if a longer text ever makes the row wider than the page, the words wrap
+   instead of running off the screen. */
+@media (min-width: 960px) { .cta-why { grid-template-columns: repeat(4, minmax(0, max-content)); gap: 20px 40px; } }
+/* The French points are longer ("Passe de bons moments"): four in a row need 1068px, so up to 1139px wide they stay
+   two by two (17 November 2026: at 1024px the first and last point ran 21px off the screen) */
+@media (min-width: 960px) and (max-width: 1139px) { :lang(fr) .cta-why { grid-template-columns: repeat(2, max-content); } }
 .exchange-cta .cta-who { margin-top: 16px; font-size: var(--fs-body); }
 
 /* As the last block of a page: room for the footer's wave, pulled up over the photo by its own height (see "Waves") */
