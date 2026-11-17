@@ -42,6 +42,13 @@
 </section>
 
 <section class="container home-what">
+  {# The wide photo comes first, right under the blue band, and the points after it (Tine, 17 November 2026: the four
+     points of the band and the five points here are two lists with coloured icon discs, and they stood back to back;
+     before, the photo closed this section). #}
+  <div class="home-what-photo">
+    {% photo whatPhoto.photo, whatPhoto.alt, { sizes: "(min-width: 900px) 1320px, 100vw" } %}
+    {% if whatPhoto.note %}<div class="photo-caption">{{ whatPhoto.note }}</div>{% endif %}
+  </div>
   <div class="split home-what-split">
     {# The title is a slogan in two sentences (Tine, file 62, October 2026). Each sentence is kept together (site.css),
        so in a narrow column "Neither do we." gets a line of its own instead of "borders. Neither do we." #}
@@ -67,10 +74,6 @@
     <figure class="logo-badge">
       <img src="/images/brand/syp-logo.png" alt="{{ T.logoAlt }}" width="463" height="538" loading="lazy">
     </figure>
-  </div>
-  <div class="home-what-photo">
-    {% photo whatPhoto.photo, whatPhoto.alt, { sizes: "(min-width: 900px) 1320px, 100vw" } %}
-    {% if whatPhoto.note %}<div class="photo-caption">{{ whatPhoto.note }}</div>{% endif %}
   </div>
 </section>
 

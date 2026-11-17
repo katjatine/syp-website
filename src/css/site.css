@@ -1015,9 +1015,9 @@ dl.facts { margin-bottom: 0; }
 .hero-for { margin: 0 0 24px; font-size: var(--fs-lead); font-weight: 700; line-height: 1.35; color: var(--water-ink); }
 @media (min-width: 900px) { .hero-for { margin-bottom: 36px; } }
 
-.home-what { padding-top: var(--section); padding-bottom: var(--section-sm); }
-.home-what .split { margin-bottom: 32px; }
-@media (min-width: 900px) { .home-what .split { margin-bottom: 64px; } }
+/* The wide photo sits first, against the blue band, then the title and the points (Tine, 17 November 2026; before, the photo closed the section) */
+.home-what { padding-top: 0; padding-bottom: var(--section-sm); }
+.home-what .split { margin-top: var(--section-sm); }
 /* The logo badge: on a computer under the title, in the left column beside the text; on a phone after the text */
 .home-what-split .logo-badge { margin: 0; }
 .home-what-split .logo-badge img { margin-inline: auto; }   /* on a phone centred under the text, like the hero visual (Tine, 5 October 2026) */
@@ -1043,10 +1043,10 @@ dl.facts { margin-bottom: 0; }
 .home-what-points p { margin: 0; padding-top: max(0px, (var(--disc-size) - 1.55em) / 2); }
 /* The link lines up with the text of the points, not with the discs */
 .home-what .link-arrow { display: inline-block; padding-top: 8px; margin-left: calc(var(--disc-size) + var(--point-gap)); }
-.home-what-photo { margin-top: 32px; margin-inline: calc(-1 * var(--gutter)); }   /* over the whole width of the screen, straight edges (Tine, 6 November 2026: the white edge on the left looked unintended) */
+.home-what-photo { margin-inline: calc(-1 * var(--gutter)); }   /* over the whole width of the screen, straight edges (Tine, 6 November 2026: the white edge on the left looked unintended) */
 .home-what-photo picture { display: block; }
 .home-what-photo img { display: block; width: 100%; height: auto; max-height: 600px; object-fit: cover; }
-@media (min-width: 900px) { .home-what-photo { margin-top: 0; margin-inline: calc(-1 * max(var(--gutter), (100vw - var(--content)) / 2)); } }
+@media (min-width: 900px) { .home-what-photo { margin-inline: calc(-1 * max(var(--gutter), (100vw - var(--content)) / 2)); } }
 
 .home-latest { padding-top: clamp(56px, 3rem + 3vw, 96px); padding-bottom: var(--section); }
 .home-river { padding-top: clamp(56px, 3rem + 2.5vw, 88px); padding-bottom: var(--section-sm); overflow: hidden; }

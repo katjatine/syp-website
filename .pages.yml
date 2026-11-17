@@ -190,6 +190,51 @@ content:
             pattern:
               regex: ^(?![\s\S]*\[TODO)[^<>]*$
               message: No "[TODO" and no < or > please.
+      - name: whatPhoto
+        label: Wide photo above Who we are
+        type: object
+        fields:
+          - name: photo
+            label: Photo
+            type: image
+            options:
+              media: photos
+          - name: alt
+            label: What is on the photo · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: alt_fr
+            label: What is on the photo · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: alt_nl
+            label: What is on the photo · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: note
+            label: Caption (optional) · English
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: note_fr
+            label: Caption (optional) · Français
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
+          - name: note_nl
+            label: Caption (optional) · Nederlands
+            type: string
+            pattern:
+              regex: ^(?![\s\S]*\[TODO)[^<>]*$
+              message: No "[TODO" and no < or > please.
       - name: whatTitle
         label: Title of Who we are · English
         type: string
@@ -323,51 +368,6 @@ content:
               regex: ^$|^/[^\s<>"]*$|^#[^\s<>"]*$|^https://[^\s<>"]+$|^mailto:[^\s<>"]+$
               message: 'Start with / for a page of this site, # for a place on this page, or https://'
             description: A page of this site, for example /join/ or /join/#how-it-works, or a full address starting with https://
-      - name: whatPhoto
-        label: Wide photo under Who we are
-        type: object
-        fields:
-          - name: photo
-            label: Photo
-            type: image
-            options:
-              media: photos
-          - name: alt
-            label: What is on the photo · English
-            type: string
-            pattern:
-              regex: ^(?![\s\S]*\[TODO)[^<>]*$
-              message: No "[TODO" and no < or > please.
-          - name: alt_fr
-            label: What is on the photo · Français
-            type: string
-            pattern:
-              regex: ^(?![\s\S]*\[TODO)[^<>]*$
-              message: No "[TODO" and no < or > please.
-          - name: alt_nl
-            label: What is on the photo · Nederlands
-            type: string
-            pattern:
-              regex: ^(?![\s\S]*\[TODO)[^<>]*$
-              message: No "[TODO" and no < or > please.
-          - name: note
-            label: Caption (optional) · English
-            type: string
-            pattern:
-              regex: ^(?![\s\S]*\[TODO)[^<>]*$
-              message: No "[TODO" and no < or > please.
-          - name: note_fr
-            label: Caption (optional) · Français
-            type: string
-            pattern:
-              regex: ^(?![\s\S]*\[TODO)[^<>]*$
-              message: No "[TODO" and no < or > please.
-          - name: note_nl
-            label: Caption (optional) · Nederlands
-            type: string
-            pattern:
-              regex: ^(?![\s\S]*\[TODO)[^<>]*$
-              message: No "[TODO" and no < or > please.
       - name: madeBy
         label: Made by members
         type: object

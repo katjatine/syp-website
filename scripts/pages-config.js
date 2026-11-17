@@ -144,10 +144,10 @@ const page = (name, label, file, description, fields) => ({ name, label, descrip
 const content = [
   page("home", "Home", "src/index.md", "The homepage. The four points in the blue band are under Why join, the news under News posts, the river under Timeline stops.", [
     obj("hero", "Top of the page", [str("headline", "Title"), txt("lede", "Text under the title"), str("forWho", "Bold line above the buttons"), obj("button1", "First button", [str("label", "Text"), url("url", "Where it goes")]), obj("button2", "Second button", [str("label", "Text"), url("url", "Where it goes")]), str("visualAlt", "What is on the round picture")]),
+    obj("whatPhoto", "Wide photo above Who we are", [photo("photo", "Photo"), str("alt", "What is on the photo"), str("note", "Caption (optional)")]),
     str("whatTitle", "Title of Who we are", { description: "Two short sentences break nicely between them." }),
     list(obj("whatPoints", "Who we are, in points", [lucide(), md("lead", "Bold start", { description: "A link is fine." }), txt("text", "Rest of the point"), select("tone", "Colour of the icon (optional)", TONES)])),
     arrowLink("whatLink", "Link under the points"),
-    obj("whatPhoto", "Wide photo under Who we are", [photo("photo", "Photo"), str("alt", "What is on the photo"), str("note", "Caption (optional)")]),
     obj("madeBy", "Made by members", [
       str("title", "Title"),
       str("subtitle", "Line under the title"),
