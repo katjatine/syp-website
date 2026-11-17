@@ -387,7 +387,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("icon", (name, cls) => icon(name, cls));
 
   // Round social media icon: {% socialIcon "instagram" %} (see lib/social-icons.js; the whole row is blocks/social-icons.njk).
-  const RIVER_WORDS = { en: { today: "Today", readAbout: "Read about " }, fr: { today: "Aujourd'hui", readAbout: "Découvrir " }, nl: { today: "Vandaag", readAbout: "Lees over " } };
+  const RIVER_WORDS = { en: { today: "Today", readAbout: "Read about ", fullTimeline: "See the full timeline" }, fr: { today: "Aujourd'hui", readAbout: "Découvrir ", fullTimeline: "Voir toute la chronologie" }, nl: { today: "Vandaag", readAbout: "Lees over ", fullTimeline: "Bekijk de hele tijdlijn" } };
   let riverWords = RIVER_WORDS.en;
   eleventyConfig.addShortcode("socialIcon", (name) => socialIcon(name));
 
@@ -524,7 +524,7 @@ module.exports = function (eleventyConfig) {
       return type ? riverNature(type) : "";
     };
     const items = [
-      `<li class="river-item river-start side-a" style="${place(0)}"><div class="river-start-inner"><a class="btn btn-small" href="/timeline/">See the full timeline</a></div><div class="river-mid">${SOURCE}${segs(0, list[0] && list[0].era === "upcoming")}</div></li>`,
+      `<li class="river-item river-start side-a" style="${place(0)}"><div class="river-start-inner"><a class="btn btn-small" href="/timeline/">${riverWords.fullTimeline}</a></div><div class="river-mid">${SOURCE}${segs(0, list[0] && list[0].era === "upcoming")}</div></li>`,
     ];
     list.forEach((e, i) => {
       const k = i + 1;

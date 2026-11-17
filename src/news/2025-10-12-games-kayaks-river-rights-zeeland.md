@@ -17,6 +17,7 @@ alt: "Kayak paddles held upright at the misty waterside before the group sets of
 alt_fr: "Des pagaies de kayak tenues bien droites au bord de l'eau, dans la brume, avant le départ du groupe"
 alt_nl: "Kajakpeddels rechtop aan het mistige water, vlak voor de groep vertrekt"
 link: /exchanges/zeeland-2025/
+linkLabel_fr: "En savoir plus sur l'échange en Zélande"
 body_fr: |
   Treize jeunes ont passé trois jours au centre de plein air Kanoa à Wolphaartsdijk, accueillis par HZ University of Applied Sciences. Ils ont joué au jeu de l'Escaut, débattu des droits du fleuve et fait du kayak sur le Veerse Meer. L'orateur principal Ad Faasse : « Nous devons offrir une scène aux jeunes, de façon à inspirer d'autres à faire la même chose. »
 body_nl: |
