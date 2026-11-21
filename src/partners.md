@@ -5,9 +5,9 @@ title_nl: Partners
 description: "Who is behind the Scheldt Youth Parliament: GoodPlanet Belgium, HZ University of Applied Sciences, the International Scheldt Commission and our funders."
 description_fr: "Qui se trouve derrière le Parlement des Jeunes de l'Escaut : GoodPlanet Belgium, HZ University of Applied Sciences, la Commission Internationale de l'Escaut et nos financeurs."
 description_nl: "Wie er achter het Schelde Jongerenparlement zit: GoodPlanet Belgium, HZ University of Applied Sciences, de Internationale Scheldecommissie en onze financiers."
-lede: Partners in three countries keep the Scheldt Youth Parliament going. So do the young people who keep showing up.
-lede_fr: "Des partenaires dans trois pays font vivre le Parlement des Jeunes de l'Escaut. Tout comme les jeunes qui répondent présent, encore et encore."
-lede_nl: Partners in drie landen houden het Schelde Jongerenparlement draaiende. En de jongeren die telkens weer komen opdagen.
+lede: Partners in three countries keep the Scheldt Youth Parliament going, together with the young people who keep coming back.
+lede_fr: "Des partenaires dans trois pays font vivre le Parlement des Jeunes de l'Escaut, avec les jeunes qui reviennent encore et encore."
+lede_nl: Partners in drie landen houden het Schelde Jongerenparlement draaiende, samen met de jongeren die telkens terugkomen.
 heroAside:
   photo: /images/photos/zeeland-2024-heart-sand.jpg
   alt: "SYP written in a large heart in the sand on a beach, with someone in a red jacket picking up litter by the sea"

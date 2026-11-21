@@ -1,5 +1,5 @@
-# The editor entries for news posts, timeline stops and join details, written by hand on 1 October 2026
-# (Output Claude/28). scripts/pages-config.js adds them to .pages.yml after the pages. Edit them here.
+# The editor entries for news posts, timeline stops and join details, written by hand on 1 October 2026.
+# scripts/pages-config.js adds them to .pages.yml after the pages. Edit them here.
 # News posts keep "icon" and "tile" (the coloured tile of a post without a photo) through settings.content.merge.
 content:
   # ----------------------------------------------------------------------------

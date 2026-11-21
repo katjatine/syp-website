@@ -8,9 +8,9 @@ headline_nl: Maak kennis met de Schelde
 description: The river behind the Scheldt Youth Parliament, from its source in France to the North Sea, and why it needs young people.
 description_fr: "Le fleuve derrière le Parlement des Jeunes de l'Escaut, de sa source en France jusqu'à la mer du Nord, et pourquoi il a besoin des jeunes."
 description_nl: "De rivier achter het Schelde Jongerenparlement, van haar bron in Frankrijk tot aan de Noordzee, en waarom ze jongeren nodig heeft."
-lede: "Escaut, Schelde, Scheldt: one river, three names. It runs from a village in northern France to the North Sea, through three countries that share it, and share its problems too."
-lede_fr: "Escaut, Schelde, Scheldt : un fleuve, trois noms. Il coule d'un village du nord de la France jusqu'à la mer du Nord, à travers trois pays qui le partagent, et qui partagent aussi ses problèmes."
-lede_nl: "Escaut, Schelde, Scheldt: één rivier, drie namen. Ze stroomt van een dorp in het noorden van Frankrijk naar de Noordzee, door drie landen die haar delen, en ook haar problemen."
+lede: "In French it is called the Escaut, in Dutch the Schelde. It runs from a village in northern France to the North Sea, through three countries that share it, and share its problems too."
+lede_fr: "En néerlandais, l'Escaut s'appelle Schelde, en anglais Scheldt. Il coule d'un village du nord de la France jusqu'à la mer du Nord, à travers trois pays qui le partagent, et qui partagent aussi ses problèmes."
+lede_nl: "In het Frans heet ze de Escaut, in het Engels de Scheldt. Ze stroomt van een dorp in het noorden van Frankrijk naar de Noordzee, door drie landen die haar delen, en ook haar problemen."
 photo: /images/photos/denain-2025-river-guide.jpg
 alt: A guide with a walking stick talks to the group on the riverbank while a young participant stands on the edge above the water
 alt_fr: "Un guide avec un bâton de marche parle au groupe sur la berge, tandis qu'un jeune participant se tient au bord, au-dessus de l'eau"

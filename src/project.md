@@ -8,9 +8,9 @@ headline_nl: Eén rivier brengt ons samen
 description: Who the Scheldt Youth Parliament is and what we do, the friends we make, the Scheldt and our seat at the International Scheldt Commission, and who is behind it.
 description_fr: "Qui est le Parlement des Jeunes de l'Escaut et ce que nous faisons : les amitiés que nous nouons, l'Escaut, notre place à la Commission Internationale de l'Escaut, et qui se trouve derrière le projet."
 description_nl: "Wie het Schelde Jongerenparlement is en wat we doen: de vriendschappen die we sluiten, de Schelde, onze plaats in de Internationale Scheldecommissie, en wie erachter zit."
-lede: "We are young people from France, Belgium and the Netherlands, aged 16 to 26. The Scheldt connects our countries, and it is under pressure. So we walk it, study it and write recommendations for the people who decide. It is serious and fun: a river walk, a campfire, an evening with a deputy mayor. In Dutch we are the Schelde Jongerenparlement, in French the Parlement des Jeunes de l'Escaut."
-lede_fr: "Nous sommes des jeunes de France, de Belgique et des Pays-Bas, âgés de 16 à 26 ans. L'Escaut relie nos pays, et il est sous pression. Alors nous le parcourons à pied, nous l'étudions et nous écrivons des recommandations pour celles et ceux qui décident. C'est sérieux et c'est fun : une marche le long du fleuve, un feu de camp, une soirée avec un échevin. En anglais, nous sommes le Scheldt Youth Parliament, en néerlandais le Schelde Jongerenparlement."
-lede_nl: "We zijn jongeren uit Frankrijk, België en Nederland, van 16 tot 26 jaar. De Schelde verbindt onze landen, en ze staat onder druk. Daarom wandelen we langs de rivier, onderzoeken we ze en schrijven we aanbevelingen voor wie beslist. Het is serieus en leuk: een wandeling langs de rivier, een kampvuur, een avond met een schepen. In het Engels zijn we het Scheldt Youth Parliament, in het Frans het Parlement des Jeunes de l'Escaut."
+lede: "We are young people from France, Belgium and the Netherlands, aged 16 to 26. The Scheldt connects our countries, and it is under pressure. So we walk it, study it and write recommendations for the people who decide. It is serious and fun at the same time, from a river walk to an evening with a deputy mayor. In Dutch we are the Schelde Jongerenparlement, in French the Parlement des Jeunes de l'Escaut."
+lede_fr: "Nous sommes des jeunes de France, de Belgique et des Pays-Bas, âgés de 16 à 26 ans. L'Escaut relie nos pays, et il est sous pression. Alors nous le parcourons à pied, nous l'étudions et nous écrivons des recommandations pour celles et ceux qui décident. C'est sérieux et fun à la fois, d'une marche le long du fleuve à une soirée avec un échevin. En anglais, nous sommes le Scheldt Youth Parliament, en néerlandais le Schelde Jongerenparlement."
+lede_nl: "We zijn jongeren uit Frankrijk, België en Nederland, van 16 tot 26 jaar. De Schelde verbindt onze landen, en ze staat onder druk. Daarom wandelen we langs de rivier, onderzoeken we ze en schrijven we aanbevelingen voor wie beslist. Het is serieus en leuk tegelijk, van een wandeling langs de rivier tot een avond met een schepen. In het Engels zijn we het Scheldt Youth Parliament, in het Frans het Parlement des Jeunes de l'Escaut."
 photo: /images/photos/zeeland-2025-group-selfie.jpg
 photoShape: free
 alt: "A close-up group selfie of about a dozen smiling young people outdoors"
@@ -111,9 +111,9 @@ blocks:
     heading: Nine nationalities, one team
     heading_fr: Neuf nationalités, une seule équipe
     heading_nl: Negen nationaliteiten, één team
-    text: "The last group came from nine countries and lived in France, Belgium and the Netherlands. Different languages, backgrounds and ages, from 16 to 26, working in mixed groups in English. That mix is our strength: a flood looks different from Valenciennes than from Zeeland, and the best ideas come when you hear both sides."
-    text_fr: "Le groupe le plus récent venait de neuf pays et vivait en France, en Belgique et aux Pays-Bas. Des langues, des parcours et des âges différents, de 16 à 26 ans, qui travaillent en groupes mixtes, en anglais. Ce mélange fait notre force : une inondation ne se vit pas de la même façon à Valenciennes qu'en Zélande, et les meilleures idées naissent quand on entend les deux côtés."
-    text_nl: "De meest recente groep kwam uit negen landen en woonde in Frankrijk, België en Nederland. Verschillende talen, achtergronden en leeftijden, van 16 tot 26, die in gemengde groepen in het Engels samenwerken. Die mix is onze kracht: een overstroming ziet er vanuit Valenciennes anders uit dan vanuit Zeeland, en de beste ideeën ontstaan als je beide kanten hoort."
+    text: "The last group came from nine countries and lived in France, Belgium and the Netherlands. Different languages, backgrounds and ages, from 16 to 26, working in mixed groups in English. A flood looks different from Valenciennes than from Zeeland, so the best ideas come when you hear both sides."
+    text_fr: "Le groupe le plus récent venait de neuf pays et vivait en France, en Belgique et aux Pays-Bas. Des langues, des parcours et des âges différents, de 16 à 26 ans, qui travaillent en groupes mixtes, en anglais. Une inondation ne se vit pas de la même façon à Valenciennes qu'en Zélande, alors les meilleures idées naissent quand on entend les deux côtés."
+    text_nl: "De meest recente groep kwam uit negen landen en woonde in Frankrijk, België en Nederland. Verschillende talen, achtergronden en leeftijden, van 16 tot 26, die in gemengde groepen in het Engels samenwerken. Een overstroming ziet er vanuit Valenciennes anders uit dan vanuit Zeeland, dus de beste ideeën ontstaan als je beide kanten hoort."
   - type: wide-photo
     photo: /images/photos/ghent-2022-roeland-group.jpg
     alt: "A large group of young people waving together in front of a big bronze bell in Ghent"
@@ -123,9 +123,9 @@ blocks:
     caption_fr: "Gand, 2022, pendant l'échange avec le Parlement des Jeunes de la Save"
     caption_nl: "Gent, 2022, tijdens de uitwisseling met het Jongerenparlement van de Sava"
   - type: statement
-    text: "Our aim: give young people a real voice in the future of one river."
-    text_fr: "Notre but : donner aux jeunes une vraie voix dans l'avenir d'un fleuve."
-    text_nl: "Ons doel: jongeren een echte stem geven in de toekomst van één rivier."
+    text: "We want young people to have a say in the future of their river."
+    text_fr: "Nous voulons que les jeunes aient leur mot à dire sur l'avenir de leur fleuve."
+    text_nl: "We willen dat jongeren mee beslissen over de toekomst van hun rivier."
   - type: map-and-text
     sections:
       - heading: One river, three countries
@@ -145,9 +145,6 @@ blocks:
     heading: Where it led
     heading_fr: Où cela nous a menés
     heading_nl: Waar het toe leidde
-    text: What starts on the Scheldt doesn't stop there.
-    text_fr: "Ce qui commence sur l'Escaut ne s'arrête pas là."
-    text_nl: "Wat op de Schelde begint, stopt daar niet."
   - type: three-cards
     cards:
       - heading: A fund for water projects
@@ -174,10 +171,10 @@ blocks:
       - heading: How it works
         heading_fr: Comment ça marche
         heading_nl: Hoe het werkt
-        text: "No fee, no test and no grades. Online sessions, brainstorm weekends (we arrange your travel, a bed and your meals), your own research project and shared recommendations."
-        text_fr: "Pas de frais, pas de test et pas de notes. Des séances en ligne, des week-ends de réflexion (nous organisons ton voyage, ton lit et tes repas), ton propre projet de recherche et des recommandations communes."
-        text_nl: "Geen inschrijvingsgeld, geen test en geen punten. Online sessies, brainstormweekends (wij regelen je reis, een bed en je maaltijden), je eigen onderzoeksproject en gezamenlijke aanbevelingen."
-        link: { label: "How it works, step by step", label_fr: "Comment ça marche, étape par étape", label_nl: "Hoe het werkt, stap voor stap", url: "/join/#how-it-works" }
+        text: "There is no fee, and no tests or grades. Online sessions, brainstorm weekends (we arrange your travel, a bed and your meals), your own research project and shared recommendations."
+        text_fr: "C'est gratuit, sans tests ni notes. Des séances en ligne, des week-ends de réflexion (nous organisons ton voyage, ton lit et tes repas), ton propre projet de recherche et des recommandations communes."
+        text_nl: "Er is geen inschrijvingsgeld, en er zijn geen toetsen of punten. Online sessies, brainstormweekends (wij regelen je reis, een bed en je maaltijden), je eigen onderzoeksproject en gezamenlijke aanbevelingen."
+        link: { label: "Read how it works", label_fr: "Lis comment ça marche", label_nl: "Lees hoe het werkt", url: "/join/#how-it-works" }
       - heading: Brought to you by
         heading_fr: Proposé par
         heading_nl: Mogelijk gemaakt door

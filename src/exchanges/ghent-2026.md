@@ -120,9 +120,9 @@ cta:
 body_fr: |
   Notre dernier échange avec ce groupe, préparé à partir de ce que les participants avaient demandé après la Zélande : plus de fond, plus de terrain, plus de politique.
 
-  Vendredi, Filip Watteeuw, échevin de Gand, nous a expliqué que redessiner une ville, c'est plus une affaire de gens que de technique. Pense aux manifestations, aux procès, et même aux menaces de mort. Quiconque prend des décisions a besoin d'empathie, nous a-t-il dit.
+  Vendredi, Filip Watteeuw, échevin de Gand, nous a expliqué que redessiner une ville, c'est plus une affaire de gens que de technique. Il nous a parlé de manifestations, de procès et même de menaces de mort. Quiconque prend des décisions a besoin d'empathie, nous a-t-il dit.
 
-  Samedi, nous avons rencontré Max Verdonck de De Vlaamse Waterweg, l'agence flamande des voies navigables. Il nous a fait parcourir l'histoire de l'Escaut, les travaux en cours et les protections contre les crues encore à venir. Le plus dur dans son métier : pas l'ingénierie, mais faire accepter de grands projets aux gens et aux responsables politiques. L'après-midi, nous sommes partis à vélo voir de nos propres yeux les zones basses de la ville, les zones tampons et les solutions fondées sur la nature.
+  Samedi, nous avons rencontré Max Verdonck de De Vlaamse Waterweg, l'agence flamande des voies navigables. Il nous a fait parcourir l'histoire de l'Escaut, les travaux en cours et les protections contre les crues encore à venir. Pour lui, faire accepter de grands projets aux gens et aux responsables politiques est plus difficile que l'ingénierie. L'après-midi, nous sommes partis à vélo voir de nos propres yeux les zones basses de la ville, les zones tampons et les solutions fondées sur la nature.
 
   Ensuite, en trois équipes, nous avons transformé tout ça en recommandations sur :
 
@@ -134,9 +134,9 @@ body_fr: |
 body_nl: |
   Onze laatste uitwisseling met deze groep, gepland rond wat de deelnemers na Zeeland vroegen: meer diepgang, meer terreinwerk, meer politiek.
 
-  Op vrijdag vertelde Filip Watteeuw, schepen van Gent, ons dat een stad herinrichten meer over mensen gaat dan over technologie. Denk aan protest, rechtszaken, zelfs doodsbedreigingen. Wie beslissingen neemt, heeft empathie nodig, zei hij.
+  Op vrijdag vertelde Filip Watteeuw, schepen van Gent, ons dat een stad herinrichten meer over mensen gaat dan over technologie. Hij vertelde over protest, rechtszaken en zelfs doodsbedreigingen. Wie beslissingen neemt, heeft empathie nodig, zei hij.
 
-  Op zaterdag ontmoetten we Max Verdonck van De Vlaamse Waterweg. Hij nam ons mee door de geschiedenis van de Schelde, de werken die nu lopen en de overstromingsbescherming die er nog aankomt. Het moeilijkste aan zijn job: niet de techniek, maar mensen en politici grote projecten laten aanvaarden. In de namiddag fietsten we zelf naar de laaggelegen delen van de stad, de bufferzones en de natuurlijke oplossingen.
+  Op zaterdag ontmoetten we Max Verdonck van De Vlaamse Waterweg. Hij nam ons mee door de geschiedenis van de Schelde, de werken die nu lopen en de overstromingsbescherming die er nog aankomt. Mensen en politici grote projecten laten aanvaarden vindt hij moeilijker dan de techniek. In de namiddag fietsten we zelf naar de laaggelegen delen van de stad, de bufferzones en de natuurlijke oplossingen.
 
   Daarna maakten we in drie teams van dat alles aanbevelingen over:
 
@@ -148,9 +148,9 @@ body_nl: |
 ---
 Our last exchange with this group, planned around what participants asked for after Zeeland: more depth, more fieldwork, more politics.
 
-On Friday, Filip Watteeuw, deputy mayor of Ghent, told us that redesigning a city is more about people than about technology. Think protests, court cases, even death threats. Anyone who makes decisions needs empathy, he said.
+On Friday, Filip Watteeuw, deputy mayor of Ghent, told us that redesigning a city is more about people than about technology. He talked about protests, court cases and even death threats. Anyone who makes decisions needs empathy, he said.
 
-On Saturday we met Max Verdonck of De Vlaamse Waterweg, the Flemish waterways agency. He took us through the Scheldt's history, the work going on now and the flood defences still to come. The hardest part of his job: not the engineering, but getting people and politicians to accept big projects. In the afternoon we cycled out to see the city's low-lying areas, buffer zones and nature-based solutions for ourselves.
+On Saturday we met Max Verdonck of De Vlaamse Waterweg, the Flemish waterways agency. He took us through the Scheldt's history, the work going on now and the flood defences still to come. He finds it harder to get people and politicians to accept big projects than to do the engineering. In the afternoon we cycled out to see the city's low-lying areas, buffer zones and nature-based solutions for ourselves.
 
 Then, in three teams, we turned all this into recommendations on:
 

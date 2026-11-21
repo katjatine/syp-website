@@ -19,9 +19,9 @@ linkName: Oudenaarde to Zingem
 linkName_fr: D'Audenarde à Zingem
 linkName_nl: Van Oudenaarde naar Zingem
 riverMap: 50.845, 3.604; 50.905, 3.655
-lede: "A small group, a river contract and a mayor who took the time: two days along the Maarkebeek and the Zwalm."
-lede_fr: "Un petit groupe, un contrat de rivière et un bourgmestre qui a pris le temps : deux jours le long de la Maarkebeek et de la Zwalm."
-lede_nl: "Een kleine groep, een riviercontract en een burgemeester die de tijd nam: twee dagen langs de Maarkebeek en de Zwalm."
+lede: "Two days along the Maarkebeek and the Zwalm, in a small group, with a mayor who took the time for us."
+lede_fr: "Deux jours le long de la Maarkebeek et de la Zwalm, en petit groupe, avec un bourgmestre qui a pris le temps pour nous."
+lede_nl: "Twee dagen langs de Maarkebeek en de Zwalm, met een kleine groep en een burgemeester die tijd voor ons maakte."
 teaser: Three participants walked along the Maarkebeek and Zwalm with local people, guides, two mayors and the secretary general of the International Scheldt Commission.
 teaser_fr: Trois participants ont marché le long de la Maarkebeek et de la Zwalm avec des habitants, des guides, deux bourgmestres et le secrétaire général de la Commission Internationale de l'Escaut.
 teaser_nl: Drie deelnemers wandelden langs de Maarkebeek en de Zwalm met buurtbewoners, gidsen, twee burgemeesters en de secretaris-generaal van de Internationale Scheldecommissie.
@@ -88,7 +88,7 @@ gallery:
     caption_fr: Le contrat de rivière expliqué, à l'abri de la pluie
     caption_nl: Het riviercontract uitgelegd, uit de regen
 body_fr: |
-  Nous n'étions que trois à pouvoir venir à la marche belge. L'avantage : toutes les personnes que nous avons rencontrées avaient du temps pour chaque question.
+  Nous n'étions que trois à pouvoir venir à la marche belge. Du coup, toutes les personnes que nous avons rencontrées avaient du temps pour toutes nos questions.
 
   Nous avons commencé le long de la Maarkebeek avec les Maarkeerders, des habitants qui prennent soin de leur propre ruisseau, et leur bourgmestre. Le coordinateur du bassin du Haut-Escaut nous a expliqué pourquoi c'est important : selon les règles européennes sur l'eau, rendre ce ruisseau à nouveau sain est une priorité.
 
@@ -98,7 +98,7 @@ body_fr: |
 
   Nous avons terminé dans un vignoble local, accueillis par le bourgmestre et les échevins de Kruisem, dont fait partie Zingem. Leon Dhaene, secrétaire général de la Commission Internationale de l'Escaut, est venu discuter avec nous, pas rien pour un groupe de trois. Dorien a clôturé le week-end avec une chanson.
 body_nl: |
-  Maar drie van ons konden naar de Belgische wandeling komen. Het voordeel: iedereen die we ontmoetten, had tijd voor elke vraag.
+  Maar drie van ons konden naar de Belgische wandeling komen. Daardoor had iedereen die we ontmoetten tijd voor al onze vragen.
 
   We begonnen langs de Maarkebeek met de Maarkeerders, buurtbewoners die zelf voor hun beek zorgen, en hun burgemeester. De coördinator van het Bovenscheldebekken legde uit waarom dat belangrijk is: volgens de Europese waterregels is deze beek weer gezond maken een prioriteit.
 
@@ -108,7 +108,7 @@ body_nl: |
 
   We sloten af in een lokale wijngaard, onthaald door de burgemeester en de schepenen van Kruisem, waar Zingem bij hoort. Leon Dhaene, secretaris-generaal van de Internationale Scheldecommissie, kwam met ons praten, best bijzonder voor een groep van drie. Dorien sloot het weekend af met een lied.
 ---
-Only three of us could come to the Belgian walk. The upside: everyone we met had time for every question.
+Only three of us could come to the Belgian walk. So everyone we met had time for all our questions.
 
 We started along the Maarkebeek with the Maarkeerders, local people who look after their own stream, and their mayor. The coordinator of the Upper Scheldt basin explained why it matters: under European water rules, making this stream healthy again is a priority.
 

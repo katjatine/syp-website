@@ -24,7 +24,7 @@ blocks:
           - communication that came in bursts around milestones
           - an evaluation tool that was only introduced at the third exchange
 
-          The conclusion: the group moved from caring about water to taking part in cross-border decisions, backed by facts.
+          The report concludes that the group moved from caring about water to taking part in cross-border decisions, backed by facts.
         text_fr: |-
           Deux ans, quarante jeunes de 16 à 26 ans, trois pays, neuf nationalités. GoodPlanet Belgium et HZ University of Applied Sciences ont mené le projet avec un financement Erasmus+, de septembre 2024 à août 2026.
 
@@ -35,7 +35,7 @@ blocks:
           - une communication par à-coups, autour des grandes étapes
           - un outil d'évaluation introduit seulement au troisième échange
 
-          La conclusion : le groupe est passé de l'intérêt pour l'eau à la participation à des décisions transfrontalières, faits à l'appui.
+          Le rapport conclut que le groupe est passé de l'intérêt pour l'eau à la participation à des décisions transfrontalières, faits à l'appui.
         text_nl: |-
           Twee jaar, veertig jongeren van 16 tot 26 jaar, drie landen, negen nationaliteiten. GoodPlanet Belgium en HZ University of Applied Sciences voerden het project uit met steun van Erasmus+, van september 2024 tot augustus 2026.
 
@@ -46,7 +46,7 @@ blocks:
           - communicatie die met horten en stoten kwam, rond de mijlpalen
           - een evaluatie-instrument dat pas bij de derde uitwisseling werd ingevoerd
 
-          De conclusie: de groep ging van bezorgd zijn om water naar meebeslissen over de grenzen heen, onderbouwd met feiten.
+          Volgens het verslag ging de groep van bezorgd zijn om water naar meebeslissen over de grenzen heen, onderbouwd met feiten.
       - heading: Ghent exchange report, May 2026
         heading_fr: Rapport de l'échange à Gand, mai 2026
         heading_nl: Verslag van de uitwisseling in Gent, mei 2026
@@ -83,19 +83,19 @@ blocks:
 
           On the agenda: the 2040 vision for the Scheldt basin, cross-border flood management and sponge landscapes, which let soil soak up water.
 
-          The conclusion: giving young people a seat at the table works, and it opens the door to taking part in future meetings of the commission.
+          The report concludes that giving young people a seat at the table works, and it opens the door to taking part in future meetings of the commission.
         text_fr: |-
           Le 25 juin 2026, la commission nous a invités à son assemblée plénière à Tournai. Mathieu, l'un de nos participants, nous a représentés pendant toute la séance.
 
           À l'ordre du jour : la vision 2040 pour le bassin de l'Escaut, la gestion transfrontalière des inondations et les paysages éponges, qui permettent au sol d'absorber l'eau.
 
-          La conclusion : donner une place aux jeunes à la table, ça marche, et cela leur ouvre la porte des prochaines réunions de la commission.
+          Le rapport conclut que donner une place aux jeunes à la table, ça marche, et que cela leur ouvre la porte des prochaines réunions de la commission.
         text_nl: |-
           Op 25 juni 2026 nodigde de commissie ons uit op haar plenaire vergadering in Doornik. Mathieu, een van onze deelnemers, vertegenwoordigde ons de hele zitting lang.
 
           Op de agenda: de visie 2040 voor het Scheldebekken, grensoverschrijdend overstromingsbeheer en sponslandschappen, waarin de bodem water opslorpt.
 
-          De conclusie: jongeren een plaats aan tafel geven werkt, en het opent de deur om deel te nemen aan volgende vergaderingen van de commissie.
+          Volgens het verslag werkt het om jongeren een plaats aan tafel te geven, en opent het de deur om deel te nemen aan volgende vergaderingen van de commissie.
       - heading: Periodic report 2024 to 2025
         heading_fr: Rapport intermédiaire 2024 à 2025
         heading_nl: Tussentijds verslag 2024 tot 2025
@@ -107,7 +107,7 @@ blocks:
           - the first two exchanges, Scheldt walks in France and Belgium
           - the start of the research projects, on ten themes
 
-          The hardest part: aligning school and university calendars across three countries, and keeping everyone on board through exam periods.
+          The hardest part was aligning school and university calendars across three countries, and keeping everyone on board through exam periods.
         text_fr: |-
           La première année, de septembre 2024 à septembre 2025 :
 
@@ -116,7 +116,7 @@ blocks:
           - les deux premiers échanges, des marches le long de l'Escaut en France et en Belgique
           - le lancement des projets de recherche, sur dix thèmes
 
-          Le plus difficile : accorder les calendriers des écoles et des universités de trois pays, et garder tout le monde à bord pendant les périodes d'examens.
+          Le plus difficile a été d'accorder les calendriers des écoles et des universités de trois pays, et de garder tout le monde à bord pendant les périodes d'examens.
         text_nl: |-
           Het eerste jaar, september 2024 tot september 2025:
 
@@ -125,7 +125,7 @@ blocks:
           - de eerste twee uitwisselingen, Scheldewandelingen in Frankrijk en België
           - de start van de onderzoeksprojecten, over tien thema's
 
-          Het moeilijkste: de kalenders van scholen en universiteiten in drie landen op elkaar afstemmen, en iedereen aan boord houden tijdens de examens.
+          Het moeilijkste was de kalenders van scholen en universiteiten in drie landen op elkaar afstemmen, en iedereen aan boord houden tijdens de examens.
     photo: /images/photos/zeeland-2024-delta-map.jpg
     alt: "A participant leaning over a large map of the Scheldt delta and pointing at yellow sticky notes"
     alt_fr: "Un participant penché sur une grande carte du delta de l'Escaut, qui montre des post-it jaunes"

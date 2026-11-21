@@ -1,4 +1,4 @@
-// Settings of the Recommendations page (src/youth-voices.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the Recommendations page (src/youth-voices.md) that stay out of the browser editor.
 // The texts and photos are in src/youth-voices.md ("Recommendations" in the editor), which drops comments when it saves,
 // so the notes are here. The letter is the Markdown text of that file; a quotation in it ("> ...") becomes the large
 // key sentence of the brief (class brief-key, added by src/_includes/types/voices.njk).

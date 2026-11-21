@@ -63,7 +63,7 @@
 </section>
 {% endif %}
 <div class="container page-body">
-  {#- A page written as blocks (the browser editor, Output Claude/77) shows its blocks where the text would be. -#}
+  {#- A page written as blocks (the browser editor) shows its blocks where the text would be. -#}
   {% if blocks %}{% set pageText %}{% include "page-blocks.njk" %}{% endset %}{% elif bodyTranslated %}{% set pageText = bodyTranslated | markdown %}{% else %}{% set pageText = content %}{% endif %}
   {% if prose === false %}{{ pageText | safe }}{% else %}<div class="prose">{{ pageText | safe }}</div>{% endif %}
 </div>

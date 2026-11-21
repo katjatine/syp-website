@@ -9,8 +9,8 @@ excerpt_nl: "Veertig deelnemers met negen nationaliteiten startten het project o
 icon: video
 tile: green
 body_fr: |
-  Quarante participants de 16 à 26 ans, de neuf nationalités, ont lancé le projet en ligne. Chacun a partagé un regard sur l'eau, tiré de son propre domaine. Ensemble, ils ont exploré la gestion des bassins fluviaux, les sciences citoyennes et le changement climatique. Prochaine étape : les premières marches en France et en Belgique.
+  Quarante participants de 16 à 26 ans, de neuf nationalités, ont lancé le projet en ligne. Chacun a partagé un regard sur l'eau, tiré de son propre domaine. Ensemble, ils ont exploré la gestion des bassins fluviaux, les sciences citoyennes et le changement climatique. Ensuite sont venues les premières marches en France et en Belgique.
 body_nl: |
-  Veertig deelnemers van 16 tot 26 jaar, met negen nationaliteiten, startten het project online. Elk deelde één inzicht over water uit hun eigen vakgebied. Samen verkenden ze stroomgebiedbeheer, burgerwetenschap en klimaatverandering. Volgende halte: de eerste wandelingen in Frankrijk en België.
+  Veertig deelnemers van 16 tot 26 jaar, met negen nationaliteiten, startten het project online. Elk deelde één inzicht over water uit hun eigen vakgebied. Samen verkenden ze stroomgebiedbeheer, burgerwetenschap en klimaatverandering. Daarna volgden de eerste wandelingen in Frankrijk en België.
 ---
-Forty participants aged 16 to 26, of nine nationalities, started the project online. Each shared one insight about water from their own field. Together they explored river-basin management, citizen science and climate change. Next stop: the first walks in France and Belgium.
+Forty participants aged 16 to 26, of nine nationalities, started the project online. Each shared one insight about water from their own field. Together they explored river-basin management, citizen science and climate change. Next came the first walks in France and Belgium.

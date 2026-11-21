@@ -21,7 +21,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
 
-  // Page blocks (the browser editor, Output Claude/77): a page with "blocks" in its front matter is built from them by
+  // Page blocks (the browser editor): a page with "blocks" in its front matter is built from them by
   // src/_includes/page-blocks.njk. Texts in blocks are Markdown (bold, links, lists) and go through the same Markdown
   // library as the text of a page itself, so a page looks the same whether it is written as blocks or as text.
   //   markdown        a text of one or more paragraphs: "<p>...</p>"
@@ -107,6 +107,48 @@ module.exports = function (eleventyConfig) {
     if (!code.includes("__PINCODE__")) throw new Error("netlify/pincode-poort.js is missing the __PINCODE__ placeholder");
     fs.mkdirSync(map, { recursive: true });
     fs.writeFileSync(path.join(map, "pincode.js"), code.replace("__PINCODE__", pincode));
+  });
+
+  // The CSS and JavaScript online carry no comments: the notes in src/css and src/js are for whoever maintains the site.
+  // The review script only goes online with the review page itself, while there is a pincode.
+  eleventyConfig.on("eleventy.after", ({ dir }) => {
+    const out = dir.output;
+    const site = JSON.parse(fs.readFileSync(path.join(__dirname, "src/_data/site.json"), "utf8"));
+    if (!String(site.pincode || "").trim()) fs.rmSync(path.join(out, "js/relecture.js"), { force: true });
+    const stripCss = (css) => {
+      let res = "", i = 0, quote = null;
+      while (i < css.length) {
+        const c = css[i];
+        if (quote) {
+          res += c;
+          if (c === "\\") { res += css[i + 1] || ""; i += 2; continue; }
+          if (c === quote) quote = null;
+          i++;
+        } else if (c === "/" && css[i + 1] === "*") {
+          const end = css.indexOf("*/", i + 2);
+          i = end < 0 ? css.length : end + 2;
+        } else {
+          if (c === '"' || c === "'") quote = c;
+          res += c;
+          i++;
+        }
+      }
+      return res.replace(/[ \t]+$/gm, "").replace(/\n{3,}/g, "\n\n");
+    };
+    const stripJs = (js) => js
+      .split("\n")
+      .filter((line) => !/^\s*\/\//.test(line))
+      .map((line) => line.replace(/([;{}),])\s+\/\/ .*$/, "$1"))
+      .join("\n");
+    for (const [folder, strip] of [["css", stripCss], ["js", stripJs]]) {
+      const map = path.join(out, folder);
+      if (!fs.existsSync(map)) continue;
+      for (const name of fs.readdirSync(map)) {
+        if (!name.endsWith("." + folder)) continue;
+        const file = path.join(map, name);
+        fs.writeFileSync(file, strip(fs.readFileSync(file, "utf8")));
+      }
+    }
   });
 
   // Photo manifest (written by scripts/images.js), reloaded before every build.
@@ -214,7 +256,7 @@ module.exports = function (eleventyConfig) {
 
   const escapeAttr = (s) => String(s || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
-  // A photo is named by its file name without ending ("ghent-2026-cafe"). The browser editor (Pages CMS, Output Claude/77)
+  // A photo is named by its file name without ending ("ghent-2026-cafe"). The browser editor (Pages CMS)
   // writes a path instead ("/images/photos/ghent-2026-cafe.jpg", or the small "-800" version); both mean the same photo.
   const photoSlug = (p) => path.basename(String(p || "").trim(), path.extname(String(p || "").trim())).replace(/-800$/, "");
   eleventyConfig.addFilter("photoSlug", photoSlug);
@@ -334,7 +376,7 @@ module.exports = function (eleventyConfig) {
 
   // Where an exchange took place along the Scheldt: {% scheldtMap riverMap %}, and {{ riverMap | scheldtSpot }}
   // for the position of the dot, so the place name can sit beside it (see lib/scheldt-map.js).
-  // Places on the maps are [latitude, longitude]. In the files the browser editor rewrites (Output Claude/77) they are
+  // Places on the maps are [latitude, longitude]. In the files the browser editor rewrites they are
   // written as text, which it keeps safely: "51.054, 3.722", or two places for a walk, "50.329, 3.395; 50.358, 3.523".
   const toPoint = (p) => (typeof p === "string" ? p.split(",").map((n) => parseFloat(n)) : p);
   const toPoints = (p) => (typeof p === "string" ? p.split(";").map((pair) => toPoint(pair.trim())) : p);
@@ -563,7 +605,7 @@ module.exports = function (eleventyConfig) {
 
   // Launch guard: at launch (empty "pincode" in site.json) no [TODO] may stay visible.
   // After the build, count the marks from the transform above in the pages that were written.
-  // At launch `npm run build` fails with the list, so publiceer.command publishes nothing;
+  // At launch `npm run build` fails with the list, so Netlify publishes nothing;
   // in the preview (PIN set) it only logs one line. The dev server only warns, so it keeps running.
   // To test the launch check without emptying the pincode: SYP_LAUNCH_CHECK=1 npx @11ty/eleventy --output=/tmp/syp-test
   // Skipped: the review page and the style guide, which only exist in the preview (relecture.11tydata.js, styleguide.11tydata.js); the style guide shows the markers on purpose.

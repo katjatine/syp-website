@@ -12,9 +12,9 @@ hero:
   lede: The Scheldt connects us, and it's under pressure. Together we walk it, study it and look for solutions across borders. Then we take them straight to the decision-makers.
   lede_fr: L'Escaut nous relie, et il est sous pression. Ensemble, on le parcourt, on l'étudie et on cherche des solutions par-delà les frontières. Puis on les porte directement aux décideurs.
   lede_nl: De Schelde verbindt ons, en ze staat onder druk. Samen wandelen we langs de rivier, onderzoeken we ze en zoeken we oplossingen over de grenzen heen. Die brengen we rechtstreeks naar wie beslist.
-  forWho: No fee, for 16 to 26 year olds. Travel, bed and meals arranged.
-  forWho_fr: Gratuit, pour les 16-26 ans. Voyage, logement et repas pris en charge.
-  forWho_nl: Gratis, voor 16- tot 26-jarigen. Reis, bed en maaltijden geregeld.
+  forWho: For 16 to 26 year olds. There is no fee, and we arrange your travel, a bed and your meals.
+  forWho_fr: Pour les 16-26 ans. Il n'y a pas de frais, et nous organisons ton voyage, ton logement et tes repas.
+  forWho_nl: Voor 16- tot 26-jarigen. Er is geen inschrijvingsgeld, en wij regelen je reis, een bed en je maaltijden.
   button1:
     label: Join the next group
     label_fr: Rejoins le prochain groupe
@@ -38,17 +38,17 @@ madeBy:
   link: All member projects
   link_fr: Tous les projets des membres
   link_nl: Alle projecten van leden
-whatTitle: Rivers don't stop at borders. Neither do we.
-whatTitle_fr: Les fleuves ne s'arrêtent pas aux frontières. Nous non plus.
-whatTitle_nl: Rivieren stoppen niet aan de grens. Wij ook niet.
+whatTitle: Rivers don't stop at borders
+whatTitle_fr: Les fleuves ne s'arrêtent pas aux frontières
+whatTitle_nl: Rivieren stoppen niet aan de grens
 whatPoints:
   - icon: flag
-    lead: Three countries, one river.
-    lead_fr: Trois pays, un fleuve.
-    lead_nl: Drie landen, één rivier.
-    text: "Young people from France, Belgium and the Netherlands, aged 16 to 26. The Scheldt's challenges cross borders: floods, water quality, nature."
-    text_fr: "Des jeunes de France, de Belgique et des Pays-Bas, de 16 à 26 ans. Les défis de l'Escaut dépassent les frontières : inondations, qualité de l'eau, nature."
-    text_nl: "Jongeren uit Frankrijk, België en Nederland, van 16 tot 26 jaar. De uitdagingen van de Schelde gaan over de grenzen heen: overstromingen, waterkwaliteit, natuur."
+    lead: From three countries.
+    lead_fr: De trois pays.
+    lead_nl: Uit drie landen.
+    text: "We are 16 to 26 and live in France, Belgium or the Netherlands. Floods, water quality and nature along the Scheldt are problems the three countries share."
+    text_fr: "Nous avons entre 16 et 26 ans et vivons en France, en Belgique ou aux Pays-Bas. Les inondations, la qualité de l'eau et la nature le long de l'Escaut sont des problèmes que les trois pays partagent."
+    text_nl: "We zijn 16 tot 26 en wonen in Frankrijk, België of Nederland. Overstromingen, waterkwaliteit en natuur langs de Schelde zijn problemen van de drie landen samen."
   - icon: footprints
     lead: Out in the field.
     lead_fr: Sur le terrain.
@@ -60,9 +60,9 @@ whatPoints:
     lead: Free and voluntary.
     lead_fr: Gratuit et volontaire.
     lead_nl: Gratis en vrijwillig.
-    text: No exams, no prior knowledge needed.
-    text_fr: Pas d'examens, aucune connaissance préalable requise.
-    text_nl: Geen examens, geen voorkennis nodig.
+    text: You don't need exams or any knowledge of water to take part.
+    text_fr: Pas besoin d'examens ni de connaissances sur l'eau pour participer.
+    text_nl: Je hebt geen examens of voorkennis over water nodig.
   - icon: megaphone
     lead: Heard where it counts.
     lead_fr: Entendus là où ça compte.

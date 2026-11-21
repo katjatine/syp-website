@@ -1,6 +1,6 @@
 # Scheldt Youth Parliament website: how to keep it up to date
 
-This is the website of the Scheldt Youth Parliament. It is a set of text files that a small program (Eleventy) turns into web pages. You do not need to know how websites work. You edit text files in `src/`, look at the result on your own computer if you like, and put the site online from a Mac with one double-click (`publiceer.command`, see "Put the site online"). Nothing goes online by itself: saving a file changes nothing on the live site until you publish.
+This is the website of the Scheldt Youth Parliament. It is a set of text files that a small program (Eleventy) turns into web pages. You do not need to know how websites work. You edit text files in `src/`, look at the result on your own computer if you like, and every change saved on the `main` branch goes online by itself (see "Put the site online").
 
 ## Where things are
 
@@ -95,7 +95,7 @@ Link previews: when someone pastes a link in Teams, WhatsApp or LinkedIn, the ca
 
 ## The browser editor (Pages CMS)
 
-Colleagues change the content of the site in the browser with Pages CMS (app.pagescms.org), without a laptop or code: every text, photo and list on every page. The house style stays fixed. Plans and choices: Output Claude/28 and 77 in the project folder. Pages CMS is installed on this repository; every save is a commit on GitHub.
+Colleagues change the content of the site in the browser with Pages CMS (app.pagescms.org), without a laptop or code: every text, photo and list on every page. The house style stays fixed. Pages CMS is installed on this repository; every save is a commit on GitHub.
 
 - **What the editor shows** is set in `.pages.yml`, which is made by `npm run editor-config` from `scripts/pages-config.js` (and `scripts/pages-config-lists.yml` for news posts, timeline stops and join details). Edit those, not `.pages.yml`.
 - **Pages as blocks.** About, Join, Partners, Reports, Exchanges, News, Timeline and Go with the flow have a `blocks` list in their front matter. Editors add, move and remove blocks. Each block type is one template in `src/_includes/page-blocks/`, drawn by `src/_includes/page-blocks.njk`. Home, The Scheldt, Recommendations and the exchange pages keep their own layout in `src/_includes/types/`; there every text, photo and list is a field.

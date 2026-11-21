@@ -1,4 +1,4 @@
-// Settings of the About page (src/project.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the About page (src/project.md) that stay out of the browser editor.
 // The texts, photos and blocks of the page are in src/project.md; the editor rewrites that file and drops comments there,
 // so the notes about the page are here.
 //

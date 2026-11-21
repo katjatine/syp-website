@@ -1,4 +1,4 @@
-// Settings of the Go with the flow page (src/go-with-the-flow.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the Go with the flow page (src/go-with-the-flow.md) that stay out of the browser editor.
 // The card texts are copied from the cards in the download (src/downloads/go-with-the-flow-water-goose-game.pdf).
 // How to play is drawn as a short river ("journey" block): "nature" adds reeds (by the source, the first step) or gulls
 // (over the sea, the last step). The steps have no icons here, so the river draws plain dots.

@@ -1,4 +1,4 @@
-// Settings of the homepage (src/index.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the homepage (src/index.md) that stay out of the browser editor.
 // The texts and photos are in src/index.md ("Home" in the editor), which drops comments when it saves, so the notes are here.
 // Each "whatPoints" lead is Markdown now (a link is fine), so "Run by [GoodPlanet Belgium](https://www.goodplanet.be),".
 //

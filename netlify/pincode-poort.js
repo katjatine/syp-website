@@ -1,6 +1,6 @@
 // Pincodepoort voor de voorvertoning van de SYP-website, naar het model van appeltje-eitje.
 //
-// Dit is het SJABLOON. Bij elke bouw (npm run build, dus ook publiceer.command) vult
+// Dit is het SJABLOON. Bij elke bouw (npm run build) vult
 // eleventy.config.js de pincode in uit src/_data/site.json (sleutel "pincode") en schrijft
 // het resultaat naar netlify/edge-functions/pincode.js. Dat bestand gaat mee naar Netlify
 // en draait daar als edge function. Staat de pincode leeg, dan wordt die map weggehaald

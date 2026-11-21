@@ -1,4 +1,4 @@
-// Settings of the Join page (src/join.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the Join page (src/join.md) that stay out of the browser editor.
 // The texts, photos and blocks are in src/join.md; the editor rewrites that file and drops comments there, so the notes
 // about the page are here.
 //

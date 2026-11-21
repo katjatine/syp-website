@@ -58,23 +58,23 @@ blocks:
         title_fr: Un fleuve, plein de voix
         title_nl: Eén rivier, veel stemmen
         icon: people
-        text: Meet people from three countries and all kinds of backgrounds. Same river, different ways of living with it.
-        text_fr: Rencontre des jeunes de trois pays et de tous les horizons. Le même fleuve, des façons différentes de vivre avec lui.
-        text_nl: Ontmoet mensen uit drie landen en met allerlei achtergronden. Dezelfde rivier, verschillende manieren om ermee te leven.
+        text: Meet people from three countries and all kinds of backgrounds, who each live with the river in their own way.
+        text_fr: Rencontre des jeunes de trois pays et de tous les horizons, qui vivent chacun le fleuve à leur façon.
+        text_nl: Ontmoet mensen uit drie landen en met allerlei achtergronden, die elk op hun eigen manier met de rivier leven.
       - title: Build real skills
         title_fr: Développe de vraies compétences
         title_nl: Bouw echte vaardigheden op
         icon: skills
-        text: "Do your own research, debate in English and present your group's ideas. No tests, no grades: you learn by doing."
-        text_fr: "Fais tes propres recherches, débats en anglais et présente les idées de ton groupe. Pas de tests, pas de notes : tu apprends en faisant."
-        text_nl: "Doe je eigen onderzoek, debatteer in het Engels en stel de ideeën van je groep voor. Geen toetsen, geen punten: je leert door te doen."
+        text: "Do your own research, debate in English and present your group's ideas. There are no tests or grades. You learn by doing."
+        text_fr: "Fais tes propres recherches, débats en anglais et présente les idées de ton groupe. Il n'y a ni tests ni notes, tu apprends en faisant."
+        text_nl: "Doe je eigen onderzoek, debatteer in het Engels en stel de ideeën van je groep voor. Er zijn geen toetsen of punten, je leert door te doen."
       - title: Be part of the Scheldt's comeback
         title_fr: Participe au retour de l'Escaut
         title_nl: Help mee aan de comeback van de Schelde
         icon: fish
-        text: Around 1990, only 14 harbour seals were counted in the whole Dutch delta. In June 2025, almost 600 were counted in the Western Scheldt alone. There's still work to do.
-        text_fr: Vers 1990, on ne comptait que 14 phoques veaux-marins dans tout le delta néerlandais. En juin 2025, on en a compté près de 600 rien que dans l'Escaut occidental. Il reste du travail.
-        text_nl: Rond 1990 telden ze in de hele Nederlandse delta maar 14 gewone zeehonden. In juni 2025 waren het er bijna 600, alleen al in de Westerschelde. Er is nog werk aan de winkel.
+        text: Around 1990, only 14 harbour seals were counted in the whole Dutch delta. In June 2025, almost 600 were counted in the Western Scheldt alone.
+        text_fr: Vers 1990, on ne comptait que 14 phoques veaux-marins dans tout le delta néerlandais. En juin 2025, on en a compté près de 600 rien que dans l'Escaut occidental.
+        text_nl: Rond 1990 telden ze in de hele Nederlandse delta maar 14 gewone zeehonden. In juni 2025 waren het er bijna 600, alleen al in de Westerschelde.
       - title: Have a good time
         title_fr: Passe du bon temps
         title_nl: Amuseer je
@@ -100,15 +100,15 @@ blocks:
     text: |-
       **Anyone aged 16 to 26** who lives in France, Belgium or the Netherlands. Any subject, any degree, or none yet. No experience needed.
 
-      Like teamwork? Want to practise your English? You'll fit right in.
+      If you like teamwork or want to practise your English, you'll fit right in.
     text_fr: |-
       **Tous les jeunes de 16 à 26 ans** qui vivent en France, en Belgique ou aux Pays-Bas. Toutes les filières, tous les diplômes, ou pas encore. Aucune expérience requise.
 
-      Tu aimes le travail d'équipe ? Tu veux pratiquer ton anglais ? Tu seras comme un poisson dans l'eau.
+      Si tu aimes le travail d'équipe ou si tu veux pratiquer ton anglais, tu seras comme un poisson dans l'eau.
     text_nl: |-
       **Iedereen van 16 tot 26 jaar** die in Frankrijk, België of Nederland woont. Elke richting, elk diploma, of nog geen. Geen ervaring nodig.
 
-      Hou je van teamwerk? Wil je je Engels oefenen? Dan voel je je hier meteen thuis.
+      Hou je van teamwerk of wil je je Engels oefenen, dan voel je je hier meteen thuis.
     quote:
       text: "I was 17 when I signed up for a water debate in the Senate. Not because of the topic, but because a girl I liked was going too. Before I knew it, I was in the Belgian delegation to the World Water Forum in Istanbul. I got hooked on water, and in 2012 I was elected chair of the World Youth Parliament for Water. That one debate, that one chance I got through GoodPlanet, completely changed my life."
       text_fr: "J'avais 17 ans quand je me suis inscrit à un débat sur l'eau au Sénat. Pas pour le sujet, mais parce qu'une fille qui me plaisait y allait aussi. Sans m'en rendre compte, je faisais partie de la délégation belge au Forum mondial de l'eau à Istanbul. L'eau m'a passionné, et en 2012 j'ai été élu président du Parlement mondial de la Jeunesse pour l'Eau. Ce seul débat, cette seule chance que j'ai eue grâce à GoodPlanet, a complètement changé ma vie."

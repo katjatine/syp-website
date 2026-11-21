@@ -1,4 +1,4 @@
-// Settings of the Timeline page (src/timeline.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the Timeline page (src/timeline.md) that stay out of the browser editor.
 // The stops on the river are in src/_data/timeline.json ("Timeline" in the editor). The note beside the source of the
 // river: the river is drawn after the real Scheldt (lib/scheldt-river.js; Tine, file 53).
 // In English, French and Dutch (Tine, file 88): lib/languages.js makes one page per language.

@@ -5,18 +5,18 @@ title_nl: Aanbevelingen
 description: The letter and the recommendations young people wrote in Ghent in May 2026. We took the recommendations to the International Scheldt Commission in June.
 description_fr: "La lettre et les recommandations écrites par des jeunes à Gand en mai 2026. En juin, nous avons porté les recommandations à la Commission Internationale de l'Escaut."
 description_nl: "De brief en de aanbevelingen die jongeren in mei 2026 in Gent schreven. In juni brachten we de aanbevelingen naar de Internationale Scheldecommissie."
-headline: Written by young people. Heard by policymakers.
-headline_fr: Écrit par des jeunes. Entendu par les décideurs.
-headline_nl: Geschreven door jongeren. Gehoord door beleidsmakers.
+headline: Recommendations by young people, heard by policymakers.
+headline_fr: Des recommandations de jeunes, entendues par les décideurs.
+headline_nl: Aanbevelingen van jongeren, gehoord door beleidsmakers.
 headlineLines:
-  - Written by young people.
-  - Heard by policymakers.
+  - Recommendations by young people,
+  - heard by policymakers.
 headlineLines_fr:
-  - Écrit par des jeunes.
-  - Entendu par les décideurs.
+  - Des recommandations de jeunes,
+  - entendues par les décideurs.
 headlineLines_nl:
-  - Geschreven door jongeren.
-  - Gehoord door beleidsmakers.
+  - Aanbevelingen van jongeren,
+  - gehoord door beleidsmakers.
 lede: Good decisions for the Scheldt need young voices too. In Ghent in May 2026, our participants set out what they want from policymakers. In June we took their recommendations to the International Scheldt Commission, where France, Belgium and the Netherlands work together on the river.
 lede_fr: "De bonnes décisions pour l'Escaut ont aussi besoin de voix jeunes. À Gand, en mai 2026, nos participants ont dit ce qu'ils attendent des décideurs. En juin, nous avons porté leurs recommandations à la Commission Internationale de l'Escaut, où la France, la Belgique et les Pays-Bas travaillent ensemble sur le fleuve."
 lede_nl: "Goede beslissingen voor de Schelde hebben ook jonge stemmen nodig. In mei 2026 zetten onze deelnemers in Gent op een rij wat ze van beleidsmakers verwachten. In juni brachten we hun aanbevelingen naar de Internationale Scheldecommissie, waar Frankrijk, België en Nederland samenwerken aan de rivier."
@@ -31,9 +31,9 @@ letter:
   title: Letter to policymakers
   title_fr: Lettre aux décideurs
   title_nl: Brief aan beleidsmakers
-  intro: "Living with water and winning people over: a letter on flooding and citizen participation, written by young people in Ghent in May 2026. Their words, their voice."
-  intro_fr: "Vivre avec l'eau et convaincre les gens : une lettre sur les inondations et la participation citoyenne, écrite par des jeunes à Gand en mai 2026. Leurs mots, leur voix."
-  intro_nl: "Leven met water en mensen overtuigen: een brief over overstromingen en burgerparticipatie, geschreven door jongeren in Gent in mei 2026. Hun woorden, hun stem."
+  intro: "Living with water and winning people over: a letter on flooding and citizen participation, written by young people in Ghent in May 2026."
+  intro_fr: "Vivre avec l'eau et convaincre les gens : une lettre sur les inondations et la participation citoyenne, écrite par des jeunes à Gand en mai 2026."
+  intro_nl: "Leven met water en mensen overtuigen: een brief over overstromingen en burgerparticipatie, geschreven door jongeren in Gent in mei 2026."
   from: Young people of the exchange in Ghent
   from_fr: "Les jeunes de l'échange à Gand"
   from_nl: De jongeren van de uitwisseling in Gent

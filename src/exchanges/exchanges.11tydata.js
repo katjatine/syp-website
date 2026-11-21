@@ -1,5 +1,5 @@
 // Settings shared by the exchange pages in this folder (src/_includes/types/exchange.njk), and notes that used to stand
-// in their front matter: the browser editor (Output Claude/77, "Exchanges") drops comments when it saves.
+// in their front matter: the browser editor (Pages CMS, "Exchanges") drops comments when it saves.
 //
 // riverMap: the dot on the small map of the Scheldt beside "Where": one place as "latitude, longitude", or two separated
 //   by ";" for a walk (the dot goes halfway). Denain and Valenciennes; Oudenaarde and Zingem; Ghent; Tournai;

@@ -1,4 +1,4 @@
-// Settings of The Scheldt page (src/the-scheldt.md) that stay out of the browser editor (Output Claude/77).
+// Settings of The Scheldt page (src/the-scheldt.md) that stay out of the browser editor.
 // Its own layout (src/_includes/types/scheldt.njk): everything on the page comes from the front matter of src/the-scheldt.md.
 // The map (lib/scheldt-map.js) puts a numbered dot on the river for each stop. "places" is one "latitude, longitude",
 // or two separated by ";" for a walk (the dot goes halfway). The name sits right of the dot; "anchor: end" puts it left,

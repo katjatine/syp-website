@@ -1,4 +1,4 @@
-// Settings of the Exchanges overview (src/exchanges.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the Exchanges overview (src/exchanges.md) that stay out of the browser editor.
 // Lede: reviewer feedback (October 2026, E1): say what an exchange is, then what the list shows, without 'This page is about'.
 // designer feedback (5 October 2026): what is in it for you, so the lede speaks to the reader; the last group's four exchanges
 // and Tournai are in the figures band right under it. 'Since 2008' stays before 2025 (Tine, 2 Oct).

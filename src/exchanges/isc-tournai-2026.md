@@ -22,9 +22,9 @@ linkName: Tournai
 linkName_fr: Tournai
 linkName_nl: Doornik
 riverMap: 50.607, 3.389
-lede: "The day it all led up to: our recommendations at the plenary where the three countries work together on the Scheldt."
-lede_fr: "Le jour vers lequel tout convergeait : nos recommandations à l'assemblée plénière où les trois pays travaillent ensemble sur l'Escaut."
-lede_nl: "De dag waar alles naartoe leidde: onze aanbevelingen op de plenaire vergadering waar de drie landen samenwerken rond de Schelde."
+lede: "In Tournai we presented our recommendations at the plenary where the three countries work together on the Scheldt."
+lede_fr: "À Tournai, nous avons présenté nos recommandations à l'assemblée plénière où les trois pays travaillent ensemble sur l'Escaut."
+lede_nl: "In Doornik stelden we onze aanbevelingen voor op de plenaire vergadering waar de drie landen samenwerken rond de Schelde."
 teaser: Our recommendations, presented in the assembly where France, Belgium and the Netherlands work together on the Scheldt.
 teaser_fr: Nos recommandations, présentées à l'assemblée où la France, la Belgique et les Pays-Bas travaillent ensemble sur l'Escaut.
 teaser_nl: Onze aanbevelingen, voorgesteld in de vergadering waar Frankrijk, België en Nederland samenwerken rond de Schelde.
@@ -91,7 +91,7 @@ cta:
 body_fr: |
   La Commission Internationale de l'Escaut nous a invités à son assemblée plénière à Tournai. C'est la grande réunion de tous ses membres : les États et les régions le long du fleuve. Mathieu, l'un de nos participants, a pris la parole pour nous.
 
-  L'invitation était plus qu'une politesse. Depuis 2012, nous avons le statut d'observateur à la commission, qui réunit fonctionnaires, ingénieurs et décideurs.
+  Depuis 2012, nous avons le statut d'observateur à la commission, qui réunit fonctionnaires, ingénieurs et décideurs.
 
   La matinée portait sur l'avenir du bassin :
 
@@ -102,11 +102,11 @@ body_fr: |
 
   L'après-midi, des groupes de travail ont présenté leurs rapports sur l'hydrologie, les eaux souterraines, les pollutions accidentelles et les populations de poissons.
 
-  Ce que la journée nous a apporté : une ligne directe avec les personnes qui gèrent le fleuve. Elles ont entendu nos recommandations de notre bouche, pas par l'intermédiaire de quelqu'un d'autre.
+  Ce jour-là, les personnes qui gèrent le fleuve ont entendu nos recommandations directement de notre bouche.
 body_nl: |
   De Internationale Scheldecommissie nodigde ons uit op haar plenaire vergadering in Doornik. Dat is de grote bijeenkomst van al haar leden: de staten en gewesten langs de rivier. Mathieu, een van onze deelnemers, sprak namens ons.
 
-  De uitnodiging was meer dan beleefdheid. Sinds 2012 hebben we het statuut van waarnemer bij de commissie, die ambtenaren, ingenieurs en beleidsmakers samenbrengt.
+  Sinds 2012 hebben we het statuut van waarnemer bij de commissie, die ambtenaren, ingenieurs en beleidsmakers samenbrengt.
 
   De ochtend ging over de toekomst van het stroomgebied:
 
@@ -117,11 +117,11 @@ body_nl: |
 
   In de namiddag brachten werkgroepen verslag uit over hydrologie, grondwater, accidentele verontreiniging en visbestanden.
 
-  Wat de dag ons opleverde: een rechtstreekse lijn naar de mensen die de rivier beheren. Ze hoorden onze aanbevelingen van ons zelf, niet via iemand anders.
+  Die dag hoorden de mensen die de rivier beheren onze aanbevelingen rechtstreeks van ons.
 ---
 The International Scheldt Commission invited us to its plenary assembly in Tournai. That is the big meeting of all its members: the states and regions along the river. Mathieu, one of our participants, spoke for us.
 
-The invitation was more than a courtesy. Since 2012 we have held observer status at the commission, which brings together civil servants, engineers and policymakers.
+Since 2012 we have held observer status at the commission, which brings together civil servants, engineers and policymakers.
 
 The morning was about the future of the basin:
 
@@ -132,4 +132,4 @@ The morning was about the future of the basin:
 
 In the afternoon, working groups reported on hydrology, groundwater, accidental pollution and fish populations.
 
-What the day gave us: a direct line to the people who manage the river. They heard our recommendations from us, not through someone else.
+That day the people who manage the river heard our recommendations from us directly.

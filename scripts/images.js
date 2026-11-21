@@ -2,7 +2,7 @@
 // Each photo becomes: name.webp and name.jpg (longest side 1600 px, under 200 KB)
 // plus name-800.webp and name-800.jpg for small screens.
 // Originals whose name starts with "reserve-" stay in photos-original/ and are not published.
-// Photos uploaded in the browser editor (Pages CMS, Output Claude/77) land straight in src/images/photos/ as one large
+// Photos uploaded in the browser editor (Pages CMS) land straight in src/images/photos/ as one large
 // file. They are made into web photos the same way, in place: on Netlify, which runs this script before every build
 // (netlify.toml), and on a laptop, where the upload is also copied to photos-original/ so it stays with the others.
 // Run with: npm run images      (add --force to redo photos that already exist)

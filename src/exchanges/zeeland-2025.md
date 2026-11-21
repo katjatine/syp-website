@@ -109,9 +109,9 @@ body_fr: |
   - Go with the flow, le jeu de société sur l'eau que tu peux [télécharger gratuitement](/go-with-the-flow/)
   - le jeu de l'Escaut : c'est toi qui décides, en pesant les intérêts des agriculteurs, de l'industrie, de la nature et d'autres encore. Ça chauffe vite.
 
-  La séance dont la plupart d'entre nous se souviennent portait sur des droits pour l'Escaut. Et si un fleuve avait ses propres droits juridiques, comme une personne ou une entreprise ? Prends l'idée au sérieux, et chaque discussion sur le fleuve change.
+  La séance dont la plupart d'entre nous se souviennent portait sur des droits pour l'Escaut. Et si un fleuve avait ses propres droits juridiques, comme une personne ou une entreprise ?
 
-  Samedi, nous avons fait du kayak à travers les zones humides du Veerse Meer : le moyen le plus rapide de comprendre un système d'eau de l'intérieur.
+  Samedi, nous avons fait du kayak à travers les zones humides du Veerse Meer, et nous avons vu le système d'eau de l'intérieur.
 
   Lors de notre première vraie évaluation, la plupart des participants étaient satisfaits ou très satisfaits. Ils ont demandé plus de fond sur l'Escaut lui-même et sur des polluants comme les PFAS. Nous avons préparé Gand à partir de ces retours.
 body_nl: |
@@ -123,9 +123,9 @@ body_nl: |
   - Go with the flow, het waterbordspel dat je [gratis kunt downloaden](/go-with-the-flow/)
   - het Scheldespel: jij bent de beslisser en weegt de belangen af van boeren, industrie, natuur en meer. Het wordt verhit.
 
-  De sessie die de meesten van ons bijbleef, ging over Rechten voor de Schelde. Wat als een rivier eigen rechten had, zoals een persoon of een bedrijf? Neem dat ernstig en elke discussie over de rivier verandert.
+  De sessie die de meesten van ons bijbleef, ging over Rechten voor de Schelde. Wat als een rivier eigen rechten had, zoals een persoon of een bedrijf?
 
-  Op zaterdag kajakten we door de natte gebieden van het Veerse Meer: de snelste manier om een watersysteem van binnenuit te begrijpen.
+  Op zaterdag kajakten we door de natte gebieden van het Veerse Meer en zagen we het watersysteem van binnenuit.
 
   In onze eerste echte evaluatie waren de meeste deelnemers tevreden of zeer tevreden. Ze vroegen meer diepgang over de Schelde zelf en over vervuilende stoffen zoals PFAS. We planden Gent rond die feedback.
 ---
@@ -137,8 +137,8 @@ We played a lot:
 - Go with the flow, the water board game you can [download for free](/go-with-the-flow/)
 - the Scheldt game: you are the decision-maker, weighing up the interests of farmers, industry, nature and more. It gets heated.
 
-The session most of us remember was on Rights for the Scheldt. What if a river had legal rights of its own, like a person or a company? Take that seriously and every discussion about the river changes.
+The session most of us remember was on Rights for the Scheldt. What if a river had legal rights of its own, like a person or a company?
 
-On Saturday we kayaked through the wetlands of the Veerse Meer: the fastest way to understand a water system from the inside.
+On Saturday we kayaked through the wetlands of the Veerse Meer and saw the water system from the inside.
 
 In our first real evaluation, most participants were satisfied or very satisfied. They asked for more depth on the Scheldt itself and on pollutants such as PFAS. We planned Ghent around that feedback.

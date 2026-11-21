@@ -21,8 +21,8 @@ linkLabel: More about the plenary in Tournai
 linkLabel_fr: "En savoir plus sur la plénière à Tournai"
 linkLabel_nl: "Meer over de plenaire vergadering in Doornik"
 body_fr: |
-  Mathieu, l'un de nos participants, a parlé au nom des jeunes tout au long de la séance plénière. Les sujets allaient de la vision 2040 pour le bassin aux inondations transfrontalières et aux paysages éponges. Nous sommes observateurs depuis 2012. À Tournai, nous n'avons pas seulement écouté : nous avons pris la parole.
+  Mathieu, l'un de nos participants, a parlé au nom des jeunes tout au long de la séance plénière. Les sujets allaient de la vision 2040 pour le bassin aux inondations transfrontalières et aux paysages éponges. Nous sommes observateurs depuis 2012. À Tournai, nous avons aussi pris la parole.
 body_nl: |
-  Mathieu, een van onze deelnemers, sprak de hele plenaire zitting lang namens de jongeren. De onderwerpen gingen van de visie 2040 voor het stroomgebied tot grensoverschrijdende overstromingen en sponslandschappen. We zijn waarnemer sinds 2012. In Doornik luisterden we niet alleen: we spraken.
+  Mathieu, een van onze deelnemers, sprak de hele plenaire zitting lang namens de jongeren. De onderwerpen gingen van de visie 2040 voor het stroomgebied tot grensoverschrijdende overstromingen en sponslandschappen. We zijn waarnemer sinds 2012. In Doornik namen we ook zelf het woord.
 ---
-Mathieu, one of our participants, spoke for young people throughout the plenary session. Topics ran from the 2040 vision for the basin to cross-border flooding and sponge landscapes. We have been observers since 2012. In Tournai we did not just listen: we spoke.
+Mathieu, one of our participants, spoke for young people throughout the plenary session. Topics ran from the 2040 vision for the basin to cross-border flooding and sponge landscapes. We have been observers since 2012. In Tournai we also took the floor.

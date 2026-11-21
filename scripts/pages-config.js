@@ -1,4 +1,4 @@
-// Writes .pages.yml, the configuration of the browser editor Pages CMS (app.pagescms.org; Output Claude/28 and 77).
+// Writes .pages.yml, the configuration of the browser editor Pages CMS (app.pagescms.org).
 // Run with: npm run editor-config      Edit this file, not .pages.yml: that file is made from this one.
 //
 // What it does: it lists what colleagues may change in the editor, page by page, and with which fields. The site itself

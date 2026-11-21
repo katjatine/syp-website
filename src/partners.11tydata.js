@@ -1,4 +1,4 @@
-// Settings of the Partners page (src/partners.md) that stay out of the browser editor (Output Claude/77).
+// Settings of the Partners page (src/partners.md) that stay out of the browser editor.
 // The texts, logos and blocks are in src/partners.md; the editor drops comments there, so the notes are here.
 //
 // The lead partner (GoodPlanet, the one with "lead") stands in the top of the page, under the intro, with the photo in
