@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/downloads": "downloads" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
 
   // Page blocks (the browser editor, Output Claude/77): a page with "blocks" in its front matter is built from them by
   // src/_includes/page-blocks.njk. Texts in blocks are Markdown (bold, links, lists) and go through the same Markdown
